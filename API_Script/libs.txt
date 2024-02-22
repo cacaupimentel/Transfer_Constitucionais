@@ -1,0 +1,44 @@
+pip install --user -q datascience
+pip install scipy
+pip install six 
+pip install python-dateutil
+pip install -U patsy
+pip install pytz
+pip install statsmodels
+pip install xgboost
+pip install pylab-sdk
+pip install pca
+pip install python-math
+pip install jupyter_contrib_nbextensions
+pip install orange3
+pip install os-sys
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install collection
+pip install -U scikit-learn
+pip install keras
+
+
+pip install flask
+pip install jsonify
+pip install requests
+pip install Werkzeug
+pip install jinja2
+pip install Flask-SQLAlchemy
+pip install marshmallow
+pip install flask-marshmallow   
+pip install marshmallow-sqlalchemy
+pip install Flask-JWT-Extended
+
+
+
+
+
+
+
+
+
+
+
+
