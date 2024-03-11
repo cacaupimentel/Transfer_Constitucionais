@@ -1,0 +1,9 @@
+﻿d_Estados_API_IBGE
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_Estados_API_IBGE.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"idUF", Int64.Type}, {"sigla", type text}, {"nome", type text}, {"regiao.id", Int64.Type}, {"regiao.sigla", type text}, {"regiao.nome", type text}, {"nomeMaiusculo", type text}})
+in
+    #"Tipo Alterado"

@@ -1,0 +1,22 @@
+d_NCM_SH_Imp_Export
+
+
+let
+    Fonte = Csv.Document(Web.Contents("https://balanca.economia.gov.br/balanca/bd/tabelas/NCM_SH.csv"),[Delimiter=";", Columns=16, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Cabeçalhos Promovidos",{"CO_SH4", "NO_SH4_POR", "NO_SH2_POR", "NO_SEC_POR"}),
+    #"Duplicatas Removidas" = Table.Distinct(#"Outras Colunas Removidas", {"CO_SH4"}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Duplicatas Removidas", "Caminho", each Caminho),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_NCM_SH_Imp_Export.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[[""CO_SH4"", ""NO_SH4_POR"", ""NO_SH2_POR"", ""NO_SEC_POR""]].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[[""CO_SH4"", ""NO_SH4_POR"", ""NO_SH2_POR"", ""NO_SEC_POR""]]#(lf)print(dataset)",[dataset=#"Cria Col Caminho"]),
+    Value = #"Executar script Python"{0}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(Value,{{"CO_SH4", Int64.Type}, {"NO_SH4_POR", type text}, {"NO_SH2_POR", type text}, {"NO_SEC_POR", type text}})
+in
+    #"Tipo Alterado"
+
+
+
+Metadados
+
+Tabelas de Correlações de Códigos e Classificações: Arquivos em CSV para correspondência dos códigos utilizados nos dados acima, apresentando as descrições, classificações e agrupamentos utilizados nas divulgações e publicações. 
+
+Fonte: https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta

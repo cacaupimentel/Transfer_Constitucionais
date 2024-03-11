@@ -1,0 +1,32 @@
+d_Cessoes_de_Direitos_ANM
+
+
+let
+    Fonte = Csv.Document(Web.Contents("https://app.dnpm.gov.br/DadosAbertos/SCM/Cessoes_de_Direitos.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Superintendência", type text}, {"Processo", type text}, {"Tipo de requerimento", type text}, {"Fase Atual", type text}, {"CPF CNPJ do titular", type text}, {"Titular", type text}, {"Municipio(s)", type text}, {"Substância(s)", type text}, {"Tipo(s) de Uso", type text}, {"Situação", type text}, {"Data da Cessão", type date}}),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tipo Alterado",{"CPF CNPJ do titular", "Titular", "Municipio(s)"}),
+    #"Duplicatas Removidas" = Table.Distinct(#"Outras Colunas Removidas", {"CPF CNPJ do titular"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Duplicatas Removidas",{{"CPF CNPJ do titular", "CPF_CNPJ"}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Colunas Renomeadas",".","",Replacer.ReplaceText,{"CPF_CNPJ"}),
+    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","/","",Replacer.ReplaceText,{"CPF_CNPJ"}),
+    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","-","",Replacer.ReplaceText,{"CPF_CNPJ"}),
+    #"Substitui Atílio Vivácqua" = Table.ReplaceValue(#"Valor Substituído2","ATÍLIO VIVACQUA","ATÍLIO VIVÁCQUA",Replacer.ReplaceText,{"Municipio(s)"}),
+    #"Subustitui Grão-Pará" = Table.ReplaceValue(#"Substitui Atílio Vivácqua","GRÃO PARÁ","GRÃO-PARÁ",Replacer.ReplaceText,{"Municipio(s)"}),
+    // A Cidade de Lagoa dos Patos - RS não existe, consultando o Wikpédia, "Localizada na cidade de Rio Grande, a Lagoa dos Patos, com uma superfície de 10 144 Km², é a maior laguna do Brasil e a segunda maior de toda a América Latina."
+    #"Substituir Lagoa dos Patos - RS" = Table.ReplaceValue(#"Subustitui Grão-Pará","LAGOA DOS PATOS - RS","RIO GRANDE - RS",Replacer.ReplaceText,{"Municipio(s)"}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Substituir Lagoa dos Patos - RS", "Caminho", each Caminho),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_Cessoes_de_Direitos_ANM.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[[""CPF_CNPJ"", ""Titular"", ""Municipio(s)""]].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[[""CPF_CNPJ"", ""Titular"", ""Municipio(s)""]]#(lf)print(dataset)",[dataset=#"Cria Col Caminho"]),
+    dataset = #"Executar script Python"{[Name="dataset"]}[Value],
+    #"Tipo Alterado1" = Table.TransformColumnTypes(dataset,{{"CPF_CNPJ", type text}, {"Titular", type text}, {"Municipio(s)", type text}})
+in
+    #"Tipo Alterado1"
+
+
+
+
+Metadados
+
+Informações sobre processos minerários, abrangendo dados sobre regimes, fases, substâncias, prazos, titulares, áreas concedidas, tipos de uso e situação. Foi incluida para ajustar a ausência dos municípios nos dados da Arrecadação da CFEM
+
+Fonte:https://dados.gov.br/dataset/sistema-de-cadastro-mineiro/resource/c11f8a7d-34bb-41eb-bb67-8e2df99c218f

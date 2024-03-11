@@ -1,0 +1,20 @@
+﻿d_Capitais_ESTUDO
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_Capitais_API_IBGE.csv",
+    Fonte = Table.FromRecords(
+        {[Caminho = Caminho]},
+        type table[Caminho = Text.Type]),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_Capitais_API_IBGE.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Abrindo o arquivo#(lf)dataset = pandas.read_csv(os.path.join(basedir, nomearq), sep=';')#(lf)#(lf)# Separa um lista para as capitais estudas#(lf)list_idMuni = [1501402, 1721000, 2111300, 2304400, 2704302, 2927408, 3106200, 5002704]#(lf)#(lf)# filtra apenas as capitais que serão estudadas#(lf)dataset = dataset.loc[dataset['id_Muni'].isin(list_idMuni)]#(lf)#(lf)#(lf)# Inclui Santarém - PA#(lf)# idMun#(tab)       Municipio#(tab)idUF#(tab)sigla#(tab)nomeUF#(tab)MunicipioUF#(tab)MunUFMaiuscula#(lf)# 1506807#(tab)Santarém#(tab)15#(tab)PA#(tab)Pará#(tab)Santarém - PA#(tab)SANTARÉM - PA#(lf)#(lf)ddpwerbi = pandas.DataFrame({'id_Muni': [1506807], 'Municipio': ['Santarém - PA'],#(lf)            'idUF': [15], 'MunicipioMaiusculo': ['SANTAREM']})#(lf)#(lf)#(lf)# Acrescenta os dados de Santarem#(lf)dataset = pandas.concat([dataset.copy(), ddpwerbi])#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_Capitais_ESTUDO.csv""#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[[""id_Muni"", ""Municipio"", ""idUF"", ""MunicipioMaiusculo""]].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[[""id_Muni"", ""Municipio"", ""idUF"", ""MunicipioMaiusculo""]]#(lf)print(dataset)",[dataset=Fonte]),
+    dataset = #"Executar script Python"{[Name="dataset"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(dataset,{{"id_Muni", Int64.Type}, {"Municipio", type text}, {"idUF", Int64.Type}}),
+    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Municipio] = "Belo Horizonte - MG" or [Municipio] = "Belém - PA" or [Municipio] = "Campo Grande - MS" or [Municipio] = "Fortaleza - CE" or [Municipio] = "Maceió - AL" or [Municipio] = "Palmas - TO" or [Municipio] = "Salvador - BA" or [Municipio] = "São Luís - MA"))
+in
+    #"Linhas Filtradas"
+
+
+
+METADADOS
+
+Capitais que responderam ao questionário e aceitaram particiapar do estudo.

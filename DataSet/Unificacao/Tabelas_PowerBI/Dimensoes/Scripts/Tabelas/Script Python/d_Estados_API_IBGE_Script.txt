@@ -1,0 +1,17 @@
+﻿d_Estados_API_IBGE
+
+let
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v1/localidades/estados/")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "sigla", "nome", "regiao"}, {"id", "sigla", "nome", "regiao"}),
+    #"regiao Expandido" = Table.ExpandRecordColumn(#"Column1 Expandido", "regiao", {"id", "sigla", "nome"}, {"regiao.id", "regiao.sigla", "regiao.nome"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"regiao Expandido",{{"id", "idUF"}}),
+    #"Função Tira Ascento Invocada" = Table.AddColumn(#"Colunas Renomeadas", "nomeMaiusculo", each F_Tira_Ascento([nome])),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Função Tira Ascento Invocada",{{"nomeMaiusculo", Text.Upper, type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Texto em Maiúscula", "Caminho", each Caminho),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col Caminho",{{"idUF", type text}, {"sigla", type text}, {"nome", type text}, {"regiao.id", type text}, {"regiao.sigla", type text}, {"regiao.nome", type text}, {"Caminho", type text}}),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_Estados_API_IBGE.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[[""idUF"", ""sigla"", ""nome"", ""regiao.id"", ""regiao.sigla"", ""regiao.nome"", ""nomeMaiusculo""]].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[[""idUF"", ""sigla"", ""nome"", ""regiao.id"", ""regiao.sigla"", ""regiao.nome"", ""nomeMaiusculo""]]#(lf)print(dataset)#(lf)",[dataset=#"Tipo Alterado1"]),
+    dataset = #"Executar script Python"{[Name="dataset"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(dataset,{{"idUF", Int64.Type}, {"sigla", type text}, {"nome", type text}, {"regiao.id", Int64.Type}, {"regiao.sigla", type text}, {"regiao.nome", type text}})
+in
+    #"Tipo Alterado"

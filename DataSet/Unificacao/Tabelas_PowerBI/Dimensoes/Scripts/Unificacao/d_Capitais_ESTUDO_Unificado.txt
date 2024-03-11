@@ -1,0 +1,15 @@
+d_Capitais_ESTUDO
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_Capitais_ESTUDO.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_Muni", Int64.Type}, {"Municipio", type text}, {"idUF", Int64.Type}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS
+
+Capitais que responderam ao questionário e aceitaram particiapar do estudo.

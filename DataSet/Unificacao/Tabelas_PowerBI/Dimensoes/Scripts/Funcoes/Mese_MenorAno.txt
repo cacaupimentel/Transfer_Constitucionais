@@ -1,0 +1,12 @@
+Mese_MenorAno
+
+
+let
+    Fonte = d_Calendario,
+    #"Dia Inserido" = Table.AddColumn(Fonte, "Dia", each Date.Day([Data]), Int64.Type),
+    #"Filtra dia 15 cada mes" = Table.SelectRows(#"Dia Inserido", each ([Dia] = 15)),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Filtra dia 15 cada mes",{"Data", "MES_ANO"}),
+    #"Linhas Filtradas" = Table.SelectRows(#"Outras Colunas Removidas", each [Data] <= Date.AddMonths(MaiorData,-4)),
+    #"Linhas Classificadas" = Table.Sort(#"Linhas Filtradas",{{"Data", Order.Ascending}})
+in
+    #"Linhas Classificadas"

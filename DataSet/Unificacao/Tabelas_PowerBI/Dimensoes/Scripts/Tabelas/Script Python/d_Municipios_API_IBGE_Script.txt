@@ -1,0 +1,23 @@
+d_Municipios_API_IBGE
+
+let
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v1/localidades/estados/11|12|13|14|15|16|17|21|22|23|24|25|26|27|28|29|31|32|33|35|41|42|43|50|51|52|53/municipios")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "nome", "regiao-imediata"}, {"id", "nome", "regiao-imediata"}),
+    #"regiao-imediata Expandido" = Table.ExpandRecordColumn(#"Column1 Expandido", "regiao-imediata", {"regiao-intermediaria"}, {"regiao-intermediaria"}),
+    #"regiao-intermediaria Expandido" = Table.ExpandRecordColumn(#"regiao-imediata Expandido", "regiao-intermediaria", {"UF"}, {"UF"}),
+    #"UF Expandido" = Table.ExpandRecordColumn(#"regiao-intermediaria Expandido", "UF", {"id", "sigla", "nome"}, {"idUF", "sigla", "nomeUF"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"UF Expandido",{{"id", "idMun"}, {"nome", "Municipio"}}),
+    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Colunas Renomeadas", "MunicipioUF", each Text.Combine({[Municipio], [sigla]}, " - "), type text),
+    #"Coluna Duplicada" = Table.DuplicateColumn(#"Coluna Mesclada Inserida", "MunicipioUF", "MunUFMaiuscula"),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Coluna Duplicada",{{"MunUFMaiuscula", Text.Upper, type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Texto em Maiúscula", "Caminho", each Caminho),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""d_Municipios_API_IBGE.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[[""idMun"", ""Municipio"", ""idUF"", ""sigla"", ""nomeUF"", ""MunicipioUF"", ""MunUFMaiuscula""]].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[[""idMun"", ""Municipio"", ""idUF"", ""sigla"", ""nomeUF"", ""MunicipioUF"", ""MunUFMaiuscula""]]#(lf)print(dataset)",[dataset=#"Cria Col Caminho"]),
+    dataset = #"Executar script Python"{[Name="dataset"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(dataset,{{"idMun", Int64.Type}, {"Municipio", type text}, {"idUF", Int64.Type}, {"sigla", type text}, {"nomeUF", type text}, {"MunicipioUF", type text}, {"MunUFMaiuscula", type text}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Disponibiliza  os Municípios das UFs com os códigos padronizados pelo IBGE.

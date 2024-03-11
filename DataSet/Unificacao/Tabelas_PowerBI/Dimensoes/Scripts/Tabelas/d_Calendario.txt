@@ -1,0 +1,42 @@
+d_Calendario
+
+let
+    MData = Date.AddYears(MaiorData, 4),
+    MnData = Date.StartOfYear(Date.AddYears(MenorData, -2)),
+    QntDias = Duration.Days(MData - MnData)+1,
+    #"Cria Lista de Data" = List.Dates(MnData,QntDias,#duration(1,0,0,0)),
+    #"Convertido para Tabela" = Table.FromList(#"Cria Lista de Data", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Convertido para Tabela",{{"Column1", "Data"}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"Data", type date}}),
+    #"Ano Inserido" = Table.AddColumn(#"Tipo Alterado", "Ano", each Date.Year([Data]), Int64.Type),
+    #"Mês Inserido" = Table.AddColumn(#"Ano Inserido", "MesNr", each Date.Month([Data]), Int64.Type),
+    #"Nome Mês Inserido" = Table.AddColumn(#"Mês Inserido", "Nome_Mes", each Date.MonthName([Data]), type text),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Nome Mês Inserido",{{"Nome_Mes", Text.Upper, type text}}),
+    #"Primeiros caracteres extraídos" = Table.TransformColumns(#"Texto em Maiúscula", {{"Nome_Mes", each Text.Start(_, 3), type text}}),
+    #"Trimestre Inserido" = Table.AddColumn(#"Primeiros caracteres extraídos", "Trimestre", each Date.QuarterOfYear([Data]), Int64.Type),
+    #"Cria Quinzena" = Table.AddColumn(#"Trimestre Inserido", "Quinzena", each if [Data]>#date([Ano],[MesNr],15) then
+  "2ª Quinzena"
+ else
+  "1ª Quinzena", type text),
+    #"Cria Período Quinzena" = Table.AddColumn(#"Cria Quinzena", "Periodo_Quinzena", each if [Data]>#date([Ano],[MesNr],15) then
+  "01 à 15/" & [Nome_Mes] & "/" & Text.From([Ano])
+  else
+    "16 à " & Text.From(Date.Day(Date.EndOfMonth([Data]))) & "/" & [Nome_Mes] & "/" & Text.From([Ano]), type text),
+    #"Cria Nr Bimestre" = Table.AddColumn(#"Cria Período Quinzena", "BimNr", each if ([MesNr]>=1 and [MesNr]<=2) then
+  1
+else if ([MesNr]>=3 and [MesNr]<=4) then 
+  2
+else if ([MesNr]>=5 and [MesNr]<=6) then 
+  3
+else if ([MesNr]>=7 and [MesNr]<=8) then 
+  4
+else if ([MesNr]>=9 and [MesNr]<=10) then 
+  5
+else
+  6, type text),
+    #"Criar Col Bimestre" = Table.AddColumn(#"Cria Nr Bimestre", "Bimestre", each Number.ToText([BimNr]) & "º Bim", type text),
+    #"Cria Col MES/ANO" = Table.AddColumn(#"Criar Col Bimestre", "MES_ANO", each Text.Combine({[Nome_Mes], Text.From([Ano], "pt-BR")}, "/"), type text),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col MES/ANO",{{"BimNr", Int64.Type}}),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tipo Alterado1",{"Data", "Ano", "MesNr", "Nome_Mes", "Trimestre", "Quinzena", "Periodo_Quinzena", "BimNr", "Bimestre", "MES_ANO"})
+in
+    #"Outras Colunas Removidas"

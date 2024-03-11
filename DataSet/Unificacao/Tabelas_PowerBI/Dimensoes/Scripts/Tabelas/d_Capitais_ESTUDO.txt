@@ -1,0 +1,14 @@
+d_Capitais_ESTUDO
+
+
+let
+    Fonte = d_Capitais_API_IBGE,
+    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Municipio] = "Belo Horizonte - MG" or [Municipio] = "Belém - PA" or [Municipio] = "Campo Grande - MS" or [Municipio] = "Fortaleza - CE" or [Municipio] = "Maceió - AL" or [Municipio] = "Palmas - TO" or [Municipio] = "Salvador - BA" or [Municipio] = "São Luís - MA")),
+    #"Texto Inserido Após o Delimitador" = Table.AddColumn(#"Linhas Filtradas", "sigla", each Text.AfterDelimiter([Municipio], "-"), type text)
+in
+    #"Texto Inserido Após o Delimitador"
+
+
+METADADOS
+
+Capitais que responderam ao questionário e aceitaram particiapar do estudo.

@@ -1,0 +1,18 @@
+d_Cessoes_de_Direitos_ANM
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_Cessoes_de_Direitos_ANM.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CPF_CNPJ", type text}, {"Titular", type text}, {"Municipio(s)", type text}})
+in
+    #"Tipo Alterado"
+
+
+
+Metadados
+
+Informações sobre processos minerários, abrangendo dados sobre regimes, fases, substâncias, prazos, titulares, áreas concedidas, tipos de uso e situação. Foi incluida para ajustar a ausência dos municípios nos dados da Arrecadação da CFEM
+
+Fonte:https://dados.gov.br/dataset/sistema-de-cadastro-mineiro/resource/c11f8a7d-34bb-41eb-bb67-8e2df99c218f

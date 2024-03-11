@@ -1,0 +1,16 @@
+d_NCM_SH_Imp_Export
+
+
+let
+    Fonte = Csv.Document(Web.Contents("https://balanca.economia.gov.br/balanca/bd/tabelas/NCM_SH.csv"),[Delimiter=";", Columns=16, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CO_SH6", Int64.Type}, {"NO_SH6_POR", type text}, {"NO_SH6_ESP", type text}, {"NO_SH6_ING", type text}, {"CO_SH4", Int64.Type}, {"NO_SH4_POR", type text}, {"NO_SH4_ESP", type text}, {"NO_SH4_ING", type text}, {"CO_SH2", Int64.Type}, {"NO_SH2_POR", type text}, {"NO_SH2_ESP", type text}, {"NO_SH2_ING", type text}, {"CO_NCM_SECROM", type text}, {"NO_SEC_POR", type text}, {"NO_SEC_ESP", type text}, {"NO_SEC_ING", type text}})
+in
+    #"Tipo Alterado"
+
+
+Metadados
+
+Tabelas de Correlações de Códigos e Classificações: Arquivos em CSV para correspondência dos códigos utilizados nos dados acima, apresentando as descrições, classificações e agrupamentos utilizados nas divulgações e publicações. 
+
+Fonte: https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta

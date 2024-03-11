@@ -1,0 +1,13 @@
+d_Municipios_API_IBGE
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_Municipios_API_IBGE.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"idMun", Int64.Type}, {"Municipio", type text}, {"idUF", Int64.Type}, {"sigla", type text}, {"nomeUF", type text}, {"MunicipioUF", type text}, {"MunUFMaiuscula", type text}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Disponibiliza  os Municípios das UFs com os códigos padronizados pelo IBGE.

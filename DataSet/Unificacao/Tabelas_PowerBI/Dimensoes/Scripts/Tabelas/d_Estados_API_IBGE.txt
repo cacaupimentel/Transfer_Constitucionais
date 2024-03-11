@@ -1,0 +1,13 @@
+﻿d_Estados_API_IBGE
+
+let
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v1/localidades/estados/")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "sigla", "nome", "regiao"}, {"id", "sigla", "nome", "regiao"}),
+    #"regiao Expandido" = Table.ExpandRecordColumn(#"Column1 Expandido", "regiao", {"id", "sigla", "nome"}, {"regiao.id", "regiao.sigla", "regiao.nome"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"regiao Expandido",{{"sigla", type text}, {"id", Int64.Type}, {"regiao.id", Int64.Type}, {"regiao.sigla", type text}, {"regiao.nome", type text}, {"nome", type text}}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"id", "idUF"}}),
+    #"Função Tira Ascento Invocada" = Table.AddColumn(#"Colunas Renomeadas", "nomeMaiusculo", each F_Tira_Ascento([nome])),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Função Tira Ascento Invocada",{{"nomeMaiusculo", Text.Upper, type text}})
+in
+    #"Texto em Maiúscula"

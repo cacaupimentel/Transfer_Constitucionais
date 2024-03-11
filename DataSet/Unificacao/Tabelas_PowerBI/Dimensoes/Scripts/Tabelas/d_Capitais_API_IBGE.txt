@@ -1,0 +1,19 @@
+d_Capitais_API_IBGE
+
+let
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v3/agregados/1287/periodos/2010/variaveis/591?localidades=N6")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "variavel", "unidade", "resultados"}, {"id", "variavel", "unidade", "resultados"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Column1 Expandido","População nos municípios das capitais","Populacao_Capitais",Replacer.ReplaceText,{"variavel"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Valor Substituído",{"id", "unidade"}),
+    #"resultados Expandido" = Table.ExpandListColumn(#"Colunas Removidas", "resultados"),
+    #"resultados Expandido1" = Table.ExpandRecordColumn(#"resultados Expandido", "resultados", {"series"}, {"resultados.series"}),
+    #"resultados.series Expandido" = Table.ExpandListColumn(#"resultados Expandido1", "resultados.series"),
+    #"resultados.series Expandido1" = Table.ExpandRecordColumn(#"resultados.series Expandido", "resultados.series", {"localidade", "serie"}, {"localidade", "serie"}),
+    #"localidade Expandido" = Table.ExpandRecordColumn(#"resultados.series Expandido1", "localidade", {"id", "nome"}, {"id_Muni", "Municipio"}),
+    #"serie Expandido" = Table.ExpandRecordColumn(#"localidade Expandido", "serie", {"2010"}, {"2010"}),
+    #"Coluna em pivô" = Table.Pivot(#"serie Expandido", List.Distinct(#"serie Expandido"[variavel]), "variavel", "2010"),
+    #"Primeiros Caracteres Inseridos" = Table.AddColumn(#"Coluna em pivô", "idUF", each Text.Start([id_Muni], 2), type text),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Primeiros Caracteres Inseridos",{{"Populacao_Capitais", Int64.Type}, {"idUF", Int64.Type}, {"id_Muni", Int64.Type}, {"Municipio", type text}})
+in
+    #"Tipo Alterado"

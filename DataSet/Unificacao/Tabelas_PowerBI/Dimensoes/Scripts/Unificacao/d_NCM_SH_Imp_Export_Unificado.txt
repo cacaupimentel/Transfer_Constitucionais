@@ -1,0 +1,17 @@
+d_NCM_SH_Imp_Export
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\d_NCM_SH_Imp_Export.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CO_SH4", Int64.Type}, {"NO_SH4_POR", type text}, {"NO_SH2_POR", type text}, {"NO_SEC_POR", type text}})
+in
+    #"Tipo Alterado"
+
+
+Metadados
+
+Tabelas de Correlações de Códigos e Classificações: Arquivos em CSV para correspondência dos códigos utilizados nos dados acima, apresentando as descrições, classificações e agrupamentos utilizados nas divulgações e publicações. 
+
+Fonte: https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta
