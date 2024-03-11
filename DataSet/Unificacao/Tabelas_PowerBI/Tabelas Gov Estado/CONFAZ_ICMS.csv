@@ -1,0 +1,2431 @@
+Ano,Data,Estado,Subitem ICMS,Arrecadacao
+2022,15/01/2022,Acre,Comércio Atacadista,28250651
+2022,15/02/2022,Acre,Comércio Atacadista,16488621
+2022,15/03/2022,Acre,Comércio Atacadista,35161208
+2022,15/04/2022,Acre,Comércio Atacadista,29481403
+2022,15/05/2022,Acre,Comércio Atacadista,30948775
+2022,15/06/2022,Acre,Comércio Atacadista,31021765
+2022,15/07/2022,Acre,Comércio Atacadista,37859203
+2022,15/08/2022,Acre,Comércio Atacadista,38151978
+2022,15/09/2022,Acre,Comércio Atacadista,38151978
+2022,15/10/2022,Acre,Comércio Atacadista,31897824
+2022,15/01/2022,Acre,Comércio Varejista,32592748
+2022,15/02/2022,Acre,Comércio Varejista,16557313
+2022,15/03/2022,Acre,Comércio Varejista,34073293
+2022,15/04/2022,Acre,Comércio Varejista,31239019
+2022,15/05/2022,Acre,Comércio Varejista,30802468
+2022,15/06/2022,Acre,Comércio Varejista,32560555
+2022,15/07/2022,Acre,Comércio Varejista,31725025
+2022,15/08/2022,Acre,Comércio Varejista,33876284
+2022,15/09/2022,Acre,Comércio Varejista,33876284
+2022,15/10/2022,Acre,Comércio Varejista,33390310
+2022,15/01/2022,Acre,Energia Elétrica Secundária,0
+2022,15/02/2022,Acre,Energia Elétrica Secundária,0
+2022,15/03/2022,Acre,Energia Elétrica Secundária,0
+2022,15/04/2022,Acre,Energia Elétrica Secundária,0
+2022,15/05/2022,Acre,Energia Elétrica Secundária,0
+2022,15/06/2022,Acre,Energia Elétrica Secundária,0
+2022,15/07/2022,Acre,Energia Elétrica Secundária,0
+2022,15/08/2022,Acre,Energia Elétrica Secundária,0
+2022,15/09/2022,Acre,Energia Elétrica Secundária,0
+2022,15/10/2022,Acre,Energia Elétrica Secundária,0
+2022,15/01/2022,Acre,Energia Elétrica Terciário,17409077
+2022,15/02/2022,Acre,Energia Elétrica Terciário,9760045
+2022,15/03/2022,Acre,Energia Elétrica Terciário,25417001
+2022,15/04/2022,Acre,Energia Elétrica Terciário,17891156
+2022,15/05/2022,Acre,Energia Elétrica Terciário,18573840
+2022,15/06/2022,Acre,Energia Elétrica Terciário,17941108
+2022,15/07/2022,Acre,Energia Elétrica Terciário,15378463
+2022,15/08/2022,Acre,Energia Elétrica Terciário,12778242
+2022,15/09/2022,Acre,Energia Elétrica Terciário,12778242
+2022,15/10/2022,Acre,Energia Elétrica Terciário,10863771
+2022,15/01/2022,Acre,Outros ICMS,8565051
+2022,15/02/2022,Acre,Outros ICMS,8269196
+2022,15/03/2022,Acre,Outros ICMS,10686612
+2022,15/04/2022,Acre,Outros ICMS,9302370
+2022,15/05/2022,Acre,Outros ICMS,9995266
+2022,15/06/2022,Acre,Outros ICMS,11784844
+2022,15/07/2022,Acre,Outros ICMS,9648992
+2022,15/08/2022,Acre,Outros ICMS,11992127
+2022,15/09/2022,Acre,Outros ICMS,11992127
+2022,15/10/2022,Acre,Outros ICMS,9738176
+2022,15/01/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,24923330
+2022,15/02/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,23642685
+2022,15/03/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,35156708
+2022,15/04/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,28093295
+2022,15/05/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,30084197
+2022,15/06/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,27147365
+2022,15/07/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,27417701
+2022,15/08/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,14881389
+2022,15/09/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,14881389
+2022,15/10/2022,Acre,Petróleo-Combustível-Lubrificantes Secundário,20430684
+2022,15/01/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,6166624
+2022,15/02/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,5206483
+2022,15/03/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,5967484
+2022,15/04/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,5301721
+2022,15/05/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,6290968
+2022,15/06/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,5977593
+2022,15/07/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,5054812
+2022,15/08/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,4037548
+2022,15/09/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,4037548
+2022,15/10/2022,Acre,Petróleo-Combustível-Lubrificantes Terciário,4868546
+2022,15/01/2022,Acre,Serviços de Comunicação,6512009
+2022,15/02/2022,Acre,Serviços de Comunicação,5688650
+2022,15/03/2022,Acre,Serviços de Comunicação,5368332
+2022,15/04/2022,Acre,Serviços de Comunicação,5227782
+2022,15/05/2022,Acre,Serviços de Comunicação,4979821
+2022,15/06/2022,Acre,Serviços de Comunicação,5246550
+2022,15/07/2022,Acre,Serviços de Comunicação,5131659
+2022,15/08/2022,Acre,Serviços de Comunicação,5773759
+2022,15/09/2022,Acre,Serviços de Comunicação,5773759
+2022,15/10/2022,Acre,Serviços de Comunicação,4272217
+2022,15/01/2022,Acre,Serviços de Transporte,329950
+2022,15/02/2022,Acre,Serviços de Transporte,282024
+2022,15/03/2022,Acre,Serviços de Transporte,390988
+2022,15/04/2022,Acre,Serviços de Transporte,375889
+2022,15/05/2022,Acre,Serviços de Transporte,352325
+2022,15/06/2022,Acre,Serviços de Transporte,482042
+2022,15/07/2022,Acre,Serviços de Transporte,415813
+2022,15/08/2022,Acre,Serviços de Transporte,414708
+2022,15/09/2022,Acre,Serviços de Transporte,414708
+2022,15/10/2022,Acre,Serviços de Transporte,495765
+2022,15/01/2022,Alagoas,Comércio Atacadista,99216743
+2022,15/02/2022,Alagoas,Comércio Atacadista,87094217
+2022,15/03/2022,Alagoas,Comércio Atacadista,91355153
+2022,15/04/2022,Alagoas,Comércio Atacadista,112505513
+2022,15/05/2022,Alagoas,Comércio Atacadista,92582353
+2022,15/06/2022,Alagoas,Comércio Atacadista,115132866
+2022,15/07/2022,Alagoas,Comércio Atacadista,97322876
+2022,15/08/2022,Alagoas,Comércio Atacadista,105599565
+2022,15/09/2022,Alagoas,Comércio Atacadista,105599565
+2022,15/10/2022,Alagoas,Comércio Atacadista,104811290
+2022,15/01/2022,Alagoas,Comércio Varejista,81024624
+2022,15/02/2022,Alagoas,Comércio Varejista,64575369
+2022,15/03/2022,Alagoas,Comércio Varejista,61685117
+2022,15/04/2022,Alagoas,Comércio Varejista,79805976
+2022,15/05/2022,Alagoas,Comércio Varejista,74612051
+2022,15/06/2022,Alagoas,Comércio Varejista,77995335
+2022,15/07/2022,Alagoas,Comércio Varejista,88548705
+2022,15/08/2022,Alagoas,Comércio Varejista,86109914
+2022,15/09/2022,Alagoas,Comércio Varejista,86109914
+2022,15/10/2022,Alagoas,Comércio Varejista,79235609
+2022,15/01/2022,Alagoas,Energia Elétrica Secundária,61200698
+2022,15/02/2022,Alagoas,Energia Elétrica Secundária,56658960
+2022,15/03/2022,Alagoas,Energia Elétrica Secundária,54446265
+2022,15/04/2022,Alagoas,Energia Elétrica Secundária,61549562
+2022,15/05/2022,Alagoas,Energia Elétrica Secundária,55151526
+2022,15/06/2022,Alagoas,Energia Elétrica Secundária,49251088
+2022,15/07/2022,Alagoas,Energia Elétrica Secundária,51043498
+2022,15/08/2022,Alagoas,Energia Elétrica Secundária,36753882
+2022,15/09/2022,Alagoas,Energia Elétrica Secundária,36753882
+2022,15/10/2022,Alagoas,Energia Elétrica Secundária,38839269
+2022,15/01/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/02/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/03/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/04/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/05/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/06/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/07/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/08/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/09/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/10/2022,Alagoas,Energia Elétrica Terciário,0
+2022,15/01/2022,Alagoas,Outros ICMS,22519676
+2022,15/02/2022,Alagoas,Outros ICMS,20685679
+2022,15/03/2022,Alagoas,Outros ICMS,20805590
+2022,15/04/2022,Alagoas,Outros ICMS,24728578
+2022,15/05/2022,Alagoas,Outros ICMS,26835791
+2022,15/06/2022,Alagoas,Outros ICMS,30490448
+2022,15/07/2022,Alagoas,Outros ICMS,30834091
+2022,15/08/2022,Alagoas,Outros ICMS,33268249
+2022,15/09/2022,Alagoas,Outros ICMS,33268249
+2022,15/10/2022,Alagoas,Outros ICMS,35809942
+2022,15/01/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,129779097
+2022,15/02/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,143765694
+2022,15/03/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,82157483
+2022,15/04/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,113557797
+2022,15/05/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,92207634
+2022,15/06/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,121800137
+2022,15/07/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,69093574
+2022,15/08/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,53800912
+2022,15/09/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,53800912
+2022,15/10/2022,Alagoas,Petróleo-Combustível-Lubrificantes Secundário,58384509
+2022,15/01/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/02/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/03/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/04/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/05/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/06/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/07/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/08/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/09/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/10/2022,Alagoas,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/01/2022,Alagoas,Serviços de Comunicação,18851996
+2022,15/02/2022,Alagoas,Serviços de Comunicação,15899807
+2022,15/03/2022,Alagoas,Serviços de Comunicação,19669289
+2022,15/04/2022,Alagoas,Serviços de Comunicação,16452995
+2022,15/05/2022,Alagoas,Serviços de Comunicação,18912000
+2022,15/06/2022,Alagoas,Serviços de Comunicação,15662943
+2022,15/07/2022,Alagoas,Serviços de Comunicação,13978282
+2022,15/08/2022,Alagoas,Serviços de Comunicação,13409639
+2022,15/09/2022,Alagoas,Serviços de Comunicação,13409639
+2022,15/10/2022,Alagoas,Serviços de Comunicação,11420236
+2022,15/01/2022,Alagoas,Serviços de Transporte,6563950
+2022,15/02/2022,Alagoas,Serviços de Transporte,5682670
+2022,15/03/2022,Alagoas,Serviços de Transporte,7275318
+2022,15/04/2022,Alagoas,Serviços de Transporte,8167495
+2022,15/05/2022,Alagoas,Serviços de Transporte,7113447
+2022,15/06/2022,Alagoas,Serviços de Transporte,5540715
+2022,15/07/2022,Alagoas,Serviços de Transporte,5651578
+2022,15/08/2022,Alagoas,Serviços de Transporte,6188664
+2022,15/09/2022,Alagoas,Serviços de Transporte,6188664
+2022,15/10/2022,Alagoas,Serviços de Transporte,7091702
+2022,15/01/2022,Amapá,Comércio Atacadista,17229741
+2022,15/02/2022,Amapá,Comércio Atacadista,16124543
+2022,15/03/2022,Amapá,Comércio Atacadista,14789161
+2022,15/04/2022,Amapá,Comércio Atacadista,17653034
+2022,15/05/2022,Amapá,Comércio Atacadista,19157295
+2022,15/06/2022,Amapá,Comércio Atacadista,20811540
+2022,15/07/2022,Amapá,Comércio Atacadista,18642417
+2022,15/08/2022,Amapá,Comércio Atacadista,22556823
+2022,15/09/2022,Amapá,Comércio Atacadista,22556823
+2022,15/10/2022,Amapá,Comércio Atacadista,20623519
+2022,15/01/2022,Amapá,Comércio Varejista,27820375
+2022,15/02/2022,Amapá,Comércio Varejista,17167370
+2022,15/03/2022,Amapá,Comércio Varejista,24504894
+2022,15/04/2022,Amapá,Comércio Varejista,21342005
+2022,15/05/2022,Amapá,Comércio Varejista,28869839
+2022,15/06/2022,Amapá,Comércio Varejista,26642343
+2022,15/07/2022,Amapá,Comércio Varejista,26062036
+2022,15/08/2022,Amapá,Comércio Varejista,38941670
+2022,15/09/2022,Amapá,Comércio Varejista,38941670
+2022,15/10/2022,Amapá,Comércio Varejista,27931331
+2022,15/01/2022,Amapá,Energia Elétrica Secundária,89947
+2022,15/02/2022,Amapá,Energia Elétrica Secundária,48003
+2022,15/03/2022,Amapá,Energia Elétrica Secundária,35111
+2022,15/04/2022,Amapá,Energia Elétrica Secundária,66386
+2022,15/05/2022,Amapá,Energia Elétrica Secundária,54373
+2022,15/06/2022,Amapá,Energia Elétrica Secundária,36866
+2022,15/07/2022,Amapá,Energia Elétrica Secundária,123110
+2022,15/08/2022,Amapá,Energia Elétrica Secundária,306859
+2022,15/09/2022,Amapá,Energia Elétrica Secundária,306859
+2022,15/10/2022,Amapá,Energia Elétrica Secundária,184654
+2022,15/01/2022,Amapá,Energia Elétrica Terciário,7565684
+2022,15/02/2022,Amapá,Energia Elétrica Terciário,6058205
+2022,15/03/2022,Amapá,Energia Elétrica Terciário,6336977
+2022,15/04/2022,Amapá,Energia Elétrica Terciário,5609091
+2022,15/05/2022,Amapá,Energia Elétrica Terciário,6025143
+2022,15/06/2022,Amapá,Energia Elétrica Terciário,6506353
+2022,15/07/2022,Amapá,Energia Elétrica Terciário,7138873
+2022,15/08/2022,Amapá,Energia Elétrica Terciário,4064598
+2022,15/09/2022,Amapá,Energia Elétrica Terciário,4064598
+2022,15/10/2022,Amapá,Energia Elétrica Terciário,4876783
+2022,15/01/2022,Amapá,Outros ICMS,5343728
+2022,15/02/2022,Amapá,Outros ICMS,2376105
+2022,15/03/2022,Amapá,Outros ICMS,2743882
+2022,15/04/2022,Amapá,Outros ICMS,2823027
+2022,15/05/2022,Amapá,Outros ICMS,2836105
+2022,15/06/2022,Amapá,Outros ICMS,2254478
+2022,15/07/2022,Amapá,Outros ICMS,2457635
+2022,15/08/2022,Amapá,Outros ICMS,2332588
+2022,15/09/2022,Amapá,Outros ICMS,2332588
+2022,15/10/2022,Amapá,Outros ICMS,2567024
+2022,15/01/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,25545604
+2022,15/02/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,16715789
+2022,15/03/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,14684133
+2022,15/04/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,21496387
+2022,15/05/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,15760955
+2022,15/06/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,13165867
+2022,15/07/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,12940633
+2022,15/08/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,6847039
+2022,15/09/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,6847039
+2022,15/10/2022,Amapá,Petróleo-Combustível-Lubrificantes Secundário,20493280
+2022,15/01/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,16555343
+2022,15/02/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,14045148
+2022,15/03/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,20279876
+2022,15/04/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,10981768
+2022,15/05/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,20229370
+2022,15/06/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,18516384
+2022,15/07/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,25973535
+2022,15/08/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,10213778
+2022,15/09/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,10213778
+2022,15/10/2022,Amapá,Petróleo-Combustível-Lubrificantes Terciário,8918082
+2022,15/01/2022,Amapá,Serviços de Comunicação,5019073
+2022,15/02/2022,Amapá,Serviços de Comunicação,5117700
+2022,15/03/2022,Amapá,Serviços de Comunicação,5318755
+2022,15/04/2022,Amapá,Serviços de Comunicação,5776909
+2022,15/05/2022,Amapá,Serviços de Comunicação,5445993
+2022,15/06/2022,Amapá,Serviços de Comunicação,5569745
+2022,15/07/2022,Amapá,Serviços de Comunicação,5431421
+2022,15/08/2022,Amapá,Serviços de Comunicação,5696763
+2022,15/09/2022,Amapá,Serviços de Comunicação,5696763
+2022,15/10/2022,Amapá,Serviços de Comunicação,6663031
+2022,15/01/2022,Amapá,Serviços de Transporte,460683
+2022,15/02/2022,Amapá,Serviços de Transporte,221212
+2022,15/03/2022,Amapá,Serviços de Transporte,224956
+2022,15/04/2022,Amapá,Serviços de Transporte,216668
+2022,15/05/2022,Amapá,Serviços de Transporte,231448
+2022,15/06/2022,Amapá,Serviços de Transporte,351017
+2022,15/07/2022,Amapá,Serviços de Transporte,399040
+2022,15/08/2022,Amapá,Serviços de Transporte,354996
+2022,15/09/2022,Amapá,Serviços de Transporte,354996
+2022,15/10/2022,Amapá,Serviços de Transporte,511922
+2022,15/01/2022,Amazonas,Comércio Atacadista,137640683
+2022,15/02/2022,Amazonas,Comércio Atacadista,127469241
+2022,15/03/2022,Amazonas,Comércio Atacadista,113457475
+2022,15/04/2022,Amazonas,Comércio Atacadista,131666685
+2022,15/05/2022,Amazonas,Comércio Atacadista,137242716
+2022,15/06/2022,Amazonas,Comércio Atacadista,139582376
+2022,15/07/2022,Amazonas,Comércio Atacadista,149564501
+2022,15/08/2022,Amazonas,Comércio Atacadista,154787091
+2022,15/09/2022,Amazonas,Comércio Atacadista,154787091
+2022,15/10/2022,Amazonas,Comércio Atacadista,157093323
+2022,15/01/2022,Amazonas,Comércio Varejista,160974612
+2022,15/02/2022,Amazonas,Comércio Varejista,135065854
+2022,15/03/2022,Amazonas,Comércio Varejista,111007102
+2022,15/04/2022,Amazonas,Comércio Varejista,129712319
+2022,15/05/2022,Amazonas,Comércio Varejista,143151355
+2022,15/06/2022,Amazonas,Comércio Varejista,136744125
+2022,15/07/2022,Amazonas,Comércio Varejista,147743378
+2022,15/08/2022,Amazonas,Comércio Varejista,156109545
+2022,15/09/2022,Amazonas,Comércio Varejista,156109545
+2022,15/10/2022,Amazonas,Comércio Varejista,149703467
+2022,15/01/2022,Amazonas,Energia Elétrica Secundária,64696525
+2022,15/02/2022,Amazonas,Energia Elétrica Secundária,77837593
+2022,15/03/2022,Amazonas,Energia Elétrica Secundária,60935518
+2022,15/04/2022,Amazonas,Energia Elétrica Secundária,63664764
+2022,15/05/2022,Amazonas,Energia Elétrica Secundária,88569613
+2022,15/06/2022,Amazonas,Energia Elétrica Secundária,77304894
+2022,15/07/2022,Amazonas,Energia Elétrica Secundária,78416499
+2022,15/08/2022,Amazonas,Energia Elétrica Secundária,69829140
+2022,15/09/2022,Amazonas,Energia Elétrica Secundária,69829140
+2022,15/10/2022,Amazonas,Energia Elétrica Secundária,66182728
+2022,15/01/2022,Amazonas,Energia Elétrica Terciário,6727489
+2022,15/02/2022,Amazonas,Energia Elétrica Terciário,6803313
+2022,15/03/2022,Amazonas,Energia Elétrica Terciário,7813415
+2022,15/04/2022,Amazonas,Energia Elétrica Terciário,7437372
+2022,15/05/2022,Amazonas,Energia Elétrica Terciário,8058205
+2022,15/06/2022,Amazonas,Energia Elétrica Terciário,7948194
+2022,15/07/2022,Amazonas,Energia Elétrica Terciário,7915306
+2022,15/08/2022,Amazonas,Energia Elétrica Terciário,7595750
+2022,15/09/2022,Amazonas,Energia Elétrica Terciário,7595750
+2022,15/10/2022,Amazonas,Energia Elétrica Terciário,6060200
+2022,15/01/2022,Amazonas,Outros ICMS,0
+2022,15/02/2022,Amazonas,Outros ICMS,0
+2022,15/03/2022,Amazonas,Outros ICMS,0
+2022,15/04/2022,Amazonas,Outros ICMS,0
+2022,15/05/2022,Amazonas,Outros ICMS,0
+2022,15/06/2022,Amazonas,Outros ICMS,0
+2022,15/07/2022,Amazonas,Outros ICMS,0
+2022,15/08/2022,Amazonas,Outros ICMS,0
+2022,15/09/2022,Amazonas,Outros ICMS,0
+2022,15/10/2022,Amazonas,Outros ICMS,0
+2022,15/01/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,127556330
+2022,15/02/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,127536514
+2022,15/03/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,142345243
+2022,15/04/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,159618651
+2022,15/05/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,146113556
+2022,15/06/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,93675933
+2022,15/07/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,156801629
+2022,15/08/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,212630360
+2022,15/09/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,212630360
+2022,15/10/2022,Amazonas,Petróleo-Combustível-Lubrificantes Secundário,164243714
+2022,15/01/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,13270617
+2022,15/02/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,131903368
+2022,15/03/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,146190374
+2022,15/04/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,126334952
+2022,15/05/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,60613660
+2022,15/06/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,86378667
+2022,15/07/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,176220003
+2022,15/08/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,57428250
+2022,15/09/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,57428250
+2022,15/10/2022,Amazonas,Petróleo-Combustível-Lubrificantes Terciário,68325432
+2022,15/01/2022,Amazonas,Serviços de Comunicação,36921829
+2022,15/02/2022,Amazonas,Serviços de Comunicação,35488927
+2022,15/03/2022,Amazonas,Serviços de Comunicação,36332872
+2022,15/04/2022,Amazonas,Serviços de Comunicação,34830676
+2022,15/05/2022,Amazonas,Serviços de Comunicação,36184663
+2022,15/06/2022,Amazonas,Serviços de Comunicação,36403754
+2022,15/07/2022,Amazonas,Serviços de Comunicação,36199144
+2022,15/08/2022,Amazonas,Serviços de Comunicação,31203526
+2022,15/09/2022,Amazonas,Serviços de Comunicação,31203526
+2022,15/10/2022,Amazonas,Serviços de Comunicação,24865606
+2022,15/01/2022,Amazonas,Serviços de Transporte,73673532
+2022,15/02/2022,Amazonas,Serviços de Transporte,48501695
+2022,15/03/2022,Amazonas,Serviços de Transporte,48664663
+2022,15/04/2022,Amazonas,Serviços de Transporte,70125745
+2022,15/05/2022,Amazonas,Serviços de Transporte,53355509
+2022,15/06/2022,Amazonas,Serviços de Transporte,51203625
+2022,15/07/2022,Amazonas,Serviços de Transporte,52432468
+2022,15/08/2022,Amazonas,Serviços de Transporte,56241392
+2022,15/09/2022,Amazonas,Serviços de Transporte,56241392
+2022,15/10/2022,Amazonas,Serviços de Transporte,60534813
+2022,15/01/2022,Bahia,Comércio Atacadista,412037915
+2022,15/02/2022,Bahia,Comércio Atacadista,346709686
+2022,15/03/2022,Bahia,Comércio Atacadista,386520687
+2022,15/04/2022,Bahia,Comércio Atacadista,437622018
+2022,15/05/2022,Bahia,Comércio Atacadista,397144510
+2022,15/06/2022,Bahia,Comércio Atacadista,422725372
+2022,15/07/2022,Bahia,Comércio Atacadista,420400715
+2022,15/08/2022,Bahia,Comércio Atacadista,450334865
+2022,15/09/2022,Bahia,Comércio Atacadista,450334865
+2022,15/10/2022,Bahia,Comércio Atacadista,475751454
+2022,15/01/2022,Bahia,Comércio Varejista,375280212
+2022,15/02/2022,Bahia,Comércio Varejista,288846895
+2022,15/03/2022,Bahia,Comércio Varejista,309532904
+2022,15/04/2022,Bahia,Comércio Varejista,312550768
+2022,15/05/2022,Bahia,Comércio Varejista,344446659
+2022,15/06/2022,Bahia,Comércio Varejista,347350074
+2022,15/07/2022,Bahia,Comércio Varejista,349199062
+2022,15/08/2022,Bahia,Comércio Varejista,361423881
+2022,15/09/2022,Bahia,Comércio Varejista,361423881
+2022,15/10/2022,Bahia,Comércio Varejista,364332166
+2022,15/01/2022,Bahia,Energia Elétrica Secundária,331456117
+2022,15/02/2022,Bahia,Energia Elétrica Secundária,293276145
+2022,15/03/2022,Bahia,Energia Elétrica Secundária,250989594
+2022,15/04/2022,Bahia,Energia Elétrica Secundária,322987139
+2022,15/05/2022,Bahia,Energia Elétrica Secundária,283521445
+2022,15/06/2022,Bahia,Energia Elétrica Secundária,269741751
+2022,15/07/2022,Bahia,Energia Elétrica Secundária,226657975
+2022,15/08/2022,Bahia,Energia Elétrica Secundária,192877855
+2022,15/09/2022,Bahia,Energia Elétrica Secundária,192877855
+2022,15/10/2022,Bahia,Energia Elétrica Secundária,177376790
+2022,15/01/2022,Bahia,Energia Elétrica Terciário,59202813
+2022,15/02/2022,Bahia,Energia Elétrica Terciário,50442003
+2022,15/03/2022,Bahia,Energia Elétrica Terciário,57551704
+2022,15/04/2022,Bahia,Energia Elétrica Terciário,41748830
+2022,15/05/2022,Bahia,Energia Elétrica Terciário,65219250
+2022,15/06/2022,Bahia,Energia Elétrica Terciário,64296164
+2022,15/07/2022,Bahia,Energia Elétrica Terciário,72315879
+2022,15/08/2022,Bahia,Energia Elétrica Terciário,70458821
+2022,15/09/2022,Bahia,Energia Elétrica Terciário,70458821
+2022,15/10/2022,Bahia,Energia Elétrica Terciário,55786311
+2022,15/01/2022,Bahia,Outros ICMS,87080699
+2022,15/02/2022,Bahia,Outros ICMS,76202159
+2022,15/03/2022,Bahia,Outros ICMS,76694964
+2022,15/04/2022,Bahia,Outros ICMS,88387138
+2022,15/05/2022,Bahia,Outros ICMS,80761901
+2022,15/06/2022,Bahia,Outros ICMS,92111050
+2022,15/07/2022,Bahia,Outros ICMS,83880631
+2022,15/08/2022,Bahia,Outros ICMS,91782809
+2022,15/09/2022,Bahia,Outros ICMS,91782809
+2022,15/10/2022,Bahia,Outros ICMS,76718558
+2022,15/01/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,660743081
+2022,15/02/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,702133369
+2022,15/03/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,821385512
+2022,15/04/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,463394916
+2022,15/05/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,498239748
+2022,15/06/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,648844589
+2022,15/07/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,620921957
+2022,15/08/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,666173457
+2022,15/09/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,666173457
+2022,15/10/2022,Bahia,Petróleo-Combustível-Lubrificantes Secundário,533805654
+2022,15/01/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,40942953
+2022,15/02/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,29320266
+2022,15/03/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,64959853
+2022,15/04/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,69414480
+2022,15/05/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,59668206
+2022,15/06/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,50510059
+2022,15/07/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,31851446
+2022,15/08/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,33029554
+2022,15/09/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,33029554
+2022,15/10/2022,Bahia,Petróleo-Combustível-Lubrificantes Terciário,31696148
+2022,15/01/2022,Bahia,Serviços de Comunicação,98157070
+2022,15/02/2022,Bahia,Serviços de Comunicação,75657737
+2022,15/03/2022,Bahia,Serviços de Comunicação,92439984
+2022,15/04/2022,Bahia,Serviços de Comunicação,68621954
+2022,15/05/2022,Bahia,Serviços de Comunicação,78713288
+2022,15/06/2022,Bahia,Serviços de Comunicação,86541939
+2022,15/07/2022,Bahia,Serviços de Comunicação,81132321
+2022,15/08/2022,Bahia,Serviços de Comunicação,64048629
+2022,15/09/2022,Bahia,Serviços de Comunicação,64048629
+2022,15/10/2022,Bahia,Serviços de Comunicação,45024990
+2022,15/01/2022,Bahia,Serviços de Transporte,40958424
+2022,15/02/2022,Bahia,Serviços de Transporte,40825464
+2022,15/03/2022,Bahia,Serviços de Transporte,38579748
+2022,15/04/2022,Bahia,Serviços de Transporte,41829117
+2022,15/05/2022,Bahia,Serviços de Transporte,38876986
+2022,15/06/2022,Bahia,Serviços de Transporte,45919189
+2022,15/07/2022,Bahia,Serviços de Transporte,45463620
+2022,15/08/2022,Bahia,Serviços de Transporte,54866050
+2022,15/09/2022,Bahia,Serviços de Transporte,54866050
+2022,15/10/2022,Bahia,Serviços de Transporte,54613509
+2022,15/01/2022,Ceará,Comércio Atacadista,302043822
+2022,15/02/2022,Ceará,Comércio Atacadista,257288700
+2022,15/03/2022,Ceará,Comércio Atacadista,291935347
+2022,15/04/2022,Ceará,Comércio Atacadista,292119962
+2022,15/05/2022,Ceará,Comércio Atacadista,319095031
+2022,15/06/2022,Ceará,Comércio Atacadista,318240513
+2022,15/07/2022,Ceará,Comércio Atacadista,319539864
+2022,15/08/2022,Ceará,Comércio Atacadista,325352481
+2022,15/09/2022,Ceará,Comércio Atacadista,325352481
+2022,15/10/2022,Ceará,Comércio Atacadista,356024718
+2022,15/01/2022,Ceará,Comércio Varejista,182239690
+2022,15/02/2022,Ceará,Comércio Varejista,150227548
+2022,15/03/2022,Ceará,Comércio Varejista,164095651
+2022,15/04/2022,Ceará,Comércio Varejista,167430726
+2022,15/05/2022,Ceará,Comércio Varejista,177746833
+2022,15/06/2022,Ceará,Comércio Varejista,194191127
+2022,15/07/2022,Ceará,Comércio Varejista,191732045
+2022,15/08/2022,Ceará,Comércio Varejista,202584731
+2022,15/09/2022,Ceará,Comércio Varejista,202584731
+2022,15/10/2022,Ceará,Comércio Varejista,205217491
+2022,15/01/2022,Ceará,Energia Elétrica Secundária,241423027
+2022,15/02/2022,Ceará,Energia Elétrica Secundária,227747680
+2022,15/03/2022,Ceará,Energia Elétrica Secundária,211631788
+2022,15/04/2022,Ceará,Energia Elétrica Secundária,213566730
+2022,15/05/2022,Ceará,Energia Elétrica Secundária,231865123
+2022,15/06/2022,Ceará,Energia Elétrica Secundária,202210171
+2022,15/07/2022,Ceará,Energia Elétrica Secundária,206348415
+2022,15/08/2022,Ceará,Energia Elétrica Secundária,176876497
+2022,15/09/2022,Ceará,Energia Elétrica Secundária,176876497
+2022,15/10/2022,Ceará,Energia Elétrica Secundária,174212137
+2022,15/01/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/02/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/03/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/04/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/05/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/06/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/07/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/08/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/09/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/10/2022,Ceará,Energia Elétrica Terciário,0
+2022,15/01/2022,Ceará,Outros ICMS,4242561
+2022,15/02/2022,Ceará,Outros ICMS,3705862
+2022,15/03/2022,Ceará,Outros ICMS,3436293
+2022,15/04/2022,Ceará,Outros ICMS,4933543
+2022,15/05/2022,Ceará,Outros ICMS,5497651
+2022,15/06/2022,Ceará,Outros ICMS,5258830
+2022,15/07/2022,Ceará,Outros ICMS,6307385
+2022,15/08/2022,Ceará,Outros ICMS,7192268
+2022,15/09/2022,Ceará,Outros ICMS,7192268
+2022,15/10/2022,Ceará,Outros ICMS,6698179
+2022,15/01/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,201265951
+2022,15/02/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,226178412
+2022,15/03/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,152084344
+2022,15/04/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,272732999
+2022,15/05/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,186544091
+2022,15/06/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,242565107
+2022,15/07/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,242986904
+2022,15/08/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,153476698
+2022,15/09/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,153476698
+2022,15/10/2022,Ceará,Petróleo-Combustível-Lubrificantes Secundário,168323746
+2022,15/01/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,92645806
+2022,15/02/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,119547365
+2022,15/03/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,107033382
+2022,15/04/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,168760739
+2022,15/05/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,77520346
+2022,15/06/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,145327476
+2022,15/07/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,96726033
+2022,15/08/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,77908460
+2022,15/09/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,77908460
+2022,15/10/2022,Ceará,Petróleo-Combustível-Lubrificantes Terciário,115840533
+2022,15/01/2022,Ceará,Serviços de Comunicação,54648289
+2022,15/02/2022,Ceará,Serviços de Comunicação,52264341
+2022,15/03/2022,Ceará,Serviços de Comunicação,52942330
+2022,15/04/2022,Ceará,Serviços de Comunicação,48202563
+2022,15/05/2022,Ceará,Serviços de Comunicação,53295610
+2022,15/06/2022,Ceará,Serviços de Comunicação,49364425
+2022,15/07/2022,Ceará,Serviços de Comunicação,54634367
+2022,15/08/2022,Ceará,Serviços de Comunicação,46150840
+2022,15/09/2022,Ceará,Serviços de Comunicação,46150840
+2022,15/10/2022,Ceará,Serviços de Comunicação,38503047
+2022,15/01/2022,Ceará,Serviços de Transporte,24361565
+2022,15/02/2022,Ceará,Serviços de Transporte,20070355
+2022,15/03/2022,Ceará,Serviços de Transporte,18760116
+2022,15/04/2022,Ceará,Serviços de Transporte,24902040
+2022,15/05/2022,Ceará,Serviços de Transporte,20610085
+2022,15/06/2022,Ceará,Serviços de Transporte,28684622
+2022,15/07/2022,Ceará,Serviços de Transporte,27685815
+2022,15/08/2022,Ceará,Serviços de Transporte,25407891
+2022,15/09/2022,Ceará,Serviços de Transporte,25407891
+2022,15/10/2022,Ceará,Serviços de Transporte,24441838
+2022,15/01/2022,Distrito Federal,Comércio Atacadista,221164456
+2022,15/02/2022,Distrito Federal,Comércio Atacadista,180877243
+2022,15/03/2022,Distrito Federal,Comércio Atacadista,191416125
+2022,15/04/2022,Distrito Federal,Comércio Atacadista,222538361
+2022,15/05/2022,Distrito Federal,Comércio Atacadista,193904730
+2022,15/06/2022,Distrito Federal,Comércio Atacadista,208291265
+2022,15/07/2022,Distrito Federal,Comércio Atacadista,204808685
+2022,15/08/2022,Distrito Federal,Comércio Atacadista,200022073
+2022,15/09/2022,Distrito Federal,Comércio Atacadista,200022073
+2022,15/10/2022,Distrito Federal,Comércio Atacadista,224286295
+2022,15/01/2022,Distrito Federal,Comércio Varejista,153045423
+2022,15/02/2022,Distrito Federal,Comércio Varejista,104263268
+2022,15/03/2022,Distrito Federal,Comércio Varejista,92598285
+2022,15/04/2022,Distrito Federal,Comércio Varejista,104546793
+2022,15/05/2022,Distrito Federal,Comércio Varejista,104578357
+2022,15/06/2022,Distrito Federal,Comércio Varejista,119501560
+2022,15/07/2022,Distrito Federal,Comércio Varejista,136725719
+2022,15/08/2022,Distrito Federal,Comércio Varejista,129834654
+2022,15/09/2022,Distrito Federal,Comércio Varejista,129834654
+2022,15/10/2022,Distrito Federal,Comércio Varejista,110947835
+2022,15/01/2022,Distrito Federal,Energia Elétrica Secundária,889090
+2022,15/02/2022,Distrito Federal,Energia Elétrica Secundária,659531
+2022,15/03/2022,Distrito Federal,Energia Elétrica Secundária,850645
+2022,15/04/2022,Distrito Federal,Energia Elétrica Secundária,604231
+2022,15/05/2022,Distrito Federal,Energia Elétrica Secundária,712040
+2022,15/06/2022,Distrito Federal,Energia Elétrica Secundária,719008
+2022,15/07/2022,Distrito Federal,Energia Elétrica Secundária,955310
+2022,15/08/2022,Distrito Federal,Energia Elétrica Secundária,702408
+2022,15/09/2022,Distrito Federal,Energia Elétrica Secundária,702408
+2022,15/10/2022,Distrito Federal,Energia Elétrica Secundária,561127
+2022,15/01/2022,Distrito Federal,Energia Elétrica Terciário,89102122
+2022,15/02/2022,Distrito Federal,Energia Elétrica Terciário,83453970
+2022,15/03/2022,Distrito Federal,Energia Elétrica Terciário,77641254
+2022,15/04/2022,Distrito Federal,Energia Elétrica Terciário,80151813
+2022,15/05/2022,Distrito Federal,Energia Elétrica Terciário,85613347
+2022,15/06/2022,Distrito Federal,Energia Elétrica Terciário,69012746
+2022,15/07/2022,Distrito Federal,Energia Elétrica Terciário,66265041
+2022,15/08/2022,Distrito Federal,Energia Elétrica Terciário,54654117
+2022,15/09/2022,Distrito Federal,Energia Elétrica Terciário,54654117
+2022,15/10/2022,Distrito Federal,Energia Elétrica Terciário,54312526
+2022,15/01/2022,Distrito Federal,Outros ICMS,21375299
+2022,15/02/2022,Distrito Federal,Outros ICMS,51948547
+2022,15/03/2022,Distrito Federal,Outros ICMS,48227272
+2022,15/04/2022,Distrito Federal,Outros ICMS,32328532
+2022,15/05/2022,Distrito Federal,Outros ICMS,45512850
+2022,15/06/2022,Distrito Federal,Outros ICMS,42280963
+2022,15/07/2022,Distrito Federal,Outros ICMS,37326523
+2022,15/08/2022,Distrito Federal,Outros ICMS,43449442
+2022,15/09/2022,Distrito Federal,Outros ICMS,43449442
+2022,15/10/2022,Distrito Federal,Outros ICMS,39157857
+2022,15/01/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,51126153
+2022,15/02/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,25911235
+2022,15/03/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,19739471
+2022,15/04/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,33615609
+2022,15/05/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,33573511
+2022,15/06/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,34661431
+2022,15/07/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,36296864
+2022,15/08/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,17409374
+2022,15/09/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,17409374
+2022,15/10/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Secundário,32036256
+2022,15/01/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,157117483
+2022,15/02/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,155920415
+2022,15/03/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,159260618
+2022,15/04/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,168447215
+2022,15/05/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,151846630
+2022,15/06/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,166201944
+2022,15/07/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,160491574
+2022,15/08/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,94010412
+2022,15/09/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,94010412
+2022,15/10/2022,Distrito Federal,Petróleo-Combustível-Lubrificantes Terciário,94219494
+2022,15/01/2022,Distrito Federal,Serviços de Comunicação,71201525
+2022,15/02/2022,Distrito Federal,Serviços de Comunicação,63318628
+2022,15/03/2022,Distrito Federal,Serviços de Comunicação,54647169
+2022,15/04/2022,Distrito Federal,Serviços de Comunicação,69096195
+2022,15/05/2022,Distrito Federal,Serviços de Comunicação,60900374
+2022,15/06/2022,Distrito Federal,Serviços de Comunicação,68852848
+2022,15/07/2022,Distrito Federal,Serviços de Comunicação,65867457
+2022,15/08/2022,Distrito Federal,Serviços de Comunicação,56775932
+2022,15/09/2022,Distrito Federal,Serviços de Comunicação,56775932
+2022,15/10/2022,Distrito Federal,Serviços de Comunicação,42368458
+2022,15/01/2022,Distrito Federal,Serviços de Transporte,10292614
+2022,15/02/2022,Distrito Federal,Serviços de Transporte,8636845
+2022,15/03/2022,Distrito Federal,Serviços de Transporte,8279828
+2022,15/04/2022,Distrito Federal,Serviços de Transporte,9668992
+2022,15/05/2022,Distrito Federal,Serviços de Transporte,10413431
+2022,15/06/2022,Distrito Federal,Serviços de Transporte,11384033
+2022,15/07/2022,Distrito Federal,Serviços de Transporte,11292499
+2022,15/08/2022,Distrito Federal,Serviços de Transporte,12655605
+2022,15/09/2022,Distrito Federal,Serviços de Transporte,12655605
+2022,15/10/2022,Distrito Federal,Serviços de Transporte,11587178
+2022,15/01/2022,Espírito Santo,Comércio Atacadista,213347208
+2022,15/02/2022,Espírito Santo,Comércio Atacadista,165797819
+2022,15/03/2022,Espírito Santo,Comércio Atacadista,169059511
+2022,15/04/2022,Espírito Santo,Comércio Atacadista,215800986
+2022,15/05/2022,Espírito Santo,Comércio Atacadista,186174239
+2022,15/06/2022,Espírito Santo,Comércio Atacadista,220496219
+2022,15/07/2022,Espírito Santo,Comércio Atacadista,202259112
+2022,15/08/2022,Espírito Santo,Comércio Atacadista,204839230
+2022,15/09/2022,Espírito Santo,Comércio Atacadista,204839230
+2022,15/10/2022,Espírito Santo,Comércio Atacadista,223950580
+2022,15/01/2022,Espírito Santo,Comércio Varejista,173321223
+2022,15/02/2022,Espírito Santo,Comércio Varejista,135229343
+2022,15/03/2022,Espírito Santo,Comércio Varejista,133183717
+2022,15/04/2022,Espírito Santo,Comércio Varejista,138058790
+2022,15/05/2022,Espírito Santo,Comércio Varejista,146628706
+2022,15/06/2022,Espírito Santo,Comércio Varejista,147511056
+2022,15/07/2022,Espírito Santo,Comércio Varejista,144007376
+2022,15/08/2022,Espírito Santo,Comércio Varejista,154746649
+2022,15/09/2022,Espírito Santo,Comércio Varejista,154746649
+2022,15/10/2022,Espírito Santo,Comércio Varejista,149578092
+2022,15/01/2022,Espírito Santo,Energia Elétrica Secundária,23203084
+2022,15/02/2022,Espírito Santo,Energia Elétrica Secundária,23130355
+2022,15/03/2022,Espírito Santo,Energia Elétrica Secundária,17206943
+2022,15/04/2022,Espírito Santo,Energia Elétrica Secundária,20141344
+2022,15/05/2022,Espírito Santo,Energia Elétrica Secundária,26230122
+2022,15/06/2022,Espírito Santo,Energia Elétrica Secundária,20209327
+2022,15/07/2022,Espírito Santo,Energia Elétrica Secundária,22413334
+2022,15/08/2022,Espírito Santo,Energia Elétrica Secundária,0
+2022,15/09/2022,Espírito Santo,Energia Elétrica Secundária,0
+2022,15/10/2022,Espírito Santo,Energia Elétrica Secundária,0
+2022,15/01/2022,Espírito Santo,Energia Elétrica Terciário,131484145
+2022,15/02/2022,Espírito Santo,Energia Elétrica Terciário,131072010
+2022,15/03/2022,Espírito Santo,Energia Elétrica Terciário,97506011
+2022,15/04/2022,Espírito Santo,Energia Elétrica Terciário,114134285
+2022,15/05/2022,Espírito Santo,Energia Elétrica Terciário,148637359
+2022,15/06/2022,Espírito Santo,Energia Elétrica Terciário,114519518
+2022,15/07/2022,Espírito Santo,Energia Elétrica Terciário,127008893
+2022,15/08/2022,Espírito Santo,Energia Elétrica Terciário,62969722
+2022,15/09/2022,Espírito Santo,Energia Elétrica Terciário,62969722
+2022,15/10/2022,Espírito Santo,Energia Elétrica Terciário,44059392
+2022,15/01/2022,Espírito Santo,Outros ICMS,112826211
+2022,15/02/2022,Espírito Santo,Outros ICMS,51449331
+2022,15/03/2022,Espírito Santo,Outros ICMS,76719710
+2022,15/04/2022,Espírito Santo,Outros ICMS,118513624
+2022,15/05/2022,Espírito Santo,Outros ICMS,71934857
+2022,15/06/2022,Espírito Santo,Outros ICMS,81519451
+2022,15/07/2022,Espírito Santo,Outros ICMS,154256481
+2022,15/08/2022,Espírito Santo,Outros ICMS,117086643
+2022,15/09/2022,Espírito Santo,Outros ICMS,117086643
+2022,15/10/2022,Espírito Santo,Outros ICMS,205425844
+2022,15/01/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/02/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/03/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/04/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/05/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/06/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/07/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/08/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/09/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/10/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/01/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,259564041
+2022,15/02/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,262454926
+2022,15/03/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,241291781
+2022,15/04/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,247122453
+2022,15/05/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,273397425
+2022,15/06/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,267806854
+2022,15/07/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,211597648
+2022,15/08/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,228831589
+2022,15/09/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,228831589
+2022,15/10/2022,Espírito Santo,Petróleo-Combustível-Lubrificantes Terciário,155560877
+2022,15/01/2022,Espírito Santo,Serviços de Comunicação,40848994
+2022,15/02/2022,Espírito Santo,Serviços de Comunicação,40236469
+2022,15/03/2022,Espírito Santo,Serviços de Comunicação,38419250
+2022,15/04/2022,Espírito Santo,Serviços de Comunicação,38279470
+2022,15/05/2022,Espírito Santo,Serviços de Comunicação,37837894
+2022,15/06/2022,Espírito Santo,Serviços de Comunicação,39126841
+2022,15/07/2022,Espírito Santo,Serviços de Comunicação,36082490
+2022,15/08/2022,Espírito Santo,Serviços de Comunicação,33289319
+2022,15/09/2022,Espírito Santo,Serviços de Comunicação,33289319
+2022,15/10/2022,Espírito Santo,Serviços de Comunicação,31160922
+2022,15/01/2022,Espírito Santo,Serviços de Transporte,58334868
+2022,15/02/2022,Espírito Santo,Serviços de Transporte,55440529
+2022,15/03/2022,Espírito Santo,Serviços de Transporte,46643090
+2022,15/04/2022,Espírito Santo,Serviços de Transporte,59572785
+2022,15/05/2022,Espírito Santo,Serviços de Transporte,54572538
+2022,15/06/2022,Espírito Santo,Serviços de Transporte,59937868
+2022,15/07/2022,Espírito Santo,Serviços de Transporte,58853203
+2022,15/08/2022,Espírito Santo,Serviços de Transporte,59952948
+2022,15/09/2022,Espírito Santo,Serviços de Transporte,59952948
+2022,15/10/2022,Espírito Santo,Serviços de Transporte,70503393
+2022,15/01/2022,Goiás,Comércio Atacadista,357516564
+2022,15/02/2022,Goiás,Comércio Atacadista,324511482
+2022,15/03/2022,Goiás,Comércio Atacadista,351207514
+2022,15/04/2022,Goiás,Comércio Atacadista,366496963
+2022,15/05/2022,Goiás,Comércio Atacadista,365683413
+2022,15/06/2022,Goiás,Comércio Atacadista,389101245
+2022,15/07/2022,Goiás,Comércio Atacadista,440658765
+2022,15/08/2022,Goiás,Comércio Atacadista,385351859
+2022,15/09/2022,Goiás,Comércio Atacadista,385351859
+2022,15/10/2022,Goiás,Comércio Atacadista,449147853
+2022,15/01/2022,Goiás,Comércio Varejista,339791579
+2022,15/02/2022,Goiás,Comércio Varejista,286051224
+2022,15/03/2022,Goiás,Comércio Varejista,260337806
+2022,15/04/2022,Goiás,Comércio Varejista,279131000
+2022,15/05/2022,Goiás,Comércio Varejista,303767540
+2022,15/06/2022,Goiás,Comércio Varejista,328618400
+2022,15/07/2022,Goiás,Comércio Varejista,312061563
+2022,15/08/2022,Goiás,Comércio Varejista,331138038
+2022,15/09/2022,Goiás,Comércio Varejista,331138038
+2022,15/10/2022,Goiás,Comércio Varejista,318363372
+2022,15/01/2022,Goiás,Energia Elétrica Secundária,1881544
+2022,15/02/2022,Goiás,Energia Elétrica Secundária,3051171
+2022,15/03/2022,Goiás,Energia Elétrica Secundária,3600722
+2022,15/04/2022,Goiás,Energia Elétrica Secundária,5822145
+2022,15/05/2022,Goiás,Energia Elétrica Secundária,2930311
+2022,15/06/2022,Goiás,Energia Elétrica Secundária,3533665
+2022,15/07/2022,Goiás,Energia Elétrica Secundária,3203696
+2022,15/08/2022,Goiás,Energia Elétrica Secundária,4105133
+2022,15/09/2022,Goiás,Energia Elétrica Secundária,4105133
+2022,15/10/2022,Goiás,Energia Elétrica Secundária,4308671
+2022,15/01/2022,Goiás,Energia Elétrica Terciário,235566638
+2022,15/02/2022,Goiás,Energia Elétrica Terciário,235284953
+2022,15/03/2022,Goiás,Energia Elétrica Terciário,234891611
+2022,15/04/2022,Goiás,Energia Elétrica Terciário,246905265
+2022,15/05/2022,Goiás,Energia Elétrica Terciário,241004210
+2022,15/06/2022,Goiás,Energia Elétrica Terciário,186736745
+2022,15/07/2022,Goiás,Energia Elétrica Terciário,185519530
+2022,15/08/2022,Goiás,Energia Elétrica Terciário,39375395
+2022,15/09/2022,Goiás,Energia Elétrica Terciário,39375395
+2022,15/10/2022,Goiás,Energia Elétrica Terciário,83131337
+2022,15/01/2022,Goiás,Outros ICMS,7578413
+2022,15/02/2022,Goiás,Outros ICMS,6546919
+2022,15/03/2022,Goiás,Outros ICMS,6572629
+2022,15/04/2022,Goiás,Outros ICMS,10185214
+2022,15/05/2022,Goiás,Outros ICMS,8985431
+2022,15/06/2022,Goiás,Outros ICMS,8115445
+2022,15/07/2022,Goiás,Outros ICMS,7966484
+2022,15/08/2022,Goiás,Outros ICMS,8652622
+2022,15/09/2022,Goiás,Outros ICMS,8652622
+2022,15/10/2022,Goiás,Outros ICMS,9700881
+2022,15/01/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,243774724
+2022,15/02/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,213967267
+2022,15/03/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,220719238
+2022,15/04/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,256638755
+2022,15/05/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,233821677
+2022,15/06/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,199418786
+2022,15/07/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,183152113
+2022,15/08/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,199910762
+2022,15/09/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,199910762
+2022,15/10/2022,Goiás,Petróleo-Combustível-Lubrificantes Secundário,144444898
+2022,15/01/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,282950768
+2022,15/02/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,300713104
+2022,15/03/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,376818498
+2022,15/04/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,346218568
+2022,15/05/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,359882637
+2022,15/06/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,358564979
+2022,15/07/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,279706443
+2022,15/08/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,280039715
+2022,15/09/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,280039715
+2022,15/10/2022,Goiás,Petróleo-Combustível-Lubrificantes Terciário,263524198
+2022,15/01/2022,Goiás,Serviços de Comunicação,70325151
+2022,15/02/2022,Goiás,Serviços de Comunicação,67770739
+2022,15/03/2022,Goiás,Serviços de Comunicação,74112542
+2022,15/04/2022,Goiás,Serviços de Comunicação,71736507
+2022,15/05/2022,Goiás,Serviços de Comunicação,70623658
+2022,15/06/2022,Goiás,Serviços de Comunicação,73101697
+2022,15/07/2022,Goiás,Serviços de Comunicação,68790699
+2022,15/08/2022,Goiás,Serviços de Comunicação,52834502
+2022,15/09/2022,Goiás,Serviços de Comunicação,52834502
+2022,15/10/2022,Goiás,Serviços de Comunicação,28329829
+2022,15/01/2022,Goiás,Serviços de Transporte,40310123
+2022,15/02/2022,Goiás,Serviços de Transporte,38488755
+2022,15/03/2022,Goiás,Serviços de Transporte,41176941
+2022,15/04/2022,Goiás,Serviços de Transporte,44556167
+2022,15/05/2022,Goiás,Serviços de Transporte,47452440
+2022,15/06/2022,Goiás,Serviços de Transporte,49415953
+2022,15/07/2022,Goiás,Serviços de Transporte,53946076
+2022,15/08/2022,Goiás,Serviços de Transporte,57558838
+2022,15/09/2022,Goiás,Serviços de Transporte,57558838
+2022,15/10/2022,Goiás,Serviços de Transporte,59804745
+2022,15/01/2022,Maranhão,Comércio Atacadista,160496615
+2022,15/02/2022,Maranhão,Comércio Atacadista,138473393
+2022,15/03/2022,Maranhão,Comércio Atacadista,146282368
+2022,15/04/2022,Maranhão,Comércio Atacadista,163269418
+2022,15/05/2022,Maranhão,Comércio Atacadista,147218956
+2022,15/06/2022,Maranhão,Comércio Atacadista,170919908
+2022,15/07/2022,Maranhão,Comércio Atacadista,175511169
+2022,15/08/2022,Maranhão,Comércio Atacadista,181306650
+2022,15/09/2022,Maranhão,Comércio Atacadista,181306650
+2022,15/10/2022,Maranhão,Comércio Atacadista,192713223
+2022,15/01/2022,Maranhão,Comércio Varejista,151870354
+2022,15/02/2022,Maranhão,Comércio Varejista,108935301
+2022,15/03/2022,Maranhão,Comércio Varejista,108615253
+2022,15/04/2022,Maranhão,Comércio Varejista,117068695
+2022,15/05/2022,Maranhão,Comércio Varejista,131342346
+2022,15/06/2022,Maranhão,Comércio Varejista,132915129
+2022,15/07/2022,Maranhão,Comércio Varejista,123400047
+2022,15/08/2022,Maranhão,Comércio Varejista,135104948
+2022,15/09/2022,Maranhão,Comércio Varejista,135104948
+2022,15/10/2022,Maranhão,Comércio Varejista,131071564
+2022,15/01/2022,Maranhão,Energia Elétrica Secundária,3956534
+2022,15/02/2022,Maranhão,Energia Elétrica Secundária,3923385
+2022,15/03/2022,Maranhão,Energia Elétrica Secundária,9426661
+2022,15/04/2022,Maranhão,Energia Elétrica Secundária,5435799
+2022,15/05/2022,Maranhão,Energia Elétrica Secundária,2938143
+2022,15/06/2022,Maranhão,Energia Elétrica Secundária,2981088
+2022,15/07/2022,Maranhão,Energia Elétrica Secundária,3174480
+2022,15/08/2022,Maranhão,Energia Elétrica Secundária,1095855
+2022,15/09/2022,Maranhão,Energia Elétrica Secundária,1095855
+2022,15/10/2022,Maranhão,Energia Elétrica Secundária,2589099
+2022,15/01/2022,Maranhão,Energia Elétrica Terciário,101514201
+2022,15/02/2022,Maranhão,Energia Elétrica Terciário,88692760
+2022,15/03/2022,Maranhão,Energia Elétrica Terciário,83617251
+2022,15/04/2022,Maranhão,Energia Elétrica Terciário,91895449
+2022,15/05/2022,Maranhão,Energia Elétrica Terciário,83960568
+2022,15/06/2022,Maranhão,Energia Elétrica Terciário,83535743
+2022,15/07/2022,Maranhão,Energia Elétrica Terciário,80599318
+2022,15/08/2022,Maranhão,Energia Elétrica Terciário,72344832
+2022,15/09/2022,Maranhão,Energia Elétrica Terciário,72344832
+2022,15/10/2022,Maranhão,Energia Elétrica Terciário,74806003
+2022,15/01/2022,Maranhão,Outros ICMS,9730121
+2022,15/02/2022,Maranhão,Outros ICMS,8744311
+2022,15/03/2022,Maranhão,Outros ICMS,8298723
+2022,15/04/2022,Maranhão,Outros ICMS,9290714
+2022,15/05/2022,Maranhão,Outros ICMS,9629804
+2022,15/06/2022,Maranhão,Outros ICMS,10157478
+2022,15/07/2022,Maranhão,Outros ICMS,10403560
+2022,15/08/2022,Maranhão,Outros ICMS,12432651
+2022,15/09/2022,Maranhão,Outros ICMS,12432651
+2022,15/10/2022,Maranhão,Outros ICMS,11599650
+2022,15/01/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,109860028
+2022,15/02/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,59213646
+2022,15/03/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,87351139
+2022,15/04/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,187147879
+2022,15/05/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,50016917
+2022,15/06/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,112235273
+2022,15/07/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,158283140
+2022,15/08/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,255538635
+2022,15/09/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,255538635
+2022,15/10/2022,Maranhão,Petróleo-Combustível-Lubrificantes Secundário,120883460
+2022,15/01/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,131275268
+2022,15/02/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,181526123
+2022,15/03/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,217731527
+2022,15/04/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,133652210
+2022,15/05/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,223118397
+2022,15/06/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,472648432
+2022,15/07/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,73523635
+2022,15/08/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,108045048
+2022,15/09/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,108045048
+2022,15/10/2022,Maranhão,Petróleo-Combustível-Lubrificantes Terciário,459685074
+2022,15/01/2022,Maranhão,Serviços de Comunicação,32108672
+2022,15/02/2022,Maranhão,Serviços de Comunicação,30448514
+2022,15/03/2022,Maranhão,Serviços de Comunicação,31473546
+2022,15/04/2022,Maranhão,Serviços de Comunicação,29244450
+2022,15/05/2022,Maranhão,Serviços de Comunicação,31121817
+2022,15/06/2022,Maranhão,Serviços de Comunicação,28839786
+2022,15/07/2022,Maranhão,Serviços de Comunicação,30653160
+2022,15/08/2022,Maranhão,Serviços de Comunicação,28518658
+2022,15/09/2022,Maranhão,Serviços de Comunicação,28518658
+2022,15/10/2022,Maranhão,Serviços de Comunicação,22482689
+2022,15/01/2022,Maranhão,Serviços de Transporte,47239847
+2022,15/02/2022,Maranhão,Serviços de Transporte,21091944
+2022,15/03/2022,Maranhão,Serviços de Transporte,20208857
+2022,15/04/2022,Maranhão,Serviços de Transporte,25513073
+2022,15/05/2022,Maranhão,Serviços de Transporte,25957926
+2022,15/06/2022,Maranhão,Serviços de Transporte,25940267
+2022,15/07/2022,Maranhão,Serviços de Transporte,27254999
+2022,15/08/2022,Maranhão,Serviços de Transporte,31064335
+2022,15/09/2022,Maranhão,Serviços de Transporte,31064335
+2022,15/10/2022,Maranhão,Serviços de Transporte,30881346
+2022,15/01/2022,Mato Grosso,Comércio Atacadista,349670930
+2022,15/02/2022,Mato Grosso,Comércio Atacadista,302043406
+2022,15/03/2022,Mato Grosso,Comércio Atacadista,312226688
+2022,15/04/2022,Mato Grosso,Comércio Atacadista,361017530
+2022,15/05/2022,Mato Grosso,Comércio Atacadista,339586210
+2022,15/06/2022,Mato Grosso,Comércio Atacadista,366126887
+2022,15/07/2022,Mato Grosso,Comércio Atacadista,395299620
+2022,15/08/2022,Mato Grosso,Comércio Atacadista,394768799
+2022,15/09/2022,Mato Grosso,Comércio Atacadista,394768799
+2022,15/10/2022,Mato Grosso,Comércio Atacadista,421182709
+2022,15/01/2022,Mato Grosso,Comércio Varejista,235387103
+2022,15/02/2022,Mato Grosso,Comércio Varejista,198211621
+2022,15/03/2022,Mato Grosso,Comércio Varejista,218727835
+2022,15/04/2022,Mato Grosso,Comércio Varejista,220510374
+2022,15/05/2022,Mato Grosso,Comércio Varejista,232607803
+2022,15/06/2022,Mato Grosso,Comércio Varejista,242046974
+2022,15/07/2022,Mato Grosso,Comércio Varejista,234504692
+2022,15/08/2022,Mato Grosso,Comércio Varejista,258251823
+2022,15/09/2022,Mato Grosso,Comércio Varejista,258251823
+2022,15/10/2022,Mato Grosso,Comércio Varejista,255384601
+2022,15/01/2022,Mato Grosso,Energia Elétrica Secundária,16511276
+2022,15/02/2022,Mato Grosso,Energia Elétrica Secundária,12439501
+2022,15/03/2022,Mato Grosso,Energia Elétrica Secundária,6811375
+2022,15/04/2022,Mato Grosso,Energia Elétrica Secundária,6419712
+2022,15/05/2022,Mato Grosso,Energia Elétrica Secundária,2537559
+2022,15/06/2022,Mato Grosso,Energia Elétrica Secundária,4478455
+2022,15/07/2022,Mato Grosso,Energia Elétrica Secundária,3375809
+2022,15/08/2022,Mato Grosso,Energia Elétrica Secundária,9753650
+2022,15/09/2022,Mato Grosso,Energia Elétrica Secundária,9753650
+2022,15/10/2022,Mato Grosso,Energia Elétrica Secundária,5712511
+2022,15/01/2022,Mato Grosso,Energia Elétrica Terciário,164357990
+2022,15/02/2022,Mato Grosso,Energia Elétrica Terciário,131690438
+2022,15/03/2022,Mato Grosso,Energia Elétrica Terciário,66250126
+2022,15/04/2022,Mato Grosso,Energia Elétrica Terciário,94560512
+2022,15/05/2022,Mato Grosso,Energia Elétrica Terciário,92736968
+2022,15/06/2022,Mato Grosso,Energia Elétrica Terciário,96107692
+2022,15/07/2022,Mato Grosso,Energia Elétrica Terciário,92874395
+2022,15/08/2022,Mato Grosso,Energia Elétrica Terciário,92935386
+2022,15/09/2022,Mato Grosso,Energia Elétrica Terciário,92935386
+2022,15/10/2022,Mato Grosso,Energia Elétrica Terciário,99358560
+2022,15/01/2022,Mato Grosso,Outros ICMS,7538897
+2022,15/02/2022,Mato Grosso,Outros ICMS,6780800
+2022,15/03/2022,Mato Grosso,Outros ICMS,7304753
+2022,15/04/2022,Mato Grosso,Outros ICMS,7374063
+2022,15/05/2022,Mato Grosso,Outros ICMS,9679533
+2022,15/06/2022,Mato Grosso,Outros ICMS,8596725
+2022,15/07/2022,Mato Grosso,Outros ICMS,9549666
+2022,15/08/2022,Mato Grosso,Outros ICMS,9731523
+2022,15/09/2022,Mato Grosso,Outros ICMS,9731523
+2022,15/10/2022,Mato Grosso,Outros ICMS,9839417
+2022,15/01/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,92916417
+2022,15/02/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,76795782
+2022,15/03/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,73939449
+2022,15/04/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,90290940
+2022,15/05/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,95397174
+2022,15/06/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,80200596
+2022,15/07/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,78856370
+2022,15/08/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,68064451
+2022,15/09/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,68064451
+2022,15/10/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Secundário,59443834
+2022,15/01/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,318611863
+2022,15/02/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,391463009
+2022,15/03/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,399340850
+2022,15/04/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,369271942
+2022,15/05/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,343742886
+2022,15/06/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,375912402
+2022,15/07/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,324790307
+2022,15/08/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,285539023
+2022,15/09/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,285539023
+2022,15/10/2022,Mato Grosso,Petróleo-Combustível-Lubrificantes Terciário,279149129
+2022,15/01/2022,Mato Grosso,Serviços de Comunicação,39718463
+2022,15/02/2022,Mato Grosso,Serviços de Comunicação,29042197
+2022,15/03/2022,Mato Grosso,Serviços de Comunicação,20242093
+2022,15/04/2022,Mato Grosso,Serviços de Comunicação,16863314
+2022,15/05/2022,Mato Grosso,Serviços de Comunicação,17910153
+2022,15/06/2022,Mato Grosso,Serviços de Comunicação,16612155
+2022,15/07/2022,Mato Grosso,Serviços de Comunicação,18248579
+2022,15/08/2022,Mato Grosso,Serviços de Comunicação,17186553
+2022,15/09/2022,Mato Grosso,Serviços de Comunicação,17186553
+2022,15/10/2022,Mato Grosso,Serviços de Comunicação,20608209
+2022,15/01/2022,Mato Grosso,Serviços de Transporte,49767518
+2022,15/02/2022,Mato Grosso,Serviços de Transporte,43333022
+2022,15/03/2022,Mato Grosso,Serviços de Transporte,49763996
+2022,15/04/2022,Mato Grosso,Serviços de Transporte,50934606
+2022,15/05/2022,Mato Grosso,Serviços de Transporte,57117770
+2022,15/06/2022,Mato Grosso,Serviços de Transporte,63774092
+2022,15/07/2022,Mato Grosso,Serviços de Transporte,60622906
+2022,15/08/2022,Mato Grosso,Serviços de Transporte,66778715
+2022,15/09/2022,Mato Grosso,Serviços de Transporte,66778715
+2022,15/10/2022,Mato Grosso,Serviços de Transporte,62625334
+2022,15/01/2022,Mato Grosso do Sul,Comércio Atacadista,283038869
+2022,15/02/2022,Mato Grosso do Sul,Comércio Atacadista,247435463
+2022,15/03/2022,Mato Grosso do Sul,Comércio Atacadista,272784728
+2022,15/04/2022,Mato Grosso do Sul,Comércio Atacadista,294199569
+2022,15/05/2022,Mato Grosso do Sul,Comércio Atacadista,275514652
+2022,15/06/2022,Mato Grosso do Sul,Comércio Atacadista,286697474
+2022,15/07/2022,Mato Grosso do Sul,Comércio Atacadista,293857663
+2022,15/08/2022,Mato Grosso do Sul,Comércio Atacadista,330334219
+2022,15/09/2022,Mato Grosso do Sul,Comércio Atacadista,330334219
+2022,15/10/2022,Mato Grosso do Sul,Comércio Atacadista,333725553
+2022,15/01/2022,Mato Grosso do Sul,Comércio Varejista,160058513
+2022,15/02/2022,Mato Grosso do Sul,Comércio Varejista,131720183
+2022,15/03/2022,Mato Grosso do Sul,Comércio Varejista,139400518
+2022,15/04/2022,Mato Grosso do Sul,Comércio Varejista,141573861
+2022,15/05/2022,Mato Grosso do Sul,Comércio Varejista,146600683
+2022,15/06/2022,Mato Grosso do Sul,Comércio Varejista,159493905
+2022,15/07/2022,Mato Grosso do Sul,Comércio Varejista,155650373
+2022,15/08/2022,Mato Grosso do Sul,Comércio Varejista,160134593
+2022,15/09/2022,Mato Grosso do Sul,Comércio Varejista,160134593
+2022,15/10/2022,Mato Grosso do Sul,Comércio Varejista,172084400
+2022,15/01/2022,Mato Grosso do Sul,Energia Elétrica Secundária,1861969
+2022,15/02/2022,Mato Grosso do Sul,Energia Elétrica Secundária,483193
+2022,15/03/2022,Mato Grosso do Sul,Energia Elétrica Secundária,2143449
+2022,15/04/2022,Mato Grosso do Sul,Energia Elétrica Secundária,355015
+2022,15/05/2022,Mato Grosso do Sul,Energia Elétrica Secundária,1864908
+2022,15/06/2022,Mato Grosso do Sul,Energia Elétrica Secundária,1316944
+2022,15/07/2022,Mato Grosso do Sul,Energia Elétrica Secundária,2234555
+2022,15/08/2022,Mato Grosso do Sul,Energia Elétrica Secundária,2344384
+2022,15/09/2022,Mato Grosso do Sul,Energia Elétrica Secundária,2344384
+2022,15/10/2022,Mato Grosso do Sul,Energia Elétrica Secundária,1150927
+2022,15/01/2022,Mato Grosso do Sul,Energia Elétrica Terciário,63971440
+2022,15/02/2022,Mato Grosso do Sul,Energia Elétrica Terciário,68211923
+2022,15/03/2022,Mato Grosso do Sul,Energia Elétrica Terciário,65556824
+2022,15/04/2022,Mato Grosso do Sul,Energia Elétrica Terciário,72260276
+2022,15/05/2022,Mato Grosso do Sul,Energia Elétrica Terciário,68047537
+2022,15/06/2022,Mato Grosso do Sul,Energia Elétrica Terciário,65915966
+2022,15/07/2022,Mato Grosso do Sul,Energia Elétrica Terciário,57611430
+2022,15/08/2022,Mato Grosso do Sul,Energia Elétrica Terciário,53484388
+2022,15/09/2022,Mato Grosso do Sul,Energia Elétrica Terciário,53484388
+2022,15/10/2022,Mato Grosso do Sul,Energia Elétrica Terciário,58219391
+2022,15/01/2022,Mato Grosso do Sul,Outros ICMS,27350579
+2022,15/02/2022,Mato Grosso do Sul,Outros ICMS,24682119
+2022,15/03/2022,Mato Grosso do Sul,Outros ICMS,25809974
+2022,15/04/2022,Mato Grosso do Sul,Outros ICMS,28423016
+2022,15/05/2022,Mato Grosso do Sul,Outros ICMS,29507704
+2022,15/06/2022,Mato Grosso do Sul,Outros ICMS,27418861
+2022,15/07/2022,Mato Grosso do Sul,Outros ICMS,26735218
+2022,15/08/2022,Mato Grosso do Sul,Outros ICMS,30279116
+2022,15/09/2022,Mato Grosso do Sul,Outros ICMS,30279116
+2022,15/10/2022,Mato Grosso do Sul,Outros ICMS,29433504
+2022,15/01/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,7081729
+2022,15/02/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,9257492
+2022,15/03/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,11259675
+2022,15/04/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,13003232
+2022,15/05/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,11965062
+2022,15/06/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,11824523
+2022,15/07/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,8640774
+2022,15/08/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,7277903
+2022,15/09/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,7277903
+2022,15/10/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Secundário,7980182
+2022,15/01/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,344313344
+2022,15/02/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,353748554
+2022,15/03/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,345025727
+2022,15/04/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,373954626
+2022,15/05/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,391696670
+2022,15/06/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,363932486
+2022,15/07/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,359522700
+2022,15/08/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,433608162
+2022,15/09/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,433608162
+2022,15/10/2022,Mato Grosso do Sul,Petróleo-Combustível-Lubrificantes Terciário,387287353
+2022,15/01/2022,Mato Grosso do Sul,Serviços de Comunicação,13316987
+2022,15/02/2022,Mato Grosso do Sul,Serviços de Comunicação,13840371
+2022,15/03/2022,Mato Grosso do Sul,Serviços de Comunicação,13868481
+2022,15/04/2022,Mato Grosso do Sul,Serviços de Comunicação,14130647
+2022,15/05/2022,Mato Grosso do Sul,Serviços de Comunicação,14745082
+2022,15/06/2022,Mato Grosso do Sul,Serviços de Comunicação,14638147
+2022,15/07/2022,Mato Grosso do Sul,Serviços de Comunicação,15576262
+2022,15/08/2022,Mato Grosso do Sul,Serviços de Comunicação,13946047
+2022,15/09/2022,Mato Grosso do Sul,Serviços de Comunicação,13946047
+2022,15/10/2022,Mato Grosso do Sul,Serviços de Comunicação,10825162
+2022,15/01/2022,Mato Grosso do Sul,Serviços de Transporte,28610258
+2022,15/02/2022,Mato Grosso do Sul,Serviços de Transporte,27044925
+2022,15/03/2022,Mato Grosso do Sul,Serviços de Transporte,23776663
+2022,15/04/2022,Mato Grosso do Sul,Serviços de Transporte,28130043
+2022,15/05/2022,Mato Grosso do Sul,Serviços de Transporte,38418717
+2022,15/06/2022,Mato Grosso do Sul,Serviços de Transporte,39414293
+2022,15/07/2022,Mato Grosso do Sul,Serviços de Transporte,36619580
+2022,15/08/2022,Mato Grosso do Sul,Serviços de Transporte,38722269
+2022,15/09/2022,Mato Grosso do Sul,Serviços de Transporte,38722269
+2022,15/10/2022,Mato Grosso do Sul,Serviços de Transporte,37636794
+2022,15/01/2022,Minas Gerais,Comércio Atacadista,1074826998
+2022,15/02/2022,Minas Gerais,Comércio Atacadista,930553599
+2022,15/03/2022,Minas Gerais,Comércio Atacadista,1016390245
+2022,15/04/2022,Minas Gerais,Comércio Atacadista,1167656523
+2022,15/05/2022,Minas Gerais,Comércio Atacadista,1038889705
+2022,15/06/2022,Minas Gerais,Comércio Atacadista,1117784550
+2022,15/07/2022,Minas Gerais,Comércio Atacadista,1115024147
+2022,15/08/2022,Minas Gerais,Comércio Atacadista,1135504607
+2022,15/09/2022,Minas Gerais,Comércio Atacadista,1135504607
+2022,15/10/2022,Minas Gerais,Comércio Atacadista,1227189115
+2022,15/01/2022,Minas Gerais,Comércio Varejista,698370107
+2022,15/02/2022,Minas Gerais,Comércio Varejista,500685398
+2022,15/03/2022,Minas Gerais,Comércio Varejista,484185372
+2022,15/04/2022,Minas Gerais,Comércio Varejista,530098355
+2022,15/05/2022,Minas Gerais,Comércio Varejista,567761157
+2022,15/06/2022,Minas Gerais,Comércio Varejista,607348225
+2022,15/07/2022,Minas Gerais,Comércio Varejista,572099773
+2022,15/08/2022,Minas Gerais,Comércio Varejista,589725406
+2022,15/09/2022,Minas Gerais,Comércio Varejista,589725406
+2022,15/10/2022,Minas Gerais,Comércio Varejista,587598474
+2022,15/01/2022,Minas Gerais,Energia Elétrica Secundária,77489222
+2022,15/02/2022,Minas Gerais,Energia Elétrica Secundária,80310606
+2022,15/03/2022,Minas Gerais,Energia Elétrica Secundária,73601816
+2022,15/04/2022,Minas Gerais,Energia Elétrica Secundária,75036651
+2022,15/05/2022,Minas Gerais,Energia Elétrica Secundária,78577963
+2022,15/06/2022,Minas Gerais,Energia Elétrica Secundária,74049220
+2022,15/07/2022,Minas Gerais,Energia Elétrica Secundária,72149492
+2022,15/08/2022,Minas Gerais,Energia Elétrica Secundária,79804565
+2022,15/09/2022,Minas Gerais,Energia Elétrica Secundária,79804565
+2022,15/10/2022,Minas Gerais,Energia Elétrica Secundária,71415998
+2022,15/01/2022,Minas Gerais,Energia Elétrica Terciário,583948344
+2022,15/02/2022,Minas Gerais,Energia Elétrica Terciário,588523165
+2022,15/03/2022,Minas Gerais,Energia Elétrica Terciário,566995489
+2022,15/04/2022,Minas Gerais,Energia Elétrica Terciário,622511894
+2022,15/05/2022,Minas Gerais,Energia Elétrica Terciário,631273099
+2022,15/06/2022,Minas Gerais,Energia Elétrica Terciário,508589710
+2022,15/07/2022,Minas Gerais,Energia Elétrica Terciário,333131311
+2022,15/08/2022,Minas Gerais,Energia Elétrica Terciário,176361088
+2022,15/09/2022,Minas Gerais,Energia Elétrica Terciário,176361088
+2022,15/10/2022,Minas Gerais,Energia Elétrica Terciário,190449250
+2022,15/01/2022,Minas Gerais,Outros ICMS,108212161
+2022,15/02/2022,Minas Gerais,Outros ICMS,83166398
+2022,15/03/2022,Minas Gerais,Outros ICMS,97580423
+2022,15/04/2022,Minas Gerais,Outros ICMS,93369814
+2022,15/05/2022,Minas Gerais,Outros ICMS,97124220
+2022,15/06/2022,Minas Gerais,Outros ICMS,114980820
+2022,15/07/2022,Minas Gerais,Outros ICMS,105355395
+2022,15/08/2022,Minas Gerais,Outros ICMS,129619225
+2022,15/09/2022,Minas Gerais,Outros ICMS,129619225
+2022,15/10/2022,Minas Gerais,Outros ICMS,130015319
+2022,15/01/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1122244543
+2022,15/02/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1051876574
+2022,15/03/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1040973824
+2022,15/04/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1247185605
+2022,15/05/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1247436528
+2022,15/06/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1256122310
+2022,15/07/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1077399891
+2022,15/08/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,951370932
+2022,15/09/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,951370932
+2022,15/10/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Secundário,1023234959
+2022,15/01/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,138833633
+2022,15/02/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,138307570
+2022,15/03/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,135690291
+2022,15/04/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,170073209
+2022,15/05/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,167572565
+2022,15/06/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,176067938
+2022,15/07/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,155179822
+2022,15/08/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,92510472
+2022,15/09/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,92510472
+2022,15/10/2022,Minas Gerais,Petróleo-Combustível-Lubrificantes Terciário,67028357
+2022,15/01/2022,Minas Gerais,Serviços de Comunicação,243684060
+2022,15/02/2022,Minas Gerais,Serviços de Comunicação,210948926
+2022,15/03/2022,Minas Gerais,Serviços de Comunicação,255968555
+2022,15/04/2022,Minas Gerais,Serviços de Comunicação,228955173
+2022,15/05/2022,Minas Gerais,Serviços de Comunicação,215789541
+2022,15/06/2022,Minas Gerais,Serviços de Comunicação,219294787
+2022,15/07/2022,Minas Gerais,Serviços de Comunicação,233596953
+2022,15/08/2022,Minas Gerais,Serviços de Comunicação,184660393
+2022,15/09/2022,Minas Gerais,Serviços de Comunicação,184660393
+2022,15/10/2022,Minas Gerais,Serviços de Comunicação,137650203
+2022,15/01/2022,Minas Gerais,Serviços de Transporte,78254271
+2022,15/02/2022,Minas Gerais,Serviços de Transporte,67994298
+2022,15/03/2022,Minas Gerais,Serviços de Transporte,68461488
+2022,15/04/2022,Minas Gerais,Serviços de Transporte,83604890
+2022,15/05/2022,Minas Gerais,Serviços de Transporte,92162199
+2022,15/06/2022,Minas Gerais,Serviços de Transporte,92500728
+2022,15/07/2022,Minas Gerais,Serviços de Transporte,98354383
+2022,15/08/2022,Minas Gerais,Serviços de Transporte,102790453
+2022,15/09/2022,Minas Gerais,Serviços de Transporte,102790453
+2022,15/10/2022,Minas Gerais,Serviços de Transporte,105817147
+2022,15/01/2022,Pará,Comércio Atacadista,167607656
+2022,15/02/2022,Pará,Comércio Atacadista,140666078
+2022,15/03/2022,Pará,Comércio Atacadista,156154509
+2022,15/04/2022,Pará,Comércio Atacadista,168246226
+2022,15/05/2022,Pará,Comércio Atacadista,167692920
+2022,15/06/2022,Pará,Comércio Atacadista,177761152
+2022,15/07/2022,Pará,Comércio Atacadista,179519225
+2022,15/08/2022,Pará,Comércio Atacadista,177656607
+2022,15/09/2022,Pará,Comércio Atacadista,177656607
+2022,15/10/2022,Pará,Comércio Atacadista,182142776
+2022,15/01/2022,Pará,Comércio Varejista,194123431
+2022,15/02/2022,Pará,Comércio Varejista,121397217
+2022,15/03/2022,Pará,Comércio Varejista,114434971
+2022,15/04/2022,Pará,Comércio Varejista,117955672
+2022,15/05/2022,Pará,Comércio Varejista,126025256
+2022,15/06/2022,Pará,Comércio Varejista,136392422
+2022,15/07/2022,Pará,Comércio Varejista,129487908
+2022,15/08/2022,Pará,Comércio Varejista,138051349
+2022,15/09/2022,Pará,Comércio Varejista,138051349
+2022,15/10/2022,Pará,Comércio Varejista,132174279
+2022,15/01/2022,Pará,Energia Elétrica Secundária,2224596
+2022,15/02/2022,Pará,Energia Elétrica Secundária,25766179
+2022,15/03/2022,Pará,Energia Elétrica Secundária,26969021
+2022,15/04/2022,Pará,Energia Elétrica Secundária,28073287
+2022,15/05/2022,Pará,Energia Elétrica Secundária,25361691
+2022,15/06/2022,Pará,Energia Elétrica Secundária,2132989
+2022,15/07/2022,Pará,Energia Elétrica Secundária,12068169
+2022,15/08/2022,Pará,Energia Elétrica Secundária,1962902
+2022,15/09/2022,Pará,Energia Elétrica Secundária,1962902
+2022,15/10/2022,Pará,Energia Elétrica Secundária,2776563
+2022,15/01/2022,Pará,Energia Elétrica Terciário,194479808
+2022,15/02/2022,Pará,Energia Elétrica Terciário,120239929
+2022,15/03/2022,Pará,Energia Elétrica Terciário,112772683
+2022,15/04/2022,Pará,Energia Elétrica Terciário,122018517
+2022,15/05/2022,Pará,Energia Elétrica Terciário,144279255
+2022,15/06/2022,Pará,Energia Elétrica Terciário,135530939
+2022,15/07/2022,Pará,Energia Elétrica Terciário,128354234
+2022,15/08/2022,Pará,Energia Elétrica Terciário,92994374
+2022,15/09/2022,Pará,Energia Elétrica Terciário,92994374
+2022,15/10/2022,Pará,Energia Elétrica Terciário,100804523
+2022,15/01/2022,Pará,Outros ICMS,107285676
+2022,15/02/2022,Pará,Outros ICMS,123920203
+2022,15/03/2022,Pará,Outros ICMS,129201559
+2022,15/04/2022,Pará,Outros ICMS,156605210
+2022,15/05/2022,Pará,Outros ICMS,131467045
+2022,15/06/2022,Pará,Outros ICMS,178294731
+2022,15/07/2022,Pará,Outros ICMS,188370644
+2022,15/08/2022,Pará,Outros ICMS,245527941
+2022,15/09/2022,Pará,Outros ICMS,245527941
+2022,15/10/2022,Pará,Outros ICMS,248100351
+2022,15/01/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/02/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/03/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/04/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/05/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/06/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/07/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/08/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/09/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/10/2022,Pará,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/01/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,483697805
+2022,15/02/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,490995871
+2022,15/03/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,444151289
+2022,15/04/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,561529297
+2022,15/05/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,415433094
+2022,15/06/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,424730526
+2022,15/07/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,511104986
+2022,15/08/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,364273938
+2022,15/09/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,364273938
+2022,15/10/2022,Pará,Petróleo-Combustível-Lubrificantes Terciário,423896732
+2022,15/01/2022,Pará,Serviços de Comunicação,42726721
+2022,15/02/2022,Pará,Serviços de Comunicação,40602455
+2022,15/03/2022,Pará,Serviços de Comunicação,43166502
+2022,15/04/2022,Pará,Serviços de Comunicação,46793912
+2022,15/05/2022,Pará,Serviços de Comunicação,39755468
+2022,15/06/2022,Pará,Serviços de Comunicação,43187606
+2022,15/07/2022,Pará,Serviços de Comunicação,44942544
+2022,15/08/2022,Pará,Serviços de Comunicação,37513886
+2022,15/09/2022,Pará,Serviços de Comunicação,37513886
+2022,15/10/2022,Pará,Serviços de Comunicação,28377597
+2022,15/01/2022,Pará,Serviços de Transporte,42104006
+2022,15/02/2022,Pará,Serviços de Transporte,41820138
+2022,15/03/2022,Pará,Serviços de Transporte,39338526
+2022,15/04/2022,Pará,Serviços de Transporte,40527098
+2022,15/05/2022,Pará,Serviços de Transporte,37691116
+2022,15/06/2022,Pará,Serviços de Transporte,46041832
+2022,15/07/2022,Pará,Serviços de Transporte,44425105
+2022,15/08/2022,Pará,Serviços de Transporte,52747513
+2022,15/09/2022,Pará,Serviços de Transporte,52747513
+2022,15/10/2022,Pará,Serviços de Transporte,51463725
+2022,15/01/2022,Paraíba,Comércio Atacadista,145084602
+2022,15/02/2022,Paraíba,Comércio Atacadista,116572301
+2022,15/03/2022,Paraíba,Comércio Atacadista,121651490
+2022,15/04/2022,Paraíba,Comércio Atacadista,132328451
+2022,15/05/2022,Paraíba,Comércio Atacadista,120876558
+2022,15/06/2022,Paraíba,Comércio Atacadista,139098765
+2022,15/07/2022,Paraíba,Comércio Atacadista,137910108
+2022,15/08/2022,Paraíba,Comércio Atacadista,139444893
+2022,15/09/2022,Paraíba,Comércio Atacadista,139444893
+2022,15/10/2022,Paraíba,Comércio Atacadista,151291876
+2022,15/01/2022,Paraíba,Comércio Varejista,163700915
+2022,15/02/2022,Paraíba,Comércio Varejista,125527610
+2022,15/03/2022,Paraíba,Comércio Varejista,115713252
+2022,15/04/2022,Paraíba,Comércio Varejista,119613100
+2022,15/05/2022,Paraíba,Comércio Varejista,136526993
+2022,15/06/2022,Paraíba,Comércio Varejista,141338797
+2022,15/07/2022,Paraíba,Comércio Varejista,150573111
+2022,15/08/2022,Paraíba,Comércio Varejista,151151910
+2022,15/09/2022,Paraíba,Comércio Varejista,151151910
+2022,15/10/2022,Paraíba,Comércio Varejista,142469578
+2022,15/01/2022,Paraíba,Energia Elétrica Secundária,1069048
+2022,15/02/2022,Paraíba,Energia Elétrica Secundária,2085532
+2022,15/03/2022,Paraíba,Energia Elétrica Secundária,2101417
+2022,15/04/2022,Paraíba,Energia Elétrica Secundária,1462856
+2022,15/05/2022,Paraíba,Energia Elétrica Secundária,1710392
+2022,15/06/2022,Paraíba,Energia Elétrica Secundária,1699718
+2022,15/07/2022,Paraíba,Energia Elétrica Secundária,2010005
+2022,15/08/2022,Paraíba,Energia Elétrica Secundária,2276558
+2022,15/09/2022,Paraíba,Energia Elétrica Secundária,2276558
+2022,15/10/2022,Paraíba,Energia Elétrica Secundária,994887
+2022,15/01/2022,Paraíba,Energia Elétrica Terciário,86253839
+2022,15/02/2022,Paraíba,Energia Elétrica Terciário,79317604
+2022,15/03/2022,Paraíba,Energia Elétrica Terciário,74591656
+2022,15/04/2022,Paraíba,Energia Elétrica Terciário,84730643
+2022,15/05/2022,Paraíba,Energia Elétrica Terciário,76805703
+2022,15/06/2022,Paraíba,Energia Elétrica Terciário,68988465
+2022,15/07/2022,Paraíba,Energia Elétrica Terciário,60756380
+2022,15/08/2022,Paraíba,Energia Elétrica Terciário,42590495
+2022,15/09/2022,Paraíba,Energia Elétrica Terciário,42590495
+2022,15/10/2022,Paraíba,Energia Elétrica Terciário,37856007
+2022,15/01/2022,Paraíba,Outros ICMS,6387301
+2022,15/02/2022,Paraíba,Outros ICMS,5298873
+2022,15/03/2022,Paraíba,Outros ICMS,5042682
+2022,15/04/2022,Paraíba,Outros ICMS,5138618
+2022,15/05/2022,Paraíba,Outros ICMS,5372543
+2022,15/06/2022,Paraíba,Outros ICMS,5494991
+2022,15/07/2022,Paraíba,Outros ICMS,5767646
+2022,15/08/2022,Paraíba,Outros ICMS,6241036
+2022,15/09/2022,Paraíba,Outros ICMS,6241036
+2022,15/10/2022,Paraíba,Outros ICMS,5857418
+2022,15/01/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,17345367
+2022,15/02/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,13375802
+2022,15/03/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,18865760
+2022,15/04/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,57307403
+2022,15/05/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,93101904
+2022,15/06/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,98411591
+2022,15/07/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,86317242
+2022,15/08/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,24606319
+2022,15/09/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,24606319
+2022,15/10/2022,Paraíba,Petróleo-Combustível-Lubrificantes Secundário,37665760
+2022,15/01/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,156515901
+2022,15/02/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,122720980
+2022,15/03/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,106966063
+2022,15/04/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,88140448
+2022,15/05/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,52227736
+2022,15/06/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,50053145
+2022,15/07/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,51197255
+2022,15/08/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,70141895
+2022,15/09/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,70141895
+2022,15/10/2022,Paraíba,Petróleo-Combustível-Lubrificantes Terciário,65068665
+2022,15/01/2022,Paraíba,Serviços de Comunicação,27397062
+2022,15/02/2022,Paraíba,Serviços de Comunicação,19433523
+2022,15/03/2022,Paraíba,Serviços de Comunicação,20390209
+2022,15/04/2022,Paraíba,Serviços de Comunicação,18983699
+2022,15/05/2022,Paraíba,Serviços de Comunicação,20004289
+2022,15/06/2022,Paraíba,Serviços de Comunicação,21174847
+2022,15/07/2022,Paraíba,Serviços de Comunicação,21015616
+2022,15/08/2022,Paraíba,Serviços de Comunicação,20210851
+2022,15/09/2022,Paraíba,Serviços de Comunicação,20210851
+2022,15/10/2022,Paraíba,Serviços de Comunicação,17151558
+2022,15/01/2022,Paraíba,Serviços de Transporte,12177157
+2022,15/02/2022,Paraíba,Serviços de Transporte,10963351
+2022,15/03/2022,Paraíba,Serviços de Transporte,11297547
+2022,15/04/2022,Paraíba,Serviços de Transporte,11985099
+2022,15/05/2022,Paraíba,Serviços de Transporte,12671138
+2022,15/06/2022,Paraíba,Serviços de Transporte,13693599
+2022,15/07/2022,Paraíba,Serviços de Transporte,12699391
+2022,15/08/2022,Paraíba,Serviços de Transporte,13658458
+2022,15/09/2022,Paraíba,Serviços de Transporte,13658458
+2022,15/10/2022,Paraíba,Serviços de Transporte,15152477
+2022,15/01/2022,Paraná,Comércio Atacadista,552095983
+2022,15/02/2022,Paraná,Comércio Atacadista,487506031
+2022,15/03/2022,Paraná,Comércio Atacadista,513677384
+2022,15/04/2022,Paraná,Comércio Atacadista,538372906
+2022,15/05/2022,Paraná,Comércio Atacadista,489854045
+2022,15/06/2022,Paraná,Comércio Atacadista,514864432
+2022,15/07/2022,Paraná,Comércio Atacadista,538809986
+2022,15/08/2022,Paraná,Comércio Atacadista,532221627
+2022,15/09/2022,Paraná,Comércio Atacadista,532221627
+2022,15/10/2022,Paraná,Comércio Atacadista,601131792
+2022,15/01/2022,Paraná,Comércio Varejista,227030134
+2022,15/02/2022,Paraná,Comércio Varejista,137386797
+2022,15/03/2022,Paraná,Comércio Varejista,139003435
+2022,15/04/2022,Paraná,Comércio Varejista,131238075
+2022,15/05/2022,Paraná,Comércio Varejista,147702477
+2022,15/06/2022,Paraná,Comércio Varejista,158115186
+2022,15/07/2022,Paraná,Comércio Varejista,191098186
+2022,15/08/2022,Paraná,Comércio Varejista,167006100
+2022,15/09/2022,Paraná,Comércio Varejista,167006100
+2022,15/10/2022,Paraná,Comércio Varejista,185514312
+2022,15/01/2022,Paraná,Energia Elétrica Secundária,540589793
+2022,15/02/2022,Paraná,Energia Elétrica Secundária,500555264
+2022,15/03/2022,Paraná,Energia Elétrica Secundária,522692749
+2022,15/04/2022,Paraná,Energia Elétrica Secundária,510538405
+2022,15/05/2022,Paraná,Energia Elétrica Secundária,444784738
+2022,15/06/2022,Paraná,Energia Elétrica Secundária,348090882
+2022,15/07/2022,Paraná,Energia Elétrica Secundária,390813916
+2022,15/08/2022,Paraná,Energia Elétrica Secundária,197782167
+2022,15/09/2022,Paraná,Energia Elétrica Secundária,197782167
+2022,15/10/2022,Paraná,Energia Elétrica Secundária,214653680
+2022,15/01/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/02/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/03/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/04/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/05/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/06/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/07/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/08/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/09/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/10/2022,Paraná,Energia Elétrica Terciário,0
+2022,15/01/2022,Paraná,Outros ICMS,11884700
+2022,15/02/2022,Paraná,Outros ICMS,9094144
+2022,15/03/2022,Paraná,Outros ICMS,9694344
+2022,15/04/2022,Paraná,Outros ICMS,8171349
+2022,15/05/2022,Paraná,Outros ICMS,10892327
+2022,15/06/2022,Paraná,Outros ICMS,9529634
+2022,15/07/2022,Paraná,Outros ICMS,9938891
+2022,15/08/2022,Paraná,Outros ICMS,10613426
+2022,15/09/2022,Paraná,Outros ICMS,10613426
+2022,15/10/2022,Paraná,Outros ICMS,10686111
+2022,15/01/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,666703988
+2022,15/02/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,512671537
+2022,15/03/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,595875988
+2022,15/04/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,647604945
+2022,15/05/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,578475792
+2022,15/06/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,478656605
+2022,15/07/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,509341943
+2022,15/08/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,503102770
+2022,15/09/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,503102770
+2022,15/10/2022,Paraná,Petróleo-Combustível-Lubrificantes Secundário,625464554
+2022,15/01/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,168000876
+2022,15/02/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,61973472
+2022,15/03/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,147027849
+2022,15/04/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,186728787
+2022,15/05/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,185028424
+2022,15/06/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,143843391
+2022,15/07/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,197975233
+2022,15/08/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,182214285
+2022,15/09/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,182214285
+2022,15/10/2022,Paraná,Petróleo-Combustível-Lubrificantes Terciário,237999927
+2022,15/01/2022,Paraná,Serviços de Comunicação,106210955
+2022,15/02/2022,Paraná,Serviços de Comunicação,89005536
+2022,15/03/2022,Paraná,Serviços de Comunicação,111339107
+2022,15/04/2022,Paraná,Serviços de Comunicação,110748948
+2022,15/05/2022,Paraná,Serviços de Comunicação,104520073
+2022,15/06/2022,Paraná,Serviços de Comunicação,101560339
+2022,15/07/2022,Paraná,Serviços de Comunicação,102284566
+2022,15/08/2022,Paraná,Serviços de Comunicação,78749293
+2022,15/09/2022,Paraná,Serviços de Comunicação,78749293
+2022,15/10/2022,Paraná,Serviços de Comunicação,58070492
+2022,15/01/2022,Paraná,Serviços de Transporte,42595938
+2022,15/02/2022,Paraná,Serviços de Transporte,36849655
+2022,15/03/2022,Paraná,Serviços de Transporte,36187140
+2022,15/04/2022,Paraná,Serviços de Transporte,40511335
+2022,15/05/2022,Paraná,Serviços de Transporte,39855342
+2022,15/06/2022,Paraná,Serviços de Transporte,42936042
+2022,15/07/2022,Paraná,Serviços de Transporte,47402035
+2022,15/08/2022,Paraná,Serviços de Transporte,49033539
+2022,15/09/2022,Paraná,Serviços de Transporte,49033539
+2022,15/10/2022,Paraná,Serviços de Transporte,51597087
+2022,15/01/2022,Pernambuco,Comércio Atacadista,461167030
+2022,15/02/2022,Pernambuco,Comércio Atacadista,371837538
+2022,15/03/2022,Pernambuco,Comércio Atacadista,400868051
+2022,15/04/2022,Pernambuco,Comércio Atacadista,459774553
+2022,15/05/2022,Pernambuco,Comércio Atacadista,438362103
+2022,15/06/2022,Pernambuco,Comércio Atacadista,460411373
+2022,15/07/2022,Pernambuco,Comércio Atacadista,458288245
+2022,15/08/2022,Pernambuco,Comércio Atacadista,472900040
+2022,15/09/2022,Pernambuco,Comércio Atacadista,472900040
+2022,15/10/2022,Pernambuco,Comércio Atacadista,510646415
+2022,15/01/2022,Pernambuco,Comércio Varejista,302136781
+2022,15/02/2022,Pernambuco,Comércio Varejista,242992979
+2022,15/03/2022,Pernambuco,Comércio Varejista,257318020
+2022,15/04/2022,Pernambuco,Comércio Varejista,278856333
+2022,15/05/2022,Pernambuco,Comércio Varejista,306758762
+2022,15/06/2022,Pernambuco,Comércio Varejista,286224409
+2022,15/07/2022,Pernambuco,Comércio Varejista,294252347
+2022,15/08/2022,Pernambuco,Comércio Varejista,306998312
+2022,15/09/2022,Pernambuco,Comércio Varejista,306998312
+2022,15/10/2022,Pernambuco,Comércio Varejista,299199734
+2022,15/01/2022,Pernambuco,Energia Elétrica Secundária,69970316
+2022,15/02/2022,Pernambuco,Energia Elétrica Secundária,76106267
+2022,15/03/2022,Pernambuco,Energia Elétrica Secundária,66248111
+2022,15/04/2022,Pernambuco,Energia Elétrica Secundária,74775151
+2022,15/05/2022,Pernambuco,Energia Elétrica Secundária,78029239
+2022,15/06/2022,Pernambuco,Energia Elétrica Secundária,81580478
+2022,15/07/2022,Pernambuco,Energia Elétrica Secundária,75588214
+2022,15/08/2022,Pernambuco,Energia Elétrica Secundária,58247758
+2022,15/09/2022,Pernambuco,Energia Elétrica Secundária,58247758
+2022,15/10/2022,Pernambuco,Energia Elétrica Secundária,53321989
+2022,15/01/2022,Pernambuco,Energia Elétrica Terciário,187736351
+2022,15/02/2022,Pernambuco,Energia Elétrica Terciário,153941826
+2022,15/03/2022,Pernambuco,Energia Elétrica Terciário,138493313
+2022,15/04/2022,Pernambuco,Energia Elétrica Terciário,163207484
+2022,15/05/2022,Pernambuco,Energia Elétrica Terciário,139509311
+2022,15/06/2022,Pernambuco,Energia Elétrica Terciário,129854685
+2022,15/07/2022,Pernambuco,Energia Elétrica Terciário,131504551
+2022,15/08/2022,Pernambuco,Energia Elétrica Terciário,109198922
+2022,15/09/2022,Pernambuco,Energia Elétrica Terciário,109198922
+2022,15/10/2022,Pernambuco,Energia Elétrica Terciário,77957525
+2022,15/01/2022,Pernambuco,Outros ICMS,108840256
+2022,15/02/2022,Pernambuco,Outros ICMS,103996941
+2022,15/03/2022,Pernambuco,Outros ICMS,107808121
+2022,15/04/2022,Pernambuco,Outros ICMS,113975425
+2022,15/05/2022,Pernambuco,Outros ICMS,126727396
+2022,15/06/2022,Pernambuco,Outros ICMS,118363930
+2022,15/07/2022,Pernambuco,Outros ICMS,118565061
+2022,15/08/2022,Pernambuco,Outros ICMS,135756121
+2022,15/09/2022,Pernambuco,Outros ICMS,135756121
+2022,15/10/2022,Pernambuco,Outros ICMS,135273968
+2022,15/01/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,230896695
+2022,15/02/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,112476813
+2022,15/03/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,305350412
+2022,15/04/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,229598431
+2022,15/05/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,293858101
+2022,15/06/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,316570772
+2022,15/07/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,271896934
+2022,15/08/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,122430823
+2022,15/09/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,122430823
+2022,15/10/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Secundário,154324025
+2022,15/01/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,94347474
+2022,15/02/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,28825641
+2022,15/03/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,26283929
+2022,15/04/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,49170023
+2022,15/05/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,97468441
+2022,15/06/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,63428232
+2022,15/07/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,117187135
+2022,15/08/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,80007846
+2022,15/09/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,80007846
+2022,15/10/2022,Pernambuco,Petróleo-Combustível-Lubrificantes Terciário,118527445
+2022,15/01/2022,Pernambuco,Serviços de Comunicação,65442369
+2022,15/02/2022,Pernambuco,Serviços de Comunicação,57175162
+2022,15/03/2022,Pernambuco,Serviços de Comunicação,69137016
+2022,15/04/2022,Pernambuco,Serviços de Comunicação,55841965
+2022,15/05/2022,Pernambuco,Serviços de Comunicação,64708024
+2022,15/06/2022,Pernambuco,Serviços de Comunicação,64321119
+2022,15/07/2022,Pernambuco,Serviços de Comunicação,54523322
+2022,15/08/2022,Pernambuco,Serviços de Comunicação,52153253
+2022,15/09/2022,Pernambuco,Serviços de Comunicação,52153253
+2022,15/10/2022,Pernambuco,Serviços de Comunicação,34717131
+2022,15/01/2022,Pernambuco,Serviços de Transporte,30586679
+2022,15/02/2022,Pernambuco,Serviços de Transporte,27301956
+2022,15/03/2022,Pernambuco,Serviços de Transporte,30080825
+2022,15/04/2022,Pernambuco,Serviços de Transporte,35164292
+2022,15/05/2022,Pernambuco,Serviços de Transporte,38151904
+2022,15/06/2022,Pernambuco,Serviços de Transporte,34011440
+2022,15/07/2022,Pernambuco,Serviços de Transporte,37274283
+2022,15/08/2022,Pernambuco,Serviços de Transporte,39245191
+2022,15/09/2022,Pernambuco,Serviços de Transporte,39245191
+2022,15/10/2022,Pernambuco,Serviços de Transporte,42645799
+2022,15/01/2022,Piauí,Comércio Atacadista,51098518
+2022,15/02/2022,Piauí,Comércio Atacadista,46057342
+2022,15/03/2022,Piauí,Comércio Atacadista,47116238
+2022,15/04/2022,Piauí,Comércio Atacadista,54899040
+2022,15/05/2022,Piauí,Comércio Atacadista,50240739
+2022,15/06/2022,Piauí,Comércio Atacadista,53331310
+2022,15/07/2022,Piauí,Comércio Atacadista,55696572
+2022,15/08/2022,Piauí,Comércio Atacadista,59378738
+2022,15/09/2022,Piauí,Comércio Atacadista,59378738
+2022,15/10/2022,Piauí,Comércio Atacadista,59273986
+2022,15/01/2022,Piauí,Comércio Varejista,80191999
+2022,15/02/2022,Piauí,Comércio Varejista,62406530
+2022,15/03/2022,Piauí,Comércio Varejista,70020977
+2022,15/04/2022,Piauí,Comércio Varejista,70116812
+2022,15/05/2022,Piauí,Comércio Varejista,77927922
+2022,15/06/2022,Piauí,Comércio Varejista,75789539
+2022,15/07/2022,Piauí,Comércio Varejista,75734349
+2022,15/08/2022,Piauí,Comércio Varejista,90755573
+2022,15/09/2022,Piauí,Comércio Varejista,90755573
+2022,15/10/2022,Piauí,Comércio Varejista,83936163
+2022,15/01/2022,Piauí,Energia Elétrica Secundária,1524024
+2022,15/02/2022,Piauí,Energia Elétrica Secundária,2622804
+2022,15/03/2022,Piauí,Energia Elétrica Secundária,2126001
+2022,15/04/2022,Piauí,Energia Elétrica Secundária,1051445
+2022,15/05/2022,Piauí,Energia Elétrica Secundária,2514421
+2022,15/06/2022,Piauí,Energia Elétrica Secundária,1102521
+2022,15/07/2022,Piauí,Energia Elétrica Secundária,2971940
+2022,15/08/2022,Piauí,Energia Elétrica Secundária,1729891
+2022,15/09/2022,Piauí,Energia Elétrica Secundária,1729891
+2022,15/10/2022,Piauí,Energia Elétrica Secundária,3251578
+2022,15/01/2022,Piauí,Energia Elétrica Terciário,73590959
+2022,15/02/2022,Piauí,Energia Elétrica Terciário,62263166
+2022,15/03/2022,Piauí,Energia Elétrica Terciário,60199280
+2022,15/04/2022,Piauí,Energia Elétrica Terciário,62881345
+2022,15/05/2022,Piauí,Energia Elétrica Terciário,57776683
+2022,15/06/2022,Piauí,Energia Elétrica Terciário,58752607
+2022,15/07/2022,Piauí,Energia Elétrica Terciário,59141818
+2022,15/08/2022,Piauí,Energia Elétrica Terciário,50662496
+2022,15/09/2022,Piauí,Energia Elétrica Terciário,50662496
+2022,15/10/2022,Piauí,Energia Elétrica Terciário,48258507
+2022,15/01/2022,Piauí,Outros ICMS,2588109
+2022,15/02/2022,Piauí,Outros ICMS,2297590
+2022,15/03/2022,Piauí,Outros ICMS,2058655
+2022,15/04/2022,Piauí,Outros ICMS,2596703
+2022,15/05/2022,Piauí,Outros ICMS,2493137
+2022,15/06/2022,Piauí,Outros ICMS,2710791
+2022,15/07/2022,Piauí,Outros ICMS,2862736
+2022,15/08/2022,Piauí,Outros ICMS,3334765
+2022,15/09/2022,Piauí,Outros ICMS,3334765
+2022,15/10/2022,Piauí,Outros ICMS,3029291
+2022,15/01/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/02/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/03/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/04/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/05/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/06/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/07/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/08/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/09/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/10/2022,Piauí,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/01/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,168736860
+2022,15/02/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,154496637
+2022,15/03/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,119018970
+2022,15/04/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,116189665
+2022,15/05/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,142631869
+2022,15/06/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,140850827
+2022,15/07/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,132813121
+2022,15/08/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,108519140
+2022,15/09/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,108519140
+2022,15/10/2022,Piauí,Petróleo-Combustível-Lubrificantes Terciário,115365816
+2022,15/01/2022,Piauí,Serviços de Comunicação,20321128
+2022,15/02/2022,Piauí,Serviços de Comunicação,18323496
+2022,15/03/2022,Piauí,Serviços de Comunicação,18181573
+2022,15/04/2022,Piauí,Serviços de Comunicação,17033058
+2022,15/05/2022,Piauí,Serviços de Comunicação,16725194
+2022,15/06/2022,Piauí,Serviços de Comunicação,18015268
+2022,15/07/2022,Piauí,Serviços de Comunicação,18093683
+2022,15/08/2022,Piauí,Serviços de Comunicação,16763355
+2022,15/09/2022,Piauí,Serviços de Comunicação,16763355
+2022,15/10/2022,Piauí,Serviços de Comunicação,12897466
+2022,15/01/2022,Piauí,Serviços de Transporte,4652538
+2022,15/02/2022,Piauí,Serviços de Transporte,3799645
+2022,15/03/2022,Piauí,Serviços de Transporte,3206429
+2022,15/04/2022,Piauí,Serviços de Transporte,4076113
+2022,15/05/2022,Piauí,Serviços de Transporte,5250731
+2022,15/06/2022,Piauí,Serviços de Transporte,5678852
+2022,15/07/2022,Piauí,Serviços de Transporte,5286848
+2022,15/08/2022,Piauí,Serviços de Transporte,6358485
+2022,15/09/2022,Piauí,Serviços de Transporte,6358485
+2022,15/10/2022,Piauí,Serviços de Transporte,6107257
+2022,15/01/2022,Rio de Janeiro,Comércio Atacadista,773048567
+2022,15/02/2022,Rio de Janeiro,Comércio Atacadista,647370782
+2022,15/03/2022,Rio de Janeiro,Comércio Atacadista,661348608
+2022,15/04/2022,Rio de Janeiro,Comércio Atacadista,751950848
+2022,15/05/2022,Rio de Janeiro,Comércio Atacadista,692074926
+2022,15/06/2022,Rio de Janeiro,Comércio Atacadista,740495954
+2022,15/07/2022,Rio de Janeiro,Comércio Atacadista,716206451
+2022,15/08/2022,Rio de Janeiro,Comércio Atacadista,714145332
+2022,15/09/2022,Rio de Janeiro,Comércio Atacadista,714145332
+2022,15/10/2022,Rio de Janeiro,Comércio Atacadista,748734874
+2022,15/01/2022,Rio de Janeiro,Comércio Varejista,495034240
+2022,15/02/2022,Rio de Janeiro,Comércio Varejista,346402502
+2022,15/03/2022,Rio de Janeiro,Comércio Varejista,331050750
+2022,15/04/2022,Rio de Janeiro,Comércio Varejista,266237477
+2022,15/05/2022,Rio de Janeiro,Comércio Varejista,350265520
+2022,15/06/2022,Rio de Janeiro,Comércio Varejista,369989288
+2022,15/07/2022,Rio de Janeiro,Comércio Varejista,399961824
+2022,15/08/2022,Rio de Janeiro,Comércio Varejista,395661352
+2022,15/09/2022,Rio de Janeiro,Comércio Varejista,395661352
+2022,15/10/2022,Rio de Janeiro,Comércio Varejista,366075782
+2022,15/01/2022,Rio de Janeiro,Energia Elétrica Secundária,99574918
+2022,15/02/2022,Rio de Janeiro,Energia Elétrica Secundária,114248905
+2022,15/03/2022,Rio de Janeiro,Energia Elétrica Secundária,92930954
+2022,15/04/2022,Rio de Janeiro,Energia Elétrica Secundária,121262530
+2022,15/05/2022,Rio de Janeiro,Energia Elétrica Secundária,99189067
+2022,15/06/2022,Rio de Janeiro,Energia Elétrica Secundária,108481113
+2022,15/07/2022,Rio de Janeiro,Energia Elétrica Secundária,100456757
+2022,15/08/2022,Rio de Janeiro,Energia Elétrica Secundária,96536338
+2022,15/09/2022,Rio de Janeiro,Energia Elétrica Secundária,96536338
+2022,15/10/2022,Rio de Janeiro,Energia Elétrica Secundária,63821717
+2022,15/01/2022,Rio de Janeiro,Energia Elétrica Terciário,722128468
+2022,15/02/2022,Rio de Janeiro,Energia Elétrica Terciário,552934728
+2022,15/03/2022,Rio de Janeiro,Energia Elétrica Terciário,467408982
+2022,15/04/2022,Rio de Janeiro,Energia Elétrica Terciário,922184216
+2022,15/05/2022,Rio de Janeiro,Energia Elétrica Terciário,614410595
+2022,15/06/2022,Rio de Janeiro,Energia Elétrica Terciário,504542792
+2022,15/07/2022,Rio de Janeiro,Energia Elétrica Terciário,252624876
+2022,15/08/2022,Rio de Janeiro,Energia Elétrica Terciário,219353663
+2022,15/09/2022,Rio de Janeiro,Energia Elétrica Terciário,219353663
+2022,15/10/2022,Rio de Janeiro,Energia Elétrica Terciário,291431593
+2022,15/01/2022,Rio de Janeiro,Outros ICMS,181045993
+2022,15/02/2022,Rio de Janeiro,Outros ICMS,160636324
+2022,15/03/2022,Rio de Janeiro,Outros ICMS,150811127
+2022,15/04/2022,Rio de Janeiro,Outros ICMS,209908554
+2022,15/05/2022,Rio de Janeiro,Outros ICMS,173236770
+2022,15/06/2022,Rio de Janeiro,Outros ICMS,176617327
+2022,15/07/2022,Rio de Janeiro,Outros ICMS,163676832
+2022,15/08/2022,Rio de Janeiro,Outros ICMS,211673797
+2022,15/09/2022,Rio de Janeiro,Outros ICMS,211673797
+2022,15/10/2022,Rio de Janeiro,Outros ICMS,427380079
+2022,15/01/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,687106998
+2022,15/02/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,565784941
+2022,15/03/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,299452692
+2022,15/04/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,382562111
+2022,15/05/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,284305306
+2022,15/06/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,488560003
+2022,15/07/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,287870831
+2022,15/08/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,138744600
+2022,15/09/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,138744600
+2022,15/10/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Secundário,676013624
+2022,15/01/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,94884439
+2022,15/02/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,92545536
+2022,15/03/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,103280093
+2022,15/04/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,110303245
+2022,15/05/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,119095088
+2022,15/06/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,87701428
+2022,15/07/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,70025962
+2022,15/08/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,155878976
+2022,15/09/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,155878976
+2022,15/10/2022,Rio de Janeiro,Petróleo-Combustível-Lubrificantes Terciário,107818606
+2022,15/01/2022,Rio de Janeiro,Serviços de Comunicação,228195263
+2022,15/02/2022,Rio de Janeiro,Serviços de Comunicação,186911440
+2022,15/03/2022,Rio de Janeiro,Serviços de Comunicação,248145146
+2022,15/04/2022,Rio de Janeiro,Serviços de Comunicação,245564820
+2022,15/05/2022,Rio de Janeiro,Serviços de Comunicação,234900367
+2022,15/06/2022,Rio de Janeiro,Serviços de Comunicação,230907857
+2022,15/07/2022,Rio de Janeiro,Serviços de Comunicação,237235792
+2022,15/08/2022,Rio de Janeiro,Serviços de Comunicação,203449298
+2022,15/09/2022,Rio de Janeiro,Serviços de Comunicação,203449298
+2022,15/10/2022,Rio de Janeiro,Serviços de Comunicação,150638760
+2022,15/01/2022,Rio de Janeiro,Serviços de Transporte,110128105
+2022,15/02/2022,Rio de Janeiro,Serviços de Transporte,114100055
+2022,15/03/2022,Rio de Janeiro,Serviços de Transporte,102988853
+2022,15/04/2022,Rio de Janeiro,Serviços de Transporte,118790011
+2022,15/05/2022,Rio de Janeiro,Serviços de Transporte,124720428
+2022,15/06/2022,Rio de Janeiro,Serviços de Transporte,117872581
+2022,15/07/2022,Rio de Janeiro,Serviços de Transporte,119279495
+2022,15/08/2022,Rio de Janeiro,Serviços de Transporte,129252886
+2022,15/09/2022,Rio de Janeiro,Serviços de Transporte,129252886
+2022,15/10/2022,Rio de Janeiro,Serviços de Transporte,139682214
+2022,15/01/2022,Rio Grande do Norte,Comércio Atacadista,121951069
+2022,15/02/2022,Rio Grande do Norte,Comércio Atacadista,107646537
+2022,15/03/2022,Rio Grande do Norte,Comércio Atacadista,107377409
+2022,15/04/2022,Rio Grande do Norte,Comércio Atacadista,118166742
+2022,15/05/2022,Rio Grande do Norte,Comércio Atacadista,113066736
+2022,15/06/2022,Rio Grande do Norte,Comércio Atacadista,117555381
+2022,15/07/2022,Rio Grande do Norte,Comércio Atacadista,119494332
+2022,15/08/2022,Rio Grande do Norte,Comércio Atacadista,125572019
+2022,15/09/2022,Rio Grande do Norte,Comércio Atacadista,125572019
+2022,15/10/2022,Rio Grande do Norte,Comércio Atacadista,122079792
+2022,15/01/2022,Rio Grande do Norte,Comércio Varejista,122365229
+2022,15/02/2022,Rio Grande do Norte,Comércio Varejista,98087775
+2022,15/03/2022,Rio Grande do Norte,Comércio Varejista,101584851
+2022,15/04/2022,Rio Grande do Norte,Comércio Varejista,99952654
+2022,15/05/2022,Rio Grande do Norte,Comércio Varejista,121009193
+2022,15/06/2022,Rio Grande do Norte,Comércio Varejista,120748712
+2022,15/07/2022,Rio Grande do Norte,Comércio Varejista,133753797
+2022,15/08/2022,Rio Grande do Norte,Comércio Varejista,137158853
+2022,15/09/2022,Rio Grande do Norte,Comércio Varejista,137158853
+2022,15/10/2022,Rio Grande do Norte,Comércio Varejista,125140902
+2022,15/01/2022,Rio Grande do Norte,Energia Elétrica Secundária,9749944
+2022,15/02/2022,Rio Grande do Norte,Energia Elétrica Secundária,7904180
+2022,15/03/2022,Rio Grande do Norte,Energia Elétrica Secundária,8655723
+2022,15/04/2022,Rio Grande do Norte,Energia Elétrica Secundária,6329761
+2022,15/05/2022,Rio Grande do Norte,Energia Elétrica Secundária,10826188
+2022,15/06/2022,Rio Grande do Norte,Energia Elétrica Secundária,7402823
+2022,15/07/2022,Rio Grande do Norte,Energia Elétrica Secundária,6054639
+2022,15/08/2022,Rio Grande do Norte,Energia Elétrica Secundária,14033079
+2022,15/09/2022,Rio Grande do Norte,Energia Elétrica Secundária,14033079
+2022,15/10/2022,Rio Grande do Norte,Energia Elétrica Secundária,12743032
+2022,15/01/2022,Rio Grande do Norte,Energia Elétrica Terciário,71032810
+2022,15/02/2022,Rio Grande do Norte,Energia Elétrica Terciário,70472096
+2022,15/03/2022,Rio Grande do Norte,Energia Elétrica Terciário,68164182
+2022,15/04/2022,Rio Grande do Norte,Energia Elétrica Terciário,62544049
+2022,15/05/2022,Rio Grande do Norte,Energia Elétrica Terciário,61778314
+2022,15/06/2022,Rio Grande do Norte,Energia Elétrica Terciário,58244203
+2022,15/07/2022,Rio Grande do Norte,Energia Elétrica Terciário,56521676
+2022,15/08/2022,Rio Grande do Norte,Energia Elétrica Terciário,46876365
+2022,15/09/2022,Rio Grande do Norte,Energia Elétrica Terciário,46876365
+2022,15/10/2022,Rio Grande do Norte,Energia Elétrica Terciário,73606128
+2022,15/01/2022,Rio Grande do Norte,Outros ICMS,37497778
+2022,15/02/2022,Rio Grande do Norte,Outros ICMS,25728107
+2022,15/03/2022,Rio Grande do Norte,Outros ICMS,33157273
+2022,15/04/2022,Rio Grande do Norte,Outros ICMS,30089734
+2022,15/05/2022,Rio Grande do Norte,Outros ICMS,36566290
+2022,15/06/2022,Rio Grande do Norte,Outros ICMS,32473832
+2022,15/07/2022,Rio Grande do Norte,Outros ICMS,35206581
+2022,15/08/2022,Rio Grande do Norte,Outros ICMS,38442751
+2022,15/09/2022,Rio Grande do Norte,Outros ICMS,38442751
+2022,15/10/2022,Rio Grande do Norte,Outros ICMS,39487166
+2022,15/01/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,128663515
+2022,15/02/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,125249716
+2022,15/03/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,120208733
+2022,15/04/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,100421240
+2022,15/05/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,154960293
+2022,15/06/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,64853472
+2022,15/07/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,122656882
+2022,15/08/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,95117127
+2022,15/09/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,95117127
+2022,15/10/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Secundário,73796919
+2022,15/01/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,19409709
+2022,15/02/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,13564929
+2022,15/03/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,17318674
+2022,15/04/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,15094852
+2022,15/05/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,16719279
+2022,15/06/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,13642635
+2022,15/07/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,11996805
+2022,15/08/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,7686611
+2022,15/09/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,7686611
+2022,15/10/2022,Rio Grande do Norte,Petróleo-Combustível-Lubrificantes Terciário,7211391
+2022,15/01/2022,Rio Grande do Norte,Serviços de Comunicação,24226450
+2022,15/02/2022,Rio Grande do Norte,Serviços de Comunicação,25124701
+2022,15/03/2022,Rio Grande do Norte,Serviços de Comunicação,25466262
+2022,15/04/2022,Rio Grande do Norte,Serviços de Comunicação,25120032
+2022,15/05/2022,Rio Grande do Norte,Serviços de Comunicação,25954907
+2022,15/06/2022,Rio Grande do Norte,Serviços de Comunicação,25981330
+2022,15/07/2022,Rio Grande do Norte,Serviços de Comunicação,25835197
+2022,15/08/2022,Rio Grande do Norte,Serviços de Comunicação,25441664
+2022,15/09/2022,Rio Grande do Norte,Serviços de Comunicação,25441664
+2022,15/10/2022,Rio Grande do Norte,Serviços de Comunicação,15177184
+2022,15/01/2022,Rio Grande do Norte,Serviços de Transporte,4598543
+2022,15/02/2022,Rio Grande do Norte,Serviços de Transporte,4011760
+2022,15/03/2022,Rio Grande do Norte,Serviços de Transporte,4819680
+2022,15/04/2022,Rio Grande do Norte,Serviços de Transporte,4496988
+2022,15/05/2022,Rio Grande do Norte,Serviços de Transporte,4598477
+2022,15/06/2022,Rio Grande do Norte,Serviços de Transporte,5594043
+2022,15/07/2022,Rio Grande do Norte,Serviços de Transporte,5444154
+2022,15/08/2022,Rio Grande do Norte,Serviços de Transporte,5516642
+2022,15/09/2022,Rio Grande do Norte,Serviços de Transporte,5516642
+2022,15/10/2022,Rio Grande do Norte,Serviços de Transporte,5773639
+2022,15/01/2022,Rio Grande do Sul,Comércio Atacadista,694223056
+2022,15/02/2022,Rio Grande do Sul,Comércio Atacadista,657543925
+2022,15/03/2022,Rio Grande do Sul,Comércio Atacadista,612689592
+2022,15/04/2022,Rio Grande do Sul,Comércio Atacadista,744106802
+2022,15/05/2022,Rio Grande do Sul,Comércio Atacadista,662064738
+2022,15/06/2022,Rio Grande do Sul,Comércio Atacadista,700060716
+2022,15/07/2022,Rio Grande do Sul,Comércio Atacadista,681599122
+2022,15/08/2022,Rio Grande do Sul,Comércio Atacadista,639525527
+2022,15/09/2022,Rio Grande do Sul,Comércio Atacadista,639525527
+2022,15/10/2022,Rio Grande do Sul,Comércio Atacadista,725838307
+2022,15/01/2022,Rio Grande do Sul,Comércio Varejista,535405729
+2022,15/02/2022,Rio Grande do Sul,Comércio Varejista,324174145
+2022,15/03/2022,Rio Grande do Sul,Comércio Varejista,319551953
+2022,15/04/2022,Rio Grande do Sul,Comércio Varejista,360377380
+2022,15/05/2022,Rio Grande do Sul,Comércio Varejista,393681947
+2022,15/06/2022,Rio Grande do Sul,Comércio Varejista,449177088
+2022,15/07/2022,Rio Grande do Sul,Comércio Varejista,440794709
+2022,15/08/2022,Rio Grande do Sul,Comércio Varejista,402030844
+2022,15/09/2022,Rio Grande do Sul,Comércio Varejista,402030844
+2022,15/10/2022,Rio Grande do Sul,Comércio Varejista,405594093
+2022,15/01/2022,Rio Grande do Sul,Energia Elétrica Secundária,21117601
+2022,15/02/2022,Rio Grande do Sul,Energia Elétrica Secundária,15199154
+2022,15/03/2022,Rio Grande do Sul,Energia Elétrica Secundária,21275382
+2022,15/04/2022,Rio Grande do Sul,Energia Elétrica Secundária,17107646
+2022,15/05/2022,Rio Grande do Sul,Energia Elétrica Secundária,16390136
+2022,15/06/2022,Rio Grande do Sul,Energia Elétrica Secundária,15232953
+2022,15/07/2022,Rio Grande do Sul,Energia Elétrica Secundária,16232109
+2022,15/08/2022,Rio Grande do Sul,Energia Elétrica Secundária,14327368
+2022,15/09/2022,Rio Grande do Sul,Energia Elétrica Secundária,14327368
+2022,15/10/2022,Rio Grande do Sul,Energia Elétrica Secundária,14325573
+2022,15/01/2022,Rio Grande do Sul,Energia Elétrica Terciário,523769972
+2022,15/02/2022,Rio Grande do Sul,Energia Elétrica Terciário,201196917
+2022,15/03/2022,Rio Grande do Sul,Energia Elétrica Terciário,683584408
+2022,15/04/2022,Rio Grande do Sul,Energia Elétrica Terciário,440747450
+2022,15/05/2022,Rio Grande do Sul,Energia Elétrica Terciário,344744772
+2022,15/06/2022,Rio Grande do Sul,Energia Elétrica Terciário,283300498
+2022,15/07/2022,Rio Grande do Sul,Energia Elétrica Terciário,328478456
+2022,15/08/2022,Rio Grande do Sul,Energia Elétrica Terciário,176391904
+2022,15/09/2022,Rio Grande do Sul,Energia Elétrica Terciário,176391904
+2022,15/10/2022,Rio Grande do Sul,Energia Elétrica Terciário,113264500
+2022,15/01/2022,Rio Grande do Sul,Outros ICMS,1375748
+2022,15/02/2022,Rio Grande do Sul,Outros ICMS,1200680
+2022,15/03/2022,Rio Grande do Sul,Outros ICMS,22819434
+2022,15/04/2022,Rio Grande do Sul,Outros ICMS,1042000
+2022,15/05/2022,Rio Grande do Sul,Outros ICMS,1441636
+2022,15/06/2022,Rio Grande do Sul,Outros ICMS,1368830
+2022,15/07/2022,Rio Grande do Sul,Outros ICMS,1302966
+2022,15/08/2022,Rio Grande do Sul,Outros ICMS,1103670
+2022,15/09/2022,Rio Grande do Sul,Outros ICMS,1103670
+2022,15/10/2022,Rio Grande do Sul,Outros ICMS,1530172
+2022,15/01/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,550423059
+2022,15/02/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,612775590
+2022,15/03/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,516746726
+2022,15/04/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,718818114
+2022,15/05/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,651810644
+2022,15/06/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,596115247
+2022,15/07/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,519686752
+2022,15/08/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,409001848
+2022,15/09/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,409001848
+2022,15/10/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Secundário,437575565
+2022,15/01/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,38020650
+2022,15/02/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,30828442
+2022,15/03/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,38276873
+2022,15/04/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,52226055
+2022,15/05/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,37126870
+2022,15/06/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,32925080
+2022,15/07/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,34126000
+2022,15/08/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,77786626
+2022,15/09/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,77786626
+2022,15/10/2022,Rio Grande do Sul,Petróleo-Combustível-Lubrificantes Terciário,143937510
+2022,15/01/2022,Rio Grande do Sul,Serviços de Comunicação,159034361
+2022,15/02/2022,Rio Grande do Sul,Serviços de Comunicação,127270150
+2022,15/03/2022,Rio Grande do Sul,Serviços de Comunicação,116719100
+2022,15/04/2022,Rio Grande do Sul,Serviços de Comunicação,115769607
+2022,15/05/2022,Rio Grande do Sul,Serviços de Comunicação,150182529
+2022,15/06/2022,Rio Grande do Sul,Serviços de Comunicação,139207245
+2022,15/07/2022,Rio Grande do Sul,Serviços de Comunicação,123018802
+2022,15/08/2022,Rio Grande do Sul,Serviços de Comunicação,112805701
+2022,15/09/2022,Rio Grande do Sul,Serviços de Comunicação,112805701
+2022,15/10/2022,Rio Grande do Sul,Serviços de Comunicação,75370897
+2022,15/01/2022,Rio Grande do Sul,Serviços de Transporte,68448688
+2022,15/02/2022,Rio Grande do Sul,Serviços de Transporte,60696528
+2022,15/03/2022,Rio Grande do Sul,Serviços de Transporte,66452563
+2022,15/04/2022,Rio Grande do Sul,Serviços de Transporte,73139010
+2022,15/05/2022,Rio Grande do Sul,Serviços de Transporte,73773638
+2022,15/06/2022,Rio Grande do Sul,Serviços de Transporte,76306718
+2022,15/07/2022,Rio Grande do Sul,Serviços de Transporte,74496764
+2022,15/08/2022,Rio Grande do Sul,Serviços de Transporte,97807095
+2022,15/09/2022,Rio Grande do Sul,Serviços de Transporte,97807095
+2022,15/10/2022,Rio Grande do Sul,Serviços de Transporte,86618144
+2022,15/01/2022,Rondônia,Comércio Atacadista,85639127
+2022,15/02/2022,Rondônia,Comércio Atacadista,71682374
+2022,15/03/2022,Rondônia,Comércio Atacadista,75804088
+2022,15/04/2022,Rondônia,Comércio Atacadista,75790122
+2022,15/05/2022,Rondônia,Comércio Atacadista,85477695
+2022,15/06/2022,Rondônia,Comércio Atacadista,87421609
+2022,15/07/2022,Rondônia,Comércio Atacadista,87820158
+2022,15/08/2022,Rondônia,Comércio Atacadista,88436458
+2022,15/09/2022,Rondônia,Comércio Atacadista,88436458
+2022,15/10/2022,Rondônia,Comércio Atacadista,92036785
+2022,15/01/2022,Rondônia,Comércio Varejista,101874032
+2022,15/02/2022,Rondônia,Comércio Varejista,74181910
+2022,15/03/2022,Rondônia,Comércio Varejista,82213547
+2022,15/04/2022,Rondônia,Comércio Varejista,87111152
+2022,15/05/2022,Rondônia,Comércio Varejista,94016810
+2022,15/06/2022,Rondônia,Comércio Varejista,96705824
+2022,15/07/2022,Rondônia,Comércio Varejista,98740252
+2022,15/08/2022,Rondônia,Comércio Varejista,95560795
+2022,15/09/2022,Rondônia,Comércio Varejista,95560795
+2022,15/10/2022,Rondônia,Comércio Varejista,101058904
+2022,15/01/2022,Rondônia,Energia Elétrica Secundária,43146621
+2022,15/02/2022,Rondônia,Energia Elétrica Secundária,40271961
+2022,15/03/2022,Rondônia,Energia Elétrica Secundária,38148103
+2022,15/04/2022,Rondônia,Energia Elétrica Secundária,41858573
+2022,15/05/2022,Rondônia,Energia Elétrica Secundária,44004065
+2022,15/06/2022,Rondônia,Energia Elétrica Secundária,39729798
+2022,15/07/2022,Rondônia,Energia Elétrica Secundária,35758060
+2022,15/08/2022,Rondônia,Energia Elétrica Secundária,34460718
+2022,15/09/2022,Rondônia,Energia Elétrica Secundária,34460718
+2022,15/10/2022,Rondônia,Energia Elétrica Secundária,34152225
+2022,15/01/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/02/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/03/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/04/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/05/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/06/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/07/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/08/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/09/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/10/2022,Rondônia,Energia Elétrica Terciário,0
+2022,15/01/2022,Rondônia,Outros ICMS,471357
+2022,15/02/2022,Rondônia,Outros ICMS,604887
+2022,15/03/2022,Rondônia,Outros ICMS,663127
+2022,15/04/2022,Rondônia,Outros ICMS,612598
+2022,15/05/2022,Rondônia,Outros ICMS,771144
+2022,15/06/2022,Rondônia,Outros ICMS,662397
+2022,15/07/2022,Rondônia,Outros ICMS,784026
+2022,15/08/2022,Rondônia,Outros ICMS,858895
+2022,15/09/2022,Rondônia,Outros ICMS,858895
+2022,15/10/2022,Rondônia,Outros ICMS,939770
+2022,15/01/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,177815145
+2022,15/02/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,118094807
+2022,15/03/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,76694120
+2022,15/04/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,110556220
+2022,15/05/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,114545697
+2022,15/06/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,147208679
+2022,15/07/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,144752977
+2022,15/08/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,75612426
+2022,15/09/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,75612426
+2022,15/10/2022,Rondônia,Petróleo-Combustível-Lubrificantes Secundário,57520479
+2022,15/01/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,16906328
+2022,15/02/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,11763519
+2022,15/03/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,5146036
+2022,15/04/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,8282996
+2022,15/05/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,11783469
+2022,15/06/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,9949749
+2022,15/07/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,8190356
+2022,15/08/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,7856252
+2022,15/09/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,7856252
+2022,15/10/2022,Rondônia,Petróleo-Combustível-Lubrificantes Terciário,6585066
+2022,15/01/2022,Rondônia,Serviços de Comunicação,16863064
+2022,15/02/2022,Rondônia,Serviços de Comunicação,15481573
+2022,15/03/2022,Rondônia,Serviços de Comunicação,14636300
+2022,15/04/2022,Rondônia,Serviços de Comunicação,14041959
+2022,15/05/2022,Rondônia,Serviços de Comunicação,16074825
+2022,15/06/2022,Rondônia,Serviços de Comunicação,16092810
+2022,15/07/2022,Rondônia,Serviços de Comunicação,15510672
+2022,15/08/2022,Rondônia,Serviços de Comunicação,12442424
+2022,15/09/2022,Rondônia,Serviços de Comunicação,12442424
+2022,15/10/2022,Rondônia,Serviços de Comunicação,9326173
+2022,15/01/2022,Rondônia,Serviços de Transporte,9065947
+2022,15/02/2022,Rondônia,Serviços de Transporte,8397040
+2022,15/03/2022,Rondônia,Serviços de Transporte,9733671
+2022,15/04/2022,Rondônia,Serviços de Transporte,9383446
+2022,15/05/2022,Rondônia,Serviços de Transporte,10693172
+2022,15/06/2022,Rondônia,Serviços de Transporte,10572991
+2022,15/07/2022,Rondônia,Serviços de Transporte,11671136
+2022,15/08/2022,Rondônia,Serviços de Transporte,12825504
+2022,15/09/2022,Rondônia,Serviços de Transporte,12825504
+2022,15/10/2022,Rondônia,Serviços de Transporte,13291727
+2022,15/01/2022,Roraima,Comércio Atacadista,13683475
+2022,15/02/2022,Roraima,Comércio Atacadista,10047231
+2022,15/03/2022,Roraima,Comércio Atacadista,8737223
+2022,15/04/2022,Roraima,Comércio Atacadista,9868546
+2022,15/05/2022,Roraima,Comércio Atacadista,9316813
+2022,15/06/2022,Roraima,Comércio Atacadista,11536151
+2022,15/07/2022,Roraima,Comércio Atacadista,12088778
+2022,15/08/2022,Roraima,Comércio Atacadista,12926621
+2022,15/09/2022,Roraima,Comércio Atacadista,12926621
+2022,15/10/2022,Roraima,Comércio Atacadista,12276624
+2022,15/01/2022,Roraima,Comércio Varejista,31789943
+2022,15/02/2022,Roraima,Comércio Varejista,20926334
+2022,15/03/2022,Roraima,Comércio Varejista,23056988
+2022,15/04/2022,Roraima,Comércio Varejista,19246981
+2022,15/05/2022,Roraima,Comércio Varejista,27522686
+2022,15/06/2022,Roraima,Comércio Varejista,30456835
+2022,15/07/2022,Roraima,Comércio Varejista,26860909
+2022,15/08/2022,Roraima,Comércio Varejista,32662965
+2022,15/09/2022,Roraima,Comércio Varejista,32662965
+2022,15/10/2022,Roraima,Comércio Varejista,28566960
+2022,15/01/2022,Roraima,Energia Elétrica Secundária,497415
+2022,15/02/2022,Roraima,Energia Elétrica Secundária,162490
+2022,15/03/2022,Roraima,Energia Elétrica Secundária,116967
+2022,15/04/2022,Roraima,Energia Elétrica Secundária,228195
+2022,15/05/2022,Roraima,Energia Elétrica Secundária,194329
+2022,15/06/2022,Roraima,Energia Elétrica Secundária,839521
+2022,15/07/2022,Roraima,Energia Elétrica Secundária,154828
+2022,15/08/2022,Roraima,Energia Elétrica Secundária,667145
+2022,15/09/2022,Roraima,Energia Elétrica Secundária,667145
+2022,15/10/2022,Roraima,Energia Elétrica Secundária,1630544
+2022,15/01/2022,Roraima,Energia Elétrica Terciário,10290311
+2022,15/02/2022,Roraima,Energia Elétrica Terciário,9240707
+2022,15/03/2022,Roraima,Energia Elétrica Terciário,9504790
+2022,15/04/2022,Roraima,Energia Elétrica Terciário,9593241
+2022,15/05/2022,Roraima,Energia Elétrica Terciário,9495917
+2022,15/06/2022,Roraima,Energia Elétrica Terciário,8797746
+2022,15/07/2022,Roraima,Energia Elétrica Terciário,8570267
+2022,15/08/2022,Roraima,Energia Elétrica Terciário,8420261
+2022,15/09/2022,Roraima,Energia Elétrica Terciário,8420261
+2022,15/10/2022,Roraima,Energia Elétrica Terciário,9708069
+2022,15/01/2022,Roraima,Outros ICMS,102275
+2022,15/02/2022,Roraima,Outros ICMS,138032
+2022,15/03/2022,Roraima,Outros ICMS,159930
+2022,15/04/2022,Roraima,Outros ICMS,106382
+2022,15/05/2022,Roraima,Outros ICMS,114526
+2022,15/06/2022,Roraima,Outros ICMS,105167
+2022,15/07/2022,Roraima,Outros ICMS,136657
+2022,15/08/2022,Roraima,Outros ICMS,118998
+2022,15/09/2022,Roraima,Outros ICMS,118998
+2022,15/10/2022,Roraima,Outros ICMS,116019
+2022,15/01/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,57419762
+2022,15/02/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,60408671
+2022,15/03/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,51278917
+2022,15/04/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,57127063
+2022,15/05/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,52526641
+2022,15/06/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,44932928
+2022,15/07/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,32855567
+2022,15/08/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,26481809
+2022,15/09/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,26481809
+2022,15/10/2022,Roraima,Petróleo-Combustível-Lubrificantes Secundário,34448853
+2022,15/01/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1607975
+2022,15/02/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,2386376
+2022,15/03/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,2027668
+2022,15/04/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1888564
+2022,15/05/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,2057281
+2022,15/06/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1696827
+2022,15/07/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,3886986
+2022,15/08/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1698163
+2022,15/09/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1698163
+2022,15/10/2022,Roraima,Petróleo-Combustível-Lubrificantes Terciário,1618296
+2022,15/01/2022,Roraima,Serviços de Comunicação,4078777
+2022,15/02/2022,Roraima,Serviços de Comunicação,5138340
+2022,15/03/2022,Roraima,Serviços de Comunicação,4573655
+2022,15/04/2022,Roraima,Serviços de Comunicação,4633169
+2022,15/05/2022,Roraima,Serviços de Comunicação,4597140
+2022,15/06/2022,Roraima,Serviços de Comunicação,4621279
+2022,15/07/2022,Roraima,Serviços de Comunicação,4679981
+2022,15/08/2022,Roraima,Serviços de Comunicação,3994561
+2022,15/09/2022,Roraima,Serviços de Comunicação,3994561
+2022,15/10/2022,Roraima,Serviços de Comunicação,3475769
+2022,15/01/2022,Roraima,Serviços de Transporte,499788
+2022,15/02/2022,Roraima,Serviços de Transporte,317427
+2022,15/03/2022,Roraima,Serviços de Transporte,236704
+2022,15/04/2022,Roraima,Serviços de Transporte,283684
+2022,15/05/2022,Roraima,Serviços de Transporte,295102
+2022,15/06/2022,Roraima,Serviços de Transporte,263546
+2022,15/07/2022,Roraima,Serviços de Transporte,219812
+2022,15/08/2022,Roraima,Serviços de Transporte,246141
+2022,15/09/2022,Roraima,Serviços de Transporte,246141
+2022,15/10/2022,Roraima,Serviços de Transporte,242311
+2022,15/01/2022,Santa Catarina,Comércio Atacadista,475703453
+2022,15/02/2022,Santa Catarina,Comércio Atacadista,455106305
+2022,15/03/2022,Santa Catarina,Comércio Atacadista,442675234
+2022,15/04/2022,Santa Catarina,Comércio Atacadista,493557791
+2022,15/05/2022,Santa Catarina,Comércio Atacadista,428851771
+2022,15/06/2022,Santa Catarina,Comércio Atacadista,463938608
+2022,15/07/2022,Santa Catarina,Comércio Atacadista,455354037
+2022,15/08/2022,Santa Catarina,Comércio Atacadista,463689033
+2022,15/09/2022,Santa Catarina,Comércio Atacadista,463689033
+2022,15/10/2022,Santa Catarina,Comércio Atacadista,516823503
+2022,15/01/2022,Santa Catarina,Comércio Varejista,591776056
+2022,15/02/2022,Santa Catarina,Comércio Varejista,606977868
+2022,15/03/2022,Santa Catarina,Comércio Varejista,442403780
+2022,15/04/2022,Santa Catarina,Comércio Varejista,471009880
+2022,15/05/2022,Santa Catarina,Comércio Varejista,512047940
+2022,15/06/2022,Santa Catarina,Comércio Varejista,490610912
+2022,15/07/2022,Santa Catarina,Comércio Varejista,494100037
+2022,15/08/2022,Santa Catarina,Comércio Varejista,496468706
+2022,15/09/2022,Santa Catarina,Comércio Varejista,496468706
+2022,15/10/2022,Santa Catarina,Comércio Varejista,498269709
+2022,15/01/2022,Santa Catarina,Energia Elétrica Secundária,307684957
+2022,15/02/2022,Santa Catarina,Energia Elétrica Secundária,307326044
+2022,15/03/2022,Santa Catarina,Energia Elétrica Secundária,306604612
+2022,15/04/2022,Santa Catarina,Energia Elétrica Secundária,710496034
+2022,15/05/2022,Santa Catarina,Energia Elétrica Secundária,693209856
+2022,15/06/2022,Santa Catarina,Energia Elétrica Secundária,264009859
+2022,15/07/2022,Santa Catarina,Energia Elétrica Secundária,260509728
+2022,15/08/2022,Santa Catarina,Energia Elétrica Secundária,212847792
+2022,15/09/2022,Santa Catarina,Energia Elétrica Secundária,212847792
+2022,15/10/2022,Santa Catarina,Energia Elétrica Secundária,167039136
+2022,15/01/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/02/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/03/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/04/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/05/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/06/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/07/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/08/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/09/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/10/2022,Santa Catarina,Energia Elétrica Terciário,0
+2022,15/01/2022,Santa Catarina,Outros ICMS,124390528
+2022,15/02/2022,Santa Catarina,Outros ICMS,110798782
+2022,15/03/2022,Santa Catarina,Outros ICMS,104831250
+2022,15/04/2022,Santa Catarina,Outros ICMS,108170011
+2022,15/05/2022,Santa Catarina,Outros ICMS,101175629
+2022,15/06/2022,Santa Catarina,Outros ICMS,103901784
+2022,15/07/2022,Santa Catarina,Outros ICMS,104273638
+2022,15/08/2022,Santa Catarina,Outros ICMS,110854574
+2022,15/09/2022,Santa Catarina,Outros ICMS,110854574
+2022,15/10/2022,Santa Catarina,Outros ICMS,108016329
+2022,15/01/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/02/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/03/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/04/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/05/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/06/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/07/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/08/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/09/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/10/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Secundário,0
+2022,15/01/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,511191015
+2022,15/02/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,471737562
+2022,15/03/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,251468501
+2022,15/04/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,267606442
+2022,15/05/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,226332001
+2022,15/06/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,231965117
+2022,15/07/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,212651367
+2022,15/08/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,146046693
+2022,15/09/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,146046693
+2022,15/10/2022,Santa Catarina,Petróleo-Combustível-Lubrificantes Terciário,142830298
+2022,15/01/2022,Santa Catarina,Serviços de Comunicação,97288603
+2022,15/02/2022,Santa Catarina,Serviços de Comunicação,93004457
+2022,15/03/2022,Santa Catarina,Serviços de Comunicação,95767814
+2022,15/04/2022,Santa Catarina,Serviços de Comunicação,91992709
+2022,15/05/2022,Santa Catarina,Serviços de Comunicação,99796735
+2022,15/06/2022,Santa Catarina,Serviços de Comunicação,97133930
+2022,15/07/2022,Santa Catarina,Serviços de Comunicação,96681577
+2022,15/08/2022,Santa Catarina,Serviços de Comunicação,94211300
+2022,15/09/2022,Santa Catarina,Serviços de Comunicação,94211300
+2022,15/10/2022,Santa Catarina,Serviços de Comunicação,75976576
+2022,15/01/2022,Santa Catarina,Serviços de Transporte,75677283
+2022,15/02/2022,Santa Catarina,Serviços de Transporte,73011595
+2022,15/03/2022,Santa Catarina,Serviços de Transporte,74297171
+2022,15/04/2022,Santa Catarina,Serviços de Transporte,85691434
+2022,15/05/2022,Santa Catarina,Serviços de Transporte,82184063
+2022,15/06/2022,Santa Catarina,Serviços de Transporte,86461215
+2022,15/07/2022,Santa Catarina,Serviços de Transporte,87896166
+2022,15/08/2022,Santa Catarina,Serviços de Transporte,92335594
+2022,15/09/2022,Santa Catarina,Serviços de Transporte,92335594
+2022,15/10/2022,Santa Catarina,Serviços de Transporte,96370796
+2022,15/01/2022,São Paulo,Comércio Atacadista,3349429681
+2022,15/02/2022,São Paulo,Comércio Atacadista,2994116336
+2022,15/03/2022,São Paulo,Comércio Atacadista,3305820557
+2022,15/04/2022,São Paulo,Comércio Atacadista,3328311271
+2022,15/05/2022,São Paulo,Comércio Atacadista,3337153924
+2022,15/06/2022,São Paulo,Comércio Atacadista,3362282018
+2022,15/07/2022,São Paulo,Comércio Atacadista,3470662763
+2022,15/08/2022,São Paulo,Comércio Atacadista,3608547118
+2022,15/09/2022,São Paulo,Comércio Atacadista,3608547118
+2022,15/10/2022,São Paulo,Comércio Atacadista,3527188495
+2022,15/01/2022,São Paulo,Comércio Varejista,1648297199
+2022,15/02/2022,São Paulo,Comércio Varejista,1686750537
+2022,15/03/2022,São Paulo,Comércio Varejista,1391873586
+2022,15/04/2022,São Paulo,Comércio Varejista,1358312660
+2022,15/05/2022,São Paulo,Comércio Varejista,1546239891
+2022,15/06/2022,São Paulo,Comércio Varejista,1722522770
+2022,15/07/2022,São Paulo,Comércio Varejista,1740489970
+2022,15/08/2022,São Paulo,Comércio Varejista,1720623006
+2022,15/09/2022,São Paulo,Comércio Varejista,1720623006
+2022,15/10/2022,São Paulo,Comércio Varejista,1518177382
+2022,15/01/2022,São Paulo,Energia Elétrica Secundária,7936857
+2022,15/02/2022,São Paulo,Energia Elétrica Secundária,1436440
+2022,15/03/2022,São Paulo,Energia Elétrica Secundária,4308903
+2022,15/04/2022,São Paulo,Energia Elétrica Secundária,4901012
+2022,15/05/2022,São Paulo,Energia Elétrica Secundária,1851325
+2022,15/06/2022,São Paulo,Energia Elétrica Secundária,21514768
+2022,15/07/2022,São Paulo,Energia Elétrica Secundária,22029417
+2022,15/08/2022,São Paulo,Energia Elétrica Secundária,20551948
+2022,15/09/2022,São Paulo,Energia Elétrica Secundária,20551948
+2022,15/10/2022,São Paulo,Energia Elétrica Secundária,23962806
+2022,15/01/2022,São Paulo,Energia Elétrica Terciário,1394880898
+2022,15/02/2022,São Paulo,Energia Elétrica Terciário,1306242824
+2022,15/03/2022,São Paulo,Energia Elétrica Terciário,1339294897
+2022,15/04/2022,São Paulo,Energia Elétrica Terciário,1393727762
+2022,15/05/2022,São Paulo,Energia Elétrica Terciário,1404026239
+2022,15/06/2022,São Paulo,Energia Elétrica Terciário,983712941
+2022,15/07/2022,São Paulo,Energia Elétrica Terciário,974277762
+2022,15/08/2022,São Paulo,Energia Elétrica Terciário,521581802
+2022,15/09/2022,São Paulo,Energia Elétrica Terciário,521581802
+2022,15/10/2022,São Paulo,Energia Elétrica Terciário,593340088
+2022,15/01/2022,São Paulo,Outros ICMS,310675225
+2022,15/02/2022,São Paulo,Outros ICMS,313373882
+2022,15/03/2022,São Paulo,Outros ICMS,342324254
+2022,15/04/2022,São Paulo,Outros ICMS,333722554
+2022,15/05/2022,São Paulo,Outros ICMS,338234471
+2022,15/06/2022,São Paulo,Outros ICMS,376539886
+2022,15/07/2022,São Paulo,Outros ICMS,389523528
+2022,15/08/2022,São Paulo,Outros ICMS,415321028
+2022,15/09/2022,São Paulo,Outros ICMS,415321028
+2022,15/10/2022,São Paulo,Outros ICMS,413654329
+2022,15/01/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1918263911
+2022,15/02/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1001214943
+2022,15/03/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,2925646213
+2022,15/04/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1859919833
+2022,15/05/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1968327334
+2022,15/06/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,2142713387
+2022,15/07/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1855706591
+2022,15/08/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1630593148
+2022,15/09/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1630593148
+2022,15/10/2022,São Paulo,Petróleo-Combustível-Lubrificantes Secundário,1672761762
+2022,15/01/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,429839257
+2022,15/02/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,328138640
+2022,15/03/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,468526371
+2022,15/04/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,536589784
+2022,15/05/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,489736446
+2022,15/06/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,414486856
+2022,15/07/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,644621670
+2022,15/08/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,1111701176
+2022,15/09/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,1111701176
+2022,15/10/2022,São Paulo,Petróleo-Combustível-Lubrificantes Terciário,898221901
+2022,15/01/2022,São Paulo,Serviços de Comunicação,772377625
+2022,15/02/2022,São Paulo,Serviços de Comunicação,770335881
+2022,15/03/2022,São Paulo,Serviços de Comunicação,750863056
+2022,15/04/2022,São Paulo,Serviços de Comunicação,753415946
+2022,15/05/2022,São Paulo,Serviços de Comunicação,766211772
+2022,15/06/2022,São Paulo,Serviços de Comunicação,702017212
+2022,15/07/2022,São Paulo,Serviços de Comunicação,706271032
+2022,15/08/2022,São Paulo,Serviços de Comunicação,565541248
+2022,15/09/2022,São Paulo,Serviços de Comunicação,565541248
+2022,15/10/2022,São Paulo,Serviços de Comunicação,509078550
+2022,15/01/2022,São Paulo,Serviços de Transporte,378145658
+2022,15/02/2022,São Paulo,Serviços de Transporte,149718708
+2022,15/03/2022,São Paulo,Serviços de Transporte,545525293
+2022,15/04/2022,São Paulo,Serviços de Transporte,415018332
+2022,15/05/2022,São Paulo,Serviços de Transporte,402579310
+2022,15/06/2022,São Paulo,Serviços de Transporte,442357704
+2022,15/07/2022,São Paulo,Serviços de Transporte,436771020
+2022,15/08/2022,São Paulo,Serviços de Transporte,482204856
+2022,15/09/2022,São Paulo,Serviços de Transporte,482204856
+2022,15/10/2022,São Paulo,Serviços de Transporte,501790496
+2022,15/01/2022,Sergipe,Comércio Atacadista,66517273
+2022,15/02/2022,Sergipe,Comércio Atacadista,60882645
+2022,15/03/2022,Sergipe,Comércio Atacadista,61143448
+2022,15/04/2022,Sergipe,Comércio Atacadista,69739883
+2022,15/05/2022,Sergipe,Comércio Atacadista,69395623
+2022,15/06/2022,Sergipe,Comércio Atacadista,71342453
+2022,15/07/2022,Sergipe,Comércio Atacadista,64486206
+2022,15/08/2022,Sergipe,Comércio Atacadista,65344490
+2022,15/09/2022,Sergipe,Comércio Atacadista,65344490
+2022,15/10/2022,Sergipe,Comércio Atacadista,69048078
+2022,15/01/2022,Sergipe,Comércio Varejista,58028417
+2022,15/02/2022,Sergipe,Comércio Varejista,37766984
+2022,15/03/2022,Sergipe,Comércio Varejista,38971052
+2022,15/04/2022,Sergipe,Comércio Varejista,40167857
+2022,15/05/2022,Sergipe,Comércio Varejista,39656599
+2022,15/06/2022,Sergipe,Comércio Varejista,46060561
+2022,15/07/2022,Sergipe,Comércio Varejista,42348805
+2022,15/08/2022,Sergipe,Comércio Varejista,47681655
+2022,15/09/2022,Sergipe,Comércio Varejista,47681655
+2022,15/10/2022,Sergipe,Comércio Varejista,47967747
+2022,15/01/2022,Sergipe,Energia Elétrica Secundária,41952096
+2022,15/02/2022,Sergipe,Energia Elétrica Secundária,41217246
+2022,15/03/2022,Sergipe,Energia Elétrica Secundária,39526700
+2022,15/04/2022,Sergipe,Energia Elétrica Secundária,42778704
+2022,15/05/2022,Sergipe,Energia Elétrica Secundária,39504145
+2022,15/06/2022,Sergipe,Energia Elétrica Secundária,37527814
+2022,15/07/2022,Sergipe,Energia Elétrica Secundária,34640821
+2022,15/08/2022,Sergipe,Energia Elétrica Secundária,25319242
+2022,15/09/2022,Sergipe,Energia Elétrica Secundária,25319242
+2022,15/10/2022,Sergipe,Energia Elétrica Secundária,21373529
+2022,15/01/2022,Sergipe,Energia Elétrica Terciário,2084355
+2022,15/02/2022,Sergipe,Energia Elétrica Terciário,2652136
+2022,15/03/2022,Sergipe,Energia Elétrica Terciário,2698736
+2022,15/04/2022,Sergipe,Energia Elétrica Terciário,3350142
+2022,15/05/2022,Sergipe,Energia Elétrica Terciário,3841036
+2022,15/06/2022,Sergipe,Energia Elétrica Terciário,4570848
+2022,15/07/2022,Sergipe,Energia Elétrica Terciário,3784273
+2022,15/08/2022,Sergipe,Energia Elétrica Terciário,2776409
+2022,15/09/2022,Sergipe,Energia Elétrica Terciário,2776409
+2022,15/10/2022,Sergipe,Energia Elétrica Terciário,3178197
+2022,15/01/2022,Sergipe,Outros ICMS,31746395
+2022,15/02/2022,Sergipe,Outros ICMS,26842374
+2022,15/03/2022,Sergipe,Outros ICMS,29435815
+2022,15/04/2022,Sergipe,Outros ICMS,26687543
+2022,15/05/2022,Sergipe,Outros ICMS,35097081
+2022,15/06/2022,Sergipe,Outros ICMS,43954383
+2022,15/07/2022,Sergipe,Outros ICMS,37144622
+2022,15/08/2022,Sergipe,Outros ICMS,36336587
+2022,15/09/2022,Sergipe,Outros ICMS,36336587
+2022,15/10/2022,Sergipe,Outros ICMS,40244424
+2022,15/01/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,85996529
+2022,15/02/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,76646645
+2022,15/03/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,71249347
+2022,15/04/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,78886529
+2022,15/05/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,75122251
+2022,15/06/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,87156128
+2022,15/07/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,77041425
+2022,15/08/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,52102902
+2022,15/09/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,52102902
+2022,15/10/2022,Sergipe,Petróleo-Combustível-Lubrificantes Secundário,43662991
+2022,15/01/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,5859259
+2022,15/02/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,5424477
+2022,15/03/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,5512578
+2022,15/04/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,6352541
+2022,15/05/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,8381711
+2022,15/06/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,6310920
+2022,15/07/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,3559982
+2022,15/08/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,3412191
+2022,15/09/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,3412191
+2022,15/10/2022,Sergipe,Petróleo-Combustível-Lubrificantes Terciário,1278979
+2022,15/01/2022,Sergipe,Serviços de Comunicação,15656527
+2022,15/02/2022,Sergipe,Serviços de Comunicação,14003748
+2022,15/03/2022,Sergipe,Serviços de Comunicação,17239691
+2022,15/04/2022,Sergipe,Serviços de Comunicação,15332180
+2022,15/05/2022,Sergipe,Serviços de Comunicação,16056539
+2022,15/06/2022,Sergipe,Serviços de Comunicação,15257790
+2022,15/07/2022,Sergipe,Serviços de Comunicação,13966961
+2022,15/08/2022,Sergipe,Serviços de Comunicação,13239647
+2022,15/09/2022,Sergipe,Serviços de Comunicação,13239647
+2022,15/10/2022,Sergipe,Serviços de Comunicação,8395599
+2022,15/01/2022,Sergipe,Serviços de Transporte,6245942
+2022,15/02/2022,Sergipe,Serviços de Transporte,5874142
+2022,15/03/2022,Sergipe,Serviços de Transporte,6775689
+2022,15/04/2022,Sergipe,Serviços de Transporte,6741623
+2022,15/05/2022,Sergipe,Serviços de Transporte,7976873
+2022,15/06/2022,Sergipe,Serviços de Transporte,6194429
+2022,15/07/2022,Sergipe,Serviços de Transporte,5582611
+2022,15/08/2022,Sergipe,Serviços de Transporte,7207711
+2022,15/09/2022,Sergipe,Serviços de Transporte,7207711
+2022,15/10/2022,Sergipe,Serviços de Transporte,5880234
+2022,15/01/2022,Tocantins,Comércio Atacadista,51245262
+2022,15/02/2022,Tocantins,Comércio Atacadista,42196800
+2022,15/03/2022,Tocantins,Comércio Atacadista,45445753
+2022,15/04/2022,Tocantins,Comércio Atacadista,49536827
+2022,15/05/2022,Tocantins,Comércio Atacadista,47279665
+2022,15/06/2022,Tocantins,Comércio Atacadista,47266585
+2022,15/07/2022,Tocantins,Comércio Atacadista,52701794
+2022,15/08/2022,Tocantins,Comércio Atacadista,52147102
+2022,15/09/2022,Tocantins,Comércio Atacadista,52147102
+2022,15/10/2022,Tocantins,Comércio Atacadista,53289805
+2022,15/01/2022,Tocantins,Comércio Varejista,72625814
+2022,15/02/2022,Tocantins,Comércio Varejista,64574008
+2022,15/03/2022,Tocantins,Comércio Varejista,75997548
+2022,15/04/2022,Tocantins,Comércio Varejista,60719762
+2022,15/05/2022,Tocantins,Comércio Varejista,66021926
+2022,15/06/2022,Tocantins,Comércio Varejista,73659281
+2022,15/07/2022,Tocantins,Comércio Varejista,68523767
+2022,15/08/2022,Tocantins,Comércio Varejista,74562529
+2022,15/09/2022,Tocantins,Comércio Varejista,74562529
+2022,15/10/2022,Tocantins,Comércio Varejista,73826236
+2022,15/01/2022,Tocantins,Energia Elétrica Secundária,40432293
+2022,15/02/2022,Tocantins,Energia Elétrica Secundária,35850712
+2022,15/03/2022,Tocantins,Energia Elétrica Secundária,34706861
+2022,15/04/2022,Tocantins,Energia Elétrica Secundária,39577255
+2022,15/05/2022,Tocantins,Energia Elétrica Secundária,39094967
+2022,15/06/2022,Tocantins,Energia Elétrica Secundária,37251032
+2022,15/07/2022,Tocantins,Energia Elétrica Secundária,37846054
+2022,15/08/2022,Tocantins,Energia Elétrica Secundária,33103163
+2022,15/09/2022,Tocantins,Energia Elétrica Secundária,33103163
+2022,15/10/2022,Tocantins,Energia Elétrica Secundária,28580204
+2022,15/01/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/02/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/03/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/04/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/05/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/06/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/07/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/08/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/09/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/10/2022,Tocantins,Energia Elétrica Terciário,0
+2022,15/01/2022,Tocantins,Outros ICMS,9607566
+2022,15/02/2022,Tocantins,Outros ICMS,6181168
+2022,15/03/2022,Tocantins,Outros ICMS,7863381
+2022,15/04/2022,Tocantins,Outros ICMS,9092750
+2022,15/05/2022,Tocantins,Outros ICMS,10631897
+2022,15/06/2022,Tocantins,Outros ICMS,11160150
+2022,15/07/2022,Tocantins,Outros ICMS,11855426
+2022,15/08/2022,Tocantins,Outros ICMS,13200988
+2022,15/09/2022,Tocantins,Outros ICMS,13200988
+2022,15/10/2022,Tocantins,Outros ICMS,12518829
+2022,15/01/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,122440601
+2022,15/02/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,101824187
+2022,15/03/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,103835696
+2022,15/04/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,144405390
+2022,15/05/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,127254058
+2022,15/06/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,138073473
+2022,15/07/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,128546984
+2022,15/08/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,100830735
+2022,15/09/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,100830735
+2022,15/10/2022,Tocantins,Petróleo-Combustível-Lubrificantes Secundário,102813511
+2022,15/01/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/02/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/03/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/04/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/05/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/06/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/07/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/08/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/09/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/10/2022,Tocantins,Petróleo-Combustível-Lubrificantes Terciário,0
+2022,15/01/2022,Tocantins,Serviços de Comunicação,11807153
+2022,15/02/2022,Tocantins,Serviços de Comunicação,12019633
+2022,15/03/2022,Tocantins,Serviços de Comunicação,12086593
+2022,15/04/2022,Tocantins,Serviços de Comunicação,11641087
+2022,15/05/2022,Tocantins,Serviços de Comunicação,11964085
+2022,15/06/2022,Tocantins,Serviços de Comunicação,12470423
+2022,15/07/2022,Tocantins,Serviços de Comunicação,12648276
+2022,15/08/2022,Tocantins,Serviços de Comunicação,12427567
+2022,15/09/2022,Tocantins,Serviços de Comunicação,12427567
+2022,15/10/2022,Tocantins,Serviços de Comunicação,11669700
+2022,15/01/2022,Tocantins,Serviços de Transporte,2759610
+2022,15/02/2022,Tocantins,Serviços de Transporte,2920854
+2022,15/03/2022,Tocantins,Serviços de Transporte,3809751
+2022,15/04/2022,Tocantins,Serviços de Transporte,4587236
+2022,15/05/2022,Tocantins,Serviços de Transporte,5453947
+2022,15/06/2022,Tocantins,Serviços de Transporte,6983957
+2022,15/07/2022,Tocantins,Serviços de Transporte,6525774
+2022,15/08/2022,Tocantins,Serviços de Transporte,8889487
+2022,15/09/2022,Tocantins,Serviços de Transporte,8889487
+2022,15/10/2022,Tocantins,Serviços de Transporte,5671221
