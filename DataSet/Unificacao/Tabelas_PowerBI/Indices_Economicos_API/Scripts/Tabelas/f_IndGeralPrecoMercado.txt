@@ -1,0 +1,22 @@
+f_IndGeralPrecoMercado
+
+
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.28655/dados?formato=json&dataInicial=" & Date.ToText(MenorData,"MM/dd/yyyy") & "&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"Column1.data", "IGPM"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"Column1.data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Data Analisada",".",",",Replacer.ReplaceText,{"IGPM"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"IGPM", type number}}),
+    #"Cria Col Data" = Table.AddColumn(#"Tipo Alterado", "Data", each Date.AddDays([Column1.data],14), type date)
+in
+    #"Cria Col Data"
+
+
+
+METADADOS:
+Recolhe o Índice Geral de Preços - Mercado. Indicador mensal do nível de atividade econômica do país, englobando seus principais setores.
+
+unidade: Índice
+
+Fonte: https://portal.fgv.br/noticias/igp-m-resultados-2021

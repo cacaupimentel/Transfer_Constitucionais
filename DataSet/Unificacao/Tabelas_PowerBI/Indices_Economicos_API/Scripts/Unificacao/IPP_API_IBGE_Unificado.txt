@@ -1,0 +1,10 @@
+IPP_API_IBGE
+
+let
+    Arquivo = "\ArquivosParaUnificar\IPP_API_IBGE.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Valor Substituído" = Table.ReplaceValue(#"Cabeçalhos Promovidos",".",",",Replacer.ReplaceText,{"TaxaIPCA", "IPCA_Indice", "IPCA_VarMES", "IPCA_VarTRIM", "IPCA_VarSEM", "IPCA_VarANO", "IPCA_Var12M"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"DATA", type date}, {"TaxaIPCA", type number}, {"IPCA_Indice", type number}, {"IPCA_VarMES", type number}, {"IPCA_VarTRIM", type number}, {"IPCA_VarSEM", type number}, {"IPCA_VarANO", type number}, {"IPCA_Var12M", type number}})
+in
+    #"Tipo Alterado"

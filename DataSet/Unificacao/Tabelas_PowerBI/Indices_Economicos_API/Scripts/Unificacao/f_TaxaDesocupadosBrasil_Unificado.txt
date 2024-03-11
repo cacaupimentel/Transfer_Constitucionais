@@ -1,0 +1,32 @@
+f_TaxaDesocupadosBrasil
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\f_TaxaDesocupadosBrasil.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"DATA", type date}, {"TxDesocupados", type number}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Total de pessoas sem trabalho, procurando emprego, de 14 anos ou mais de idade. Pesquisa Nacional por Amostra de Domicílios Contínua mensal, composto pelas variáveis:
+24379 Pessoas ocupadas - PNADC
+10812 Ocupados - Total (Desativada)
+7434	Ocupados - Total - Desativada
+10811 Desocupados - Total (Desativada)
+7433	Desocupados - Total - Desativada
+24380	Pessoas desocupadas - PNADC
+
+PEA = População Economicamente Ativa = PopDesocupada+PopOcupada
+
+Cálculo da taxa: [PopDesocupada/(PEA)]*100
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+

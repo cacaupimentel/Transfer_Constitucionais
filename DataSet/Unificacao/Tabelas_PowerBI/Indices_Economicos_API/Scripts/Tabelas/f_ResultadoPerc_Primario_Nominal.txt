@@ -1,0 +1,70 @@
+﻿f_ResultadoPerc_Primario_Nominal
+
+let
+    Fonte = Table.NestedJoin(f_ResultadoPerc_Nominal_5289, {"DataVigencia"}, f_ResultadoPerc_Primario_5355, {"DataVigencia"}, "f_ResultadoPerc_Primario_5355", JoinKind.LeftOuter),
+    #"f_ResultadoPerc_Primario_5355 Expandido" = Table.ExpandTableColumn(Fonte, "f_ResultadoPerc_Primario_5355", {"PercResSP_Primario"}, {"PercResSP_Primario"}),
+    #"Filtra MenorData" = Table.SelectRows(#"f_ResultadoPerc_Primario_5355 Expandido", each [DataVigencia] >= Date.AddYears(MenorData,-2)),
+    #"Cria Col Data" = Table.AddColumn(#"Filtra MenorData", "Data", each Date.AddDays([DataVigencia],14), type date),
+    Arredondado = Table.TransformColumns(#"Cria Col Data",{{"PercResSP_Nominal", each Number.Round(_, 2), type number}, {"PercResSP_Primario", each Number.Round(_, 2), type number}})
+in
+    Arredondado
+
+
+Metadados:
+Unifica as variáveis: 5355 NFSP sem desvalorização cambial (% PIB) - Fluxo mensal corrente - Resultado primário - Total - Governo Federal
+5289 NFSP sem desvalorização cambial (% PIB) - Fluxo mensal corrente - Resultado nominal - Total - Governo Federal
+
+Unidade: %
+Periodicidade: Mensal
+Data de início: janeiro/1999
+
+Fonte:https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+TABELAS AUXILIARES:
+
+f_ResultadoPerc_Primario_5355
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.5355/dados?formato=json&dataInicial=01/01/1999&dataFinal=" & DateTime.ToText(Date.AddMonths(DateTime.LocalNow(), -2),"MM/dd/yyyy"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DataVigencia", "PercResSP_Primario"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Column1 Expandido",".",",",Replacer.ReplaceText,{"PercResSP_Primario"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"PercResSP_Primario", type number}}),
+    #"Data Analisada" = Table.TransformColumns(#"Tipo Alterado",{{"DataVigencia", each Date.From(DateTimeZone.From(_)), type date}})
+in
+    #"Data Analisada"
+
+
+MEtadados:
+5355	NFSP sem desvalorização cambial (% PIB) - Fluxo mensal corrente - Resultado primário - Total - Governo Federal
+Unidade: %
+Periodicidade: Mensal
+Data de início: janeiro/1999
+
+Fonte:https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+f_ResultadoPerc_Nominal_5289
+
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.5289/dados?formato=json&dataInicial=01/01/1999&dataFinal=" & DateTime.ToText(Date.AddMonths(DateTime.LocalNow(), -2),"MM/dd/yyyy"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DataVigencia", "PercResSP_Nominal"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Column1 Expandido",".",",",Replacer.ReplaceText,{"PercResSP_Nominal"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"PercResSP_Nominal", type number}}),
+    #"Data Analisada" = Table.TransformColumns(#"Tipo Alterado",{{"DataVigencia", each Date.From(DateTimeZone.From(_)), type date}})
+in
+    #"Data Analisada"
+
+Metadados:
+5289	NFSP sem desvalorização cambial (% PIB) - Fluxo mensal corrente - Resultado nominal - Total - Governo Federal
+
+Unidade: %
+Periodicidade: Mensal
+Data de início: janeiro/1999
+
+Fonte:https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint

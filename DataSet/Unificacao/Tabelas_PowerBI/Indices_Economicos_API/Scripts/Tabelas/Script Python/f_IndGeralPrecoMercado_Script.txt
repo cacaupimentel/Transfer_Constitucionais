@@ -1,0 +1,29 @@
+f_IndGeralPrecoMercado
+
+
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.28655/dados?formato=json&dataInicial=" & Date.ToText(MenorData,"MM/dd/yyyy") & "&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"Column1.data", "IGPM"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"Column1.data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Data Analisada",".",",",Replacer.ReplaceText,{"IGPM"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"IGPM", type number}}),
+    #"Cria Col Data" = Table.AddColumn(#"Tipo Alterado", "Data", each Date.AddDays([Column1.data],14)),
+    #"Cria Col Caminho" = Table.AddColumn(#"Cria Col Data", "Caminho", each Caminho),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col Caminho",{{"Data", type text}, {"Caminho", type text}}),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""f_IndGeralPrecoMercado.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['Data', 'IGPM']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['Data', 'IGPM']]#(lf)print(dataset)#(lf)",[dataset=#"Tipo Alterado1"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"Data", "IGPM"}, {"Data", "IGPM"}),
+    #"Valor Substituído1" = Table.ReplaceValue(#"Value Expandido",".",",",Replacer.ReplaceText,{"IGPM"}),
+    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Valor Substituído1",{{"Data", type date}, {"IGPM", type number}})
+in
+    #"Tipo Alterado2"
+
+
+
+METADADOS:
+Recolhe o Índice Geral de Preços - Mercado. Indicador mensal do nível de atividade econômica do país, englobando seus principais setores.
+
+unidade: Índice
+
+Fonte: https://portal.fgv.br/noticias/igp-m-resultados-2021

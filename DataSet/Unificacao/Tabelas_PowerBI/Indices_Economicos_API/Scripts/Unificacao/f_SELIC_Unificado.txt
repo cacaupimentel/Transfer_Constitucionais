@@ -1,0 +1,17 @@
+f_SELIC
+
+let
+    Arquivo = "\ArquivosParaUnificar\f_SELIC.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"Taxa_SELIC_Periodo", type number}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Histórico das taxas de juros fixadas pelo Copom e evolução que são registradas diariamente no Sistema Especial de Liquidação e de Custódia (Selic), consiste na taxa média cobrada em negociações com títulos emitidos pelo Tesouro Nacional, uma taxa de juros de referência para os demais juros da economia. Divulgação em % a.a.
+
+unidade: Índice
+
+Fonte: https://www.bcb.gov.br/controleinflacao/historicotaxasjuros

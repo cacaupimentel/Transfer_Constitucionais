@@ -1,0 +1,268 @@
+f_TaxaDesocupadosBrasil
+
+
+let
+    Pasta = "\Estimativa_Populacao\API_IBGE\PopDesocupada",
+    Fonte = Folder.Files(Caminho & Pasta),
+    #"Outras Colunas Removidas" = Table.SelectColumns(Fonte,{"Name", "Folder Path"}),
+    #"Executar script Python1" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)caminho = dataset['Folder Path'][0]#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(caminho))#(lf)#(lf)i=0#(lf)col = """"#(lf)# Grava os arquivos na pasta já habilitados para edição#(lf)for arq in dataset['Name']:#(lf)#(lf)  # Abre o arquivo#(lf)  df = pd.read_csv(os.path.join(basedir, arq), sep="";"", encoding='utf_8')#(lf)  #(lf)  #Concatena o arquivo#(lf)  if i==0:#(lf)    dfnew = df.copy()#(lf)    col = df.columns[1]#(lf)  else:#(lf)    # Verifica se as tabelas são iguais ou não#(lf)    #if col == df.columns[1]:#(lf)      dfnew = pd.concat([df.copy(), dfnew.copy()]).sort_values(by='DATA')#(lf)    #else:#(lf)    #  dfnew = pd.merge(df.copy(), dfnew.copy(), how='inner', on='DATA')#(lf)      #(lf)    #(lf)  i = i + 1#(lf)#(lf)#dfnew.groupby('DATA', as_index =True)['PopOcupados', 'PopDesocupados'].sum()#(lf)#(lf)print(dfnew)",[dataset=#"Outras Colunas Removidas"]),
+    dfnew = #"Executar script Python1"{[Name="dfnew"]}[Value],
+    #"Tipo Alterado" = Table.TransformColumnTypes(dfnew,{{"DATA", type date}, {"PopOcupados", Int64.Type}, {"PopDesocupados", Int64.Type}}),
+    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado",{{"DATA", Order.Ascending}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Linhas Classificadas",null,0,Replacer.ReplaceValue,{"PopOcupados", "PopDesocupados"}),
+    #"Linhas Agrupadas" = Table.Group(#"Valor Substituído", {"DATA"}, {{"PopOcupada", each List.Sum([PopOcupados]), type nullable number}, {"PopDesocupada", each List.Sum([PopDesocupados]), type nullable number}}),
+    #"Cria Col Cálculo Taxa" = Table.AddColumn(#"Linhas Agrupadas", "TxDesocupados", each ([PopDesocupada]/([PopDesocupada]+[PopOcupada]))*100, type number),
+    #"Cria Col Caminho" = Table.AddColumn(#"Cria Col Cálculo Taxa", "Caminho", each Caminho),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col Caminho",{{"DATA", type text}, {"PopOcupada", type text}, {"PopDesocupada", type text}, {"TxDesocupados", type text}, {"Caminho", type text}}),
+    #"Script Python Salvar" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import numpy as np#(lf)import os#(lf)#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""f_TaxaDesocupadosBrasil.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'TxDesocupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'TxDesocupados']]",[dataset=#"Tipo Alterado1"]),
+    dataset = #"Script Python Salvar"{[Name="dataset"]}[Value],
+    #"Tipo Alterado2" = Table.TransformColumnTypes(dataset,{{"DATA", type date}, {"TxDesocupados", type number}})
+in
+    #"Tipo Alterado2"
+
+
+METADADOS:
+Total de pessoas sem trabalho, procurando emprego, de 14 anos ou mais de idade. Pesquisa Nacional por Amostra de Domicílios Contínua mensal, composto pelas variáveis:
+24379 Pessoas ocupadas - PNADC
+10812 Ocupados - Total (Desativada)
+7434	Ocupados - Total - Desativada
+10811 Desocupados - Total (Desativada)
+7433	Desocupados - Total - Desativada
+24380	Pessoas desocupadas - PNADC
+
+PEA = População Economicamente Ativa = PopDesocupada+PopOcupada
+
+Cálculo da taxa: [PopDesocupada/(PEA)]*100
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+TABELAS AUXILIARES:
+PopulacaoDesocupada_7433
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.7433/dados?formato=json&dataInicial=01/31/1994&dataFinal=" & Text.Replace(DataAtual, "-","/"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Filtra antes de 01/10/2001" = Table.SelectRows(#"Data Analisada", each [DateVigencia] < #date(2001, 10, 1)),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Filtra antes de 01/10/2001",{{"PopDesocupados", type number}}),
+    #"Filtra até jan2002" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2002, 1, 1)),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Filtra até jan2002" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopDesocupada_7433.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopDesocupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopDesocupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopDesocupados"}, {"DATA", "PopDesocupados"})
+in
+    #"Value Expandido"
+
+
+Metadados:
+7433	Desocupados - Total - Desativada
+
+Unidade: unidade
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+Data desativada: dezembro/2002
+usada até dezembro/2001
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+PopulacaoDesocupada_10811
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10811/dados?formato=json&dataInicial=01/31/2001&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopDesocupados", type number}}),
+    #"Filtra antes de 01/03/2012" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Filtra até mar2012" = Table.SelectRows(#"Filtra antes de 01/03/2012", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Filtra antes de 01/03/2012", {{"PopDesocupados", each _ * 1000, type number}}),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Coluna multiplicada por 1000" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopDesocupada_10811.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopDesocupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopDesocupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopDesocupados"}, {"DATA", "PopDesocupados"})
+in
+    #"Value Expandido"
+
+
+
+Metadados:
+10811 Desocupados - Total (Desativada)
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: outubro/2001
+Data desativada: fevereiro/2016
+usada até fevereiro/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+PopulacaoOcupada_7434
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.7433/dados?formato=json&dataInicial=01/31/1994&dataFinal=" & Text.Replace(DataAtual, "-","/"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Filtra antes de 01/10/2001" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2001, 10, 1)),
+    #"Filtra até jan2002" = Table.SelectRows(#"Filtra antes de 01/10/2001", each [DateVigencia] < #date(2002, 1, 1)),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Filtra até jan2002" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopOcupada_7434.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopOcupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopOcupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopOcupados"}, {"DATA", "PopOcupados"})
+in
+    #"Value Expandido"
+
+
+Metadados:
+7434	Ocupados - Total - Desativada
+
+Unidade: unidade
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+Data desativada: dezembro/2002
+usada até dezembro/2001
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+PopulacaoOcupada_10812
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10812/dados?formato=json&dataInicial=01/31/2001&dataFinal=" & Text.Replace(DataAtual, "-","/"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Filtra antes de 01/03/2012" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Filtra até mar2012" = Table.SelectRows(#"Filtra antes de 01/03/2012", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Filtra antes de 01/03/2012", {{"PopOcupados", each _ * 1000, type number}}),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Coluna multiplicada por 1000" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopOcupada_10812.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopOcupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopOcupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopOcupados"}, {"DATA", "PopOcupados"})
+in
+    #"Value Expandido"
+
+
+Metadados:
+10812 	Ocupados - Total (Desativada)
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: outubro/2001
+Data desativada: fevereiro/2016
+usada até fevereiro/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+PopOcupada_Atual
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.24379/dados?formato=json&dataInicial=03/01/2012&dataFinal=" & Text.Replace(DataAtual, "-","/"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopOcupados", each _ * 1000, type number}}),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Coluna multiplicada por 1000" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopOcupada_Atual.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopOcupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopOcupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopOcupados"}, {"DATA", "PopOcupados"})
+in
+    #"Value Expandido"
+
+Metadados:
+24379	Pessoas ocupadas - PNADC
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: março/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+PopDesocupada_Atual
+let
+    Montagem = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.24380/dados?formato=json&dataInicial=03/01/2012&dataFinal=" & Text.Replace(DataAtual, "-","/"),
+    Fonte = Json.Document(Web.Contents(Montagem)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopDesocupados", type number}}),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopDesocupados", each _ * 1000, type number}}),
+    #"Cria Col DATA em 15" = Table.AddColumn(#"Coluna multiplicada por 1000" , "DATA", each Date.AddDays([DateVigencia],14)),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col DATA em 15",{{"DATA", type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Tipo Alterado1", "Caminho", each Caminho, type text),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/Estimativa_Populacao/API_IBGE/PopDesocupada/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""PopDesocupada_Atual.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'PopDesocupados']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'PopDesocupados']]#(lf)print(dataset)#(lf)",[dataset=#"Cria Col Caminho"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "PopDesocupados"}, {"DATA", "PopDesocupados"})
+in
+    #"Value Expandido"
+
+Metadados:
+24380	Pessoas desocupadas - PNADC
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: março/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+ArqPopDesocupadaAmostra
+let
+    Pasta = "\Estimativa_Populacao\API_IBGE\PopDesocupada",
+    Fonte = Folder.Files(Caminho & Pasta),
+    #"Outras Colunas Removidas" = Table.SelectColumns(Fonte,{"Content"}),
+    Navegação1 = #"Outras Colunas Removidas"{0}[Content]
+in
+    Navegação1
+
+
+ParPopDesocupado
+ArqPopDesocupadaAmostra meta [IsParameterQuery=true, BinaryIdentifier=ArqPopDesocupadaAmostra, Type="Binary", IsParameterQueryRequired=true]
+
+
+TransfArqPopDesocupadaExemplo
+let
+    Fonte = Csv.Document(ParPopDesocupado,[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Colunas Renomeadas" = Table.RenameColumns(Fonte,{{"Column1", "DATA"}, {"Column2", "Populacao"}}),
+    #"Linhas Filtradas" = Table.SelectRows(#"Colunas Renomeadas", each ([DATA] <> "DATA"))
+in
+    #"Linhas Filtradas"
+
+
+TransfArqPopDesocupada
+let
+    Fonte = (ParPopDesocupado as binary) => let
+    Fonte = Csv.Document(ParPopDesocupado,[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Colunas Renomeadas" = Table.RenameColumns(Fonte,{{"Column1", "DATA"}, {"Column2", "Populacao"}}),
+    #"Linhas Filtradas" = Table.SelectRows(#"Colunas Renomeadas", each ([DATA] <> "DATA"))
+in
+    #"Linhas Filtradas"
+in
+    Fonte
+

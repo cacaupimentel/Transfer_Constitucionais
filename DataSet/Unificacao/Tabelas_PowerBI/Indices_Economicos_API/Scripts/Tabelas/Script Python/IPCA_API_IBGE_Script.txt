@@ -1,0 +1,51 @@
+IPCA_API_IBGE
+
+
+let
+    VarPerCalendario = Text.Range(Lines.ToText(Mes_Ano[AnoMes], "|"), Text.PositionOf(Lines.ToText(Mes_Ano[AnoMes], "|"),"199912|")+7),
+    VarPeriodos = Text.Middle(VarPerCalendario, 0, Text.PositionOf(VarPerCalendario, Text.Combine({"|", AnoMesAtual,"|"}))+7),
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v3/agregados/1737/periodos/"& VarPeriodos & "/variaveis/2266|63|2263|2264|69|2265?localidades=N1[all]")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "variavel", "unidade", "resultados"}, {"id", "variavel", "unidade", "resultados"}),
+    #"resultados Expandido" = Table.ExpandListColumn(#"Column1 Expandido", "resultados"),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"resultados Expandido",{{"resultados", type any}}),
+    #"resultados Expandido1" = Table.ExpandRecordColumn(#"Tipo Alterado", "resultados", {"series"}, {"resultados.series"}),
+    #"Substitui IPCA_Indice" = Table.ReplaceValue(#"resultados Expandido1","IPCA - Número-índice (base: dezembro de 1993 = 100)","IPCA_Indice",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPCA_VarMES" = Table.ReplaceValue(#"Substitui IPCA_Indice","IPCA - Variação mensal","IPCA_VarMES",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPCA_VarTRIM" = Table.ReplaceValue(#"Substitui IPCA_VarMES","IPCA - Variação acumulada em 3 meses","IPCA_VarTRIM",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPCA_VarSEM" = Table.ReplaceValue(#"Substitui IPCA_VarTRIM","IPCA - Variação acumulada em 6 meses","IPCA_VarSEM",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPCA_VarANO" = Table.ReplaceValue(#"Substitui IPCA_VarSEM","IPCA - Variação acumulada no ano","IPCA_VarANO",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPCA_Var12M" = Table.ReplaceValue(#"Substitui IPCA_VarANO","IPCA - Variação acumulada em 12 meses","IPCA_Var12M",Replacer.ReplaceText,{"variavel"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Substitui IPCA_Var12M",{"unidade", "id"}),
+    #"resultados.series Expandido" = Table.ExpandListColumn(#"Colunas Removidas", "resultados.series"),
+    #"resultados.series Expandido1" = Table.ExpandRecordColumn(#"resultados.series Expandido", "resultados.series", {"serie"}, {"serie"}),
+    #"serie Expandido2" = Table.ExpandRecordColumn(#"resultados.series Expandido1", "serie", Text.Split(VarPeriodos,"|")),
+    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"serie Expandido2", {"variavel"}, "Atributo", "Valor"),
+    #"Colunas Reordenadas" = Table.ReorderColumns(#"Outras Colunas Não Dinâmicas",{"Atributo", "variavel", "Valor"}),
+    #"Valor Substituído6" = Table.ReplaceValue(#"Colunas Reordenadas",".",",",Replacer.ReplaceText,{"Valor"}),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído6",{{"Valor", type number}}),
+    #"Coluna em pivô" = Table.Pivot(#"Tipo Alterado1", List.Distinct(#"Tipo Alterado1"[variavel]), "variavel", "Valor", List.Sum),
+    #"Últimos caracteres inseridos" = Table.AddColumn(#"Coluna em pivô", "Últimos caracteres", each Text.End([Atributo], 2), type text),
+    #"Primeiros caracteres extraídos" = Table.TransformColumns(#"Últimos caracteres inseridos", {{"Atributo", each Text.Start(_, 4), type text}}),
+    #"Colunas Mescladas" = Table.CombineColumns(#"Primeiros caracteres extraídos",{"Últimos caracteres", "Atributo"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"DATA"),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Colunas Mescladas", {{"DATA", each "15/" & _, type text}}),
+    #"Cria Col Caminho" = Table.AddColumn(#"Prefixo Adicionado", "Caminho", each Caminho, type text),
+    #"Adição Inserida" = Table.AddColumn(#"Cria Col Caminho", "TaxaIPCA", each [IPCA_VarMES] + 1, type number),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""IPCA_API_IBGE.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['DATA', 'TaxaIPCA', 'IPCA_Indice', 'IPCA_VarMES', 'IPCA_VarTRIM', 'IPCA_VarSEM', 'IPCA_VarANO', 'IPCA_Var12M']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['DATA', 'TaxaIPCA', 'IPCA_Indice', 'IPCA_VarMES', 'IPCA_VarTRIM', 'IPCA_VarSEM', 'IPCA_VarANO', 'IPCA_Var12M']]#(lf)print(dataset)#(lf)",[dataset=#"Adição Inserida"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"DATA", "TaxaIPCA", "IPCA_Indice", "IPCA_VarMES", "IPCA_VarTRIM", "IPCA_VarSEM", "IPCA_VarANO", "IPCA_Var12M"}, {"DATA", "TaxaIPCA", "IPCA_Indice", "IPCA_VarMES", "IPCA_VarTRIM", "IPCA_VarSEM", "IPCA_VarANO", "IPCA_Var12M"}),
+    #"Data Analisada" = Table.TransformColumns(#"Value Expandido",{{"DATA", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Data Analisada",".",",",Replacer.ReplaceText,{"TaxaIPCA", "IPCA_Indice", "IPCA_VarMES", "IPCA_VarTRIM", "IPCA_VarSEM", "IPCA_VarANO", "IPCA_Var12M"}),
+    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Valor Substituído",{{"TaxaIPCA", type number}, {"IPCA_Indice", type number}, {"IPCA_VarMES", type number}, {"IPCA_VarTRIM", type number}, {"IPCA_VarSEM", type number}, {"IPCA_VarANO", type number}, {"IPCA_Var12M", type number}})
+in
+    #"Tipo Alterado2"
+
+
+
+Metadados:
+Agrupa o Índice Nacional de Preços ao Consumidor Amplo (IPCA) da Tabela 1737- IPCA - Série histórica com número-índice (2266), variação mensal(63) e variações acumuladas em 3 meses (2263), em 6 meses (2264), no ano (69) e em 12 meses (2265) do IBGE.
+
+Data início: dezembro/1979
+Periodicidade: Mensal
+
+Fonte: https://servicodados.ibge.gov.br/api/docs/agregados?versao=3#api-bq

@@ -1,0 +1,174 @@
+f_TaxaDesocupadosBrasil
+
+
+let
+    Fonte = Table.NestedJoin(PopDesocupada_Atual, {"DateVigencia"}, PopOcupada_Atual, {"DateVigencia"}, "PopOcupada_Atual", JoinKind.LeftOuter),
+    #"PopOcupada_Atual Expandido" = Table.ExpandTableColumn(Fonte, "PopOcupada_Atual", {"PopOcupados"}, {"PopOcupados"}),
+    #"Cria Col Cálculo Taxa" = Table.AddColumn(#"PopOcupada_Atual Expandido", "TxDesocupados", each ([PopDesocupados]/([PopDesocupados]+[PopOcupados]))*100),
+    Arredondado = Table.TransformColumns(#"Cria Col Cálculo Taxa",{{"TxDesocupados", each Number.Round(_, 4), type number}}),
+    #"Cria Col DATA" = Table.AddColumn(Arredondado, "DATA", each Date.AddDays([DateVigencia],14), type date),
+    #"Filtra DataMenor (MM-2)" = Table.SelectRows(#"Cria Col DATA", each [DATA] >= Date.AddMonths(MenorData,-2)), 
+    #"Colunas Removidas" = Table.RemoveColumns(#"Filtra DataMenor (MM-2)",{"PopDesocupados", "PopOcupados"})
+in
+    #"Colunas Removidas"
+
+
+METADADOS:
+Total de pessoas sem trabalho, procurando emprego, de 14 anos ou mais de idade. Pesquisa Nacional por Amostra de Domicílios Contínua mensal, composto pelas variáveis:
+24379 Pessoas ocupadas - PNADC
+10812 Ocupados - Total (Desativada)
+7434	Ocupados - Total - Desativada
+10811 Desocupados - Total (Desativada)
+7433	Desocupados - Total - Desativada
+24380	Pessoas desocupadas - PNADC
+
+PEA = População Economicamente Ativa = PopDesocupada+PopOcupada
+
+Cálculo da taxa: [PopDesocupada/(PEA)]*100
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+TABELAS AUXILIARES:
+PopulacaoDesocupada_7433
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.7433/dados?formato=json&dataInicial=01/31/1994&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopDesocupados", type number}}),
+    #"Filtra até jan2002" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2002, 1, 1))
+in
+    #"Filtra até jan2002"
+
+Metadados:
+7433	Desocupados - Total - Desativada
+
+Unidade: unidade
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+Data desativada: dezembro/2002
+usada até dezembro/2001
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+PopulacaoDesocupada_10811
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.10811/dados?formato=json&dataInicial=01/31/2001&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopDesocupados", type number}}),
+    #"Filtra até mar2012" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopDesocupados", each _ * 1000, type number}})
+in
+    #"Coluna multiplicada por 1000"
+
+
+Metadados:
+10811 Desocupados - Total (Desativada)
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: outubro/2001
+Data desativada: fevereiro/2016
+usada até fevereiro/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+PopulacaoOcupada_7434
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.7434/dados?formato=json&dataInicial=01/31/1994&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Filtra até jan2002" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2002, 1, 1))
+in
+    #"Filtra até jan2002"
+
+Metadados:
+7434	Ocupados - Total - Desativada
+
+Unidade: unidade
+Periodicidade: Mensal
+Data Inicial: janeiro/1994
+Data desativada: dezembro/2002
+usada até dezembro/2001
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+PopulacaoOcupada_10812
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.10812/dados?formato=json&dataInicial=01/31/2001&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Filtra até mar2012" = Table.SelectRows(#"Tipo Alterado", each [DateVigencia] < #date(2012, 3, 1)),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopOcupados", each _ * 1000, type number}})
+in
+    #"Coluna multiplicada por 1000"
+
+Metadados:
+10812 	Ocupados - Total (Desativada)
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: outubro/2001
+Data desativada: fevereiro/2016
+usada até fevereiro/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+
+PopOcupada_Atual
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.24379/dados?formato=json&dataInicial=03/01/2012&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopOcupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopOcupados", type number}}),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopOcupados", each _ * 1000, type number}})
+in
+    #"Coluna multiplicada por 1000"
+
+Metadados:
+24379	Pessoas ocupadas - PNADC
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: março/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint
+
+
+PopDesocupada_Atual
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.24380/dados?formato=json&dataInicial=03/01/2012&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"DateVigencia", "PopDesocupados"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"DateVigencia", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"PopDesocupados", type number}}),
+    #"Coluna multiplicada por 1000" = Table.TransformColumns(#"Tipo Alterado", {{"PopDesocupados", each _ * 1000, type number}})
+in
+    #"Coluna multiplicada por 1000"
+
+Metadados:
+24380	Pessoas desocupadas - PNADC
+
+Unidade: unidade(mil)
+Periodicidade: Mensal
+Data Inicial: março/2012
+
+Fonte: https://www3.bcb.gov.br/sgspub/consultarvalores/telaCvsSelecionarSeries.paint

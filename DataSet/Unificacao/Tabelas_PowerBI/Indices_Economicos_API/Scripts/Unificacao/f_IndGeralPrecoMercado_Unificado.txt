@@ -1,0 +1,20 @@
+f_IndGeralPrecoMercado
+
+
+let
+    Arquivo = "\ArquivosParaUnificar\f_IndGeralPrecoMercado.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Valor Substituído" = Table.ReplaceValue(#"Cabeçalhos Promovidos",".",",",Replacer.ReplaceText,{"IGPM"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"Data", type date}, {"IGPM", type number}})
+in
+    #"Tipo Alterado"
+
+
+
+METADADOS:
+Recolhe o Índice Geral de Preços - Mercado. Indicador mensal do nível de atividade econômica do país, englobando seus principais setores.
+
+unidade: Índice
+
+Fonte: https://portal.fgv.br/noticias/igp-m-resultados-2021

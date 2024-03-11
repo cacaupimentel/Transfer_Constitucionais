@@ -1,0 +1,20 @@
+f_IBC_BR_AtivEcon_API
+
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.24363/dados?formato=json&dataInicial=" & Date.ToText(MenorData,"MM/dd/yyyy") & "&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"Column1.data", "IBC_Br"}),
+    #"Data Analisada" = Table.TransformColumns(#"Column1 Expandido",{{"Column1.data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Data Analisada",".",",",Replacer.ReplaceText,{"IBC_Br"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"IBC_Br", type number}}),
+    #"Cria Col Data" = Table.AddColumn(#"Tipo Alterado", "Data", each Date.AddDays([Column1.data],14), type date)
+in
+    #"Cria Col Data"
+
+
+METADADOS:
+Na descrição do Banco Central esta tabela reúne “O Índice de Atividade Econômica do Banco Central (IBC-Br) reflete as atividades da indústria, dos serviços e da agropecuária.” Foi utilizada a tabela nº 24364 - Índice de Atividade Econômica do Banco Central (IBC-Br) - com ajuste sazonal.
+
+unidade: valores correntes
+
+Fonte: https://www.bcb.gov.br/estatisticas/grafico/graficoestatistica/ibcbr e SGS - Sistema Gerenciador de Séries Temporais (bcb.gov.br)

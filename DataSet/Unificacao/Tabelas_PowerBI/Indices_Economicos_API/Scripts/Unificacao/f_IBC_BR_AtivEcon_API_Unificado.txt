@@ -1,0 +1,17 @@
+f_IBC_BR_AtivEcon_API
+
+let
+    Arquivo = "\ArquivosParaUnificar\f_IBC_BR_AtivEcon_API.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data", type date}, {"IBC_Br", type number}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Na descrição do Banco Central esta tabela reúne “O Índice de Atividade Econômica do Banco Central (IBC-Br) reflete as atividades da indústria, dos serviços e da agropecuária.” Foi utilizada a tabela nº 24364 - Índice de Atividade Econômica do Banco Central (IBC-Br) - com ajuste sazonal.
+
+unidade: valores correntes
+
+Fonte: https://www.bcb.gov.br/estatisticas/grafico/graficoestatistica/ibcbr e SGS - Sistema Gerenciador de Séries Temporais (bcb.gov.br)

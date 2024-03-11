@@ -1,0 +1,44 @@
+INPC_API_IBGE
+
+let
+    VrAnoPesquisa = Text.Middle(Lines.ToText(Mes_Ano[AnoMes], "|"), 0, Text.PositionOf(Lines.ToText(Mes_Ano[AnoMes], "|"), Text.Combine({"|", AnoMesAtual,"|"}))+7),
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v3/agregados/1736/periodos/" & VrAnoPesquisa & "/variaveis/2289|44|68|2292?localidades=N1[all]")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "variavel", "unidade", "resultados"}, {"id", "variavel", "unidade", "resultados"}),
+    // Substitui a descrição da variável 2289  de INPC - Número-índice (base: dezembro de 1993 = 100) para "INPC_Nr_Indice", pois será transformada em coluna
+    #"Substitui INPC 2289" = Table.ReplaceValue(#"Column1 Expandido","INPC - Número-índice (base: dezembro de 1993 = 100)","INPC_Nr_Indice",Replacer.ReplaceText,{"variavel"}),
+    // Substitui a descrição da variável 44 "INPC - Variação mensal" para "INPC", pois será transformado em culana
+    #"Substitui INPC 44" = Table.ReplaceValue(#"Substitui INPC 2289","INPC - Variação mensal","INPC",Replacer.ReplaceText,{"variavel"}),
+    // Substitui a dscrição da variável 68 "INPC - Variação acumulada no ano" para "INPC_AC_ANO", pois vari ser transformado em coluna
+    #"Substitui INPC 68" = Table.ReplaceValue(#"Substitui INPC 44","INPC - Variação acumulada no ano","INPC_AC_ANO",Replacer.ReplaceText,{"variavel"}),
+    // Substitui a descrição da variável 2292 "INPC - Variação acumulada em 12 meses" para "INPC_AC12M", pois vai ser uma coluna
+    #"Substitui INPC 2292" = Table.ReplaceValue(#"Substitui INPC 68","INPC - Variação acumulada em 12 meses","INPC_AC12M",Replacer.ReplaceText,{"variavel"}),
+    #"resultados Expandido" = Table.ExpandListColumn(#"Substitui INPC 2292", "resultados"),
+    #"resultados Expandido1" = Table.ExpandRecordColumn(#"resultados Expandido", "resultados", {"series"}, {"resultados.series"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"resultados Expandido1",{{"id", Int64.Type}, {"variavel", type text}, {"unidade", type text}, {"resultados.series", type any}}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"unidade", "id"}),
+    #"resultados.series Expandido" = Table.ExpandListColumn(#"Colunas Removidas", "resultados.series"),
+    #"resultados.series Expandido1" = Table.ExpandRecordColumn(#"resultados.series Expandido", "resultados.series", {"serie"}, {"resultados.series.serie"}),
+    #"resultados.series.serie Expandido" = Table.ExpandRecordColumn(#"resultados.series Expandido1", "resultados.series.serie", Text.Split(VrAnoPesquisa,"|")),
+    Personalizar1 = Table.UnpivotOtherColumns(#"resultados.series.serie Expandido", {"variavel"}, "AnoMes", "Valor"),
+    #"Valor Substituído" = Table.ReplaceValue(Personalizar1,".",",",Replacer.ReplaceText,{"Valor"}),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Valor Substituído",{{"Valor", type number}}),
+    #"Coluna em pivô" = Table.Pivot(#"Tipo Alterado1", List.Distinct(#"Tipo Alterado1"[variavel]), "variavel", "Valor", List.Sum),
+    #"Últimos caracteres inseridos" = Table.AddColumn(#"Coluna em pivô", "Últimos caracteres", each Text.End([AnoMes], 2), type text),
+    #"Primeiros caracteres extraídos" = Table.TransformColumns(#"Últimos caracteres inseridos", {{"AnoMes", each Text.Start(_, 4), type text}}),
+    #"Colunas Mescladas" = Table.CombineColumns(#"Primeiros caracteres extraídos",{"Últimos caracteres", "AnoMes"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"DATA"),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Colunas Mescladas", {{"DATA", each "15/" & _, type text}}),
+    #"Data Analisada" = Table.TransformColumns(#"Prefixo Adicionado",{{"DATA", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Linhas Classificadas" = Table.Sort(#"Data Analisada",{{"DATA", Order.Descending}})
+in
+    #"Linhas Classificadas"
+
+
+METADADOS:
+Tabela do IBGE do Índice Nacional de Preços ao Consumidor nº 1736- INPC - Série histórica com número-índice (2289), variação mensal (44) e variações acumuladas no ano (68) e em 12 meses (2292). 
+
+Unidade: US$ (milhões)
+Periodiciadade: Mensal
+Data Início: abr-1979
+
+Fonte:https://servicodados.ibge.gov.br/api/docs/agregados?versao=3#api-bq

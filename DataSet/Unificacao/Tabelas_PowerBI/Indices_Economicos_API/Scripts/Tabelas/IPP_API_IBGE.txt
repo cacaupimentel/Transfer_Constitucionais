@@ -1,0 +1,30 @@
+IPP_API_IBGE
+
+let
+    VrPerPesquisa = Text.Middle(VarPerCalendario, (119*6)+119, Text.PositionOf(VarPerCalendario, Text.Combine({"|", AnoMesAtual,"|"}))-(119*6)-112),
+    Fonte = Json.Document(Web.Contents("https://servicodados.ibge.gov.br/api/v3/agregados/6903/periodos/" & VrPerPesquisa & "/variaveis/1396|1394|10008?localidades=N1[all]&classificacao=842[all]")),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"id", "variavel", "unidade", "resultados"}, {"id", "variavel", "unidade", "resultados"}),
+    #"Substoitui var m/m1) por IPP" = Table.ReplaceValue(#"Column1 Expandido","IPP - Variação mês/mês imediatamente anterior (M/M-1)","IPP",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui var mes ano anterior" = Table.ReplaceValue(#"Substoitui var m/m1) por IPP","IPP - Variação mês/mesmo mês do ano anterior (M/M-12)","IPP_MesAnoAnt",Replacer.ReplaceText,{"variavel"}),
+    #"Substitui IPP Indice" = Table.ReplaceValue(#"Substitui var mes ano anterior","IPP - Número-índice (dezembro de 2018 = 100)","IPP_NrIndice",Replacer.ReplaceText,{"variavel"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Substitui IPP Indice",{"unidade", "id"}),
+    #"Filtra IPP" = Table.SelectRows(#"Colunas Removidas", each ([variavel] = "IPP")),
+    #"resultados Expandido" = Table.ExpandListColumn(#"Filtra IPP", "resultados"),
+    #"resultados Expandido1" = Table.ExpandRecordColumn(#"resultados Expandido", "resultados", {"series"}, {"resultados.series"}),
+    #"resultados.series Expandido2" = Table.ExpandListColumn(#"resultados Expandido1", "resultados.series"),
+    #"resultados.series Expandido3" = Table.ExpandRecordColumn(#"resultados.series Expandido2", "resultados.series", {"serie"}, {"serie"}),
+    #"serie Expandido" = Table.ExpandRecordColumn(#"resultados.series Expandido3", "serie", Text.Split(VrPerPesquisa,"|")),
+    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"serie Expandido", {"variavel"}, "Data", "Valor"),
+    #"Substitui ... por ZERO" = Table.ReplaceValue(#"Outras Colunas Não Dinâmicas","...","0",Replacer.ReplaceText,{"Valor"}),
+    #"Substitui - por ZERO" = Table.ReplaceValue(#"Substitui ... por ZERO","-","0",Replacer.ReplaceValue,{"Valor"}),
+    #"Substitui . por ," = Table.ReplaceValue(#"Substitui - por ZERO",".",",",Replacer.ReplaceText,{"Valor"}),
+    #"Tipo Valor Alterado" = Table.TransformColumnTypes(#"Substitui . por ,",{{"Valor", type number}}),
+    #"Coluna em pivô" = Table.Pivot(#"Tipo Valor Alterado", List.Distinct(#"Tipo Valor Alterado"[variavel]), "variavel", "Valor", List.Sum),
+    #"Dividir Coluna pela Posição" = Table.SplitColumn(#"Coluna em pivô", "Data", Splitter.SplitTextByRepeatedLengths(4), {"Data.1", "Data.2"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna pela Posição",{{"Data.1", Int64.Type}, {"Data.2", Int64.Type}}),
+    #"Colunas Mescladas" = Table.CombineColumns(Table.TransformColumnTypes(#"Tipo Alterado", {{"Data.2", type text}, {"Data.1", type text}}, "pt-BR"),{"Data.2", "Data.1"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"Data"),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Colunas Mescladas", {{"Data", each "15/" & _, type text}}),
+    #"Data Analisada" = Table.TransformColumns(#"Prefixo Adicionado",{{"Data", each Date.From(DateTimeZone.From(_)), type date}})
+in
+    #"Data Analisada"

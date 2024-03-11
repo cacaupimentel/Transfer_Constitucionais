@@ -1,0 +1,28 @@
+f_SELIC
+
+
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=json&dataInicial=" & Date.ToText(MenorData,"MM/dd/yyyy") & "&dataFinal=" & Text.Replace(DataAtual, "-","/") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"data", "valor"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Column1 Expandido",".",",",Replacer.ReplaceText,{"valor"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Valor Substituído",{{"valor", "Taxa_SELIC_Periodo"}, {"data", "data_original"}}),
+    #"Data Analisada" = Table.TransformColumns(#"Colunas Renomeadas",{{"data_original", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Cria Col Data dia 15" = Table.AddColumn(#"Data Analisada", "Data", each Date.AddDays([data_original],14)),
+    #"Cria Col Caminho" = Table.AddColumn(#"Cria Col Data dia 15", "Caminho", each Caminho, type text),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cria Col Caminho",{{"Data", type text}}),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""f_SELIC.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['Data', 'Taxa_SELIC_Periodo']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['Data', 'Taxa_SELIC_Periodo']]#(lf)print(dataset)#(lf)",[dataset=#"Tipo Alterado1"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"Data", "Taxa_SELIC_Periodo"}, {"Data", "Taxa_SELIC_Periodo"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Value Expandido",{{"Data", type date}, {"Taxa_SELIC_Periodo", type number}})
+in
+    #"Tipo Alterado"
+
+
+
+METADADOS:
+Histórico das taxas de juros fixadas pelo Copom e evolução que são registradas diariamente no Sistema Especial de Liquidação e de Custódia (Selic), consiste na taxa média cobrada em negociações com títulos emitidos pelo Tesouro Nacional, uma taxa de juros de referência para os demais juros da economia. Divulgação em % a.a.
+
+unidade: Índice
+
+Fonte: https://www.bcb.gov.br/controleinflacao/historicotaxasjuros

@@ -1,0 +1,20 @@
+INPC_API_IBGE
+
+let
+    Arquivo = "\ArquivosParaUnificar\INPC_API_IBGE.csv",
+    Fonte = Csv.Document(File.Contents(Caminho & Arquivo),[Delimiter=";", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+    #"Valor Substituído" = Table.ReplaceValue(#"Cabeçalhos Promovidos",".",",",Replacer.ReplaceText,{"INPC", "INPC_Nr_Indice", "INPC_AC_ANO", "INPC_AC12M"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"DATA", type date}, {"INPC", type number}, {"INPC_Nr_Indice", type number}, {"INPC_AC_ANO", type number}, {"INPC_AC12M", type number}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Tabela do IBGE do Índice Nacional de Preços ao Consumidor nº 1736- INPC - Série histórica com número-índice (2289), variação mensal (44) e variações acumuladas no ano (68) e em 12 meses (2292). 
+
+Unidade: US$ (milhões)
+Periodiciadade: Mensal
+Data Início: abr-1979
+
+Fonte:https://servicodados.ibge.gov.br/api/docs/agregados?versao=3#api-bq

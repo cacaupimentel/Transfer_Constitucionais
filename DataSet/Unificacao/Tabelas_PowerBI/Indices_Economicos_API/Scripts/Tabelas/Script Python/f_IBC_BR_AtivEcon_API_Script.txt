@@ -1,0 +1,27 @@
+f_IBC_BR_AtivEcon_API
+
+let
+    Fonte = Json.Document(Web.Contents("https://api.bcb.gov.br/dados/serie/bcdata.sgs.24363/dados?formato=json&dataInicial=" & Date.ToText(MenorData,"MM/dd/yyyy") & "&dataFinal=" & DateTime.ToText(DateTime.LocalNow(),"MM/dd/yyyy") )),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Column1 Expandido" = Table.ExpandRecordColumn(#"Convertido para Tabela", "Column1", {"data", "valor"}, {"Column1.data", "IBC_Br"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Column1 Expandido",".",",",Replacer.ReplaceText,{"IBC_Br"}),
+    #"Data Analisada" = Table.TransformColumns(#"Valor Substituído",{{"Column1.data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Cria Col Data" = Table.AddColumn(#"Data Analisada", "Data", each Date.AddDays([Column1.data],14), type date),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Cria Col Data",{"Column1.data"}),
+    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Removidas",{"Data", "IBC_Br"}),
+    #"Cria Col Caminho para Script" = Table.AddColumn(#"Colunas Reordenadas", "Caminho", each Caminho, type text),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cria Col Caminho para Script",{{"Data", type text}}),
+    #"Executar script Python" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)# -*- encoding: utf-8 -*-#(lf)import pandas as pd#(lf)import os#(lf)from datetime import date#(lf)#(lf)# Pega o Caminho já definido#(lf)Caminho = dataset['Caminho'][0]#(lf)#(lf)# Seleciona o caminho do Arquivo#(lf)basedir = Caminho + ""/ArquivosParaUnificar/""#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""f_IBC_BR_AtivEcon_API.csv""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)basedir = os.path.abspath(os.path.dirname(basedir))#(lf)#(lf)# Apaga o arquivo se foi criado#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe apaga o arquivo#(lf)  os.remove(os.path.join(basedir, nomearq))#(lf)#(lf)# Salva o arquivo na Pasta de unificação#(lf)dataset[['Data', 'IBC_Br']].to_csv(os.path.join(basedir, nomearq), index = False, sep =';')#(lf)#(lf)dataset = dataset[['Data', 'IBC_Br']]#(lf)print(dataset)#(lf)",[dataset=#"Tipo Alterado"]),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Executar script Python",{"Value"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Value", {"Data", "IBC_Br"}, {"Data", "IBC_Br"}),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Value Expandido",{{"IBC_Br", type number}, {"Data", type date}})
+in
+    #"Tipo Alterado1"
+
+
+METADADOS:
+Na descrição do Banco Central esta tabela reúne “O Índice de Atividade Econômica do Banco Central (IBC-Br) reflete as atividades da indústria, dos serviços e da agropecuária.” Foi utilizada a tabela nº 24364 - Índice de Atividade Econômica do Banco Central (IBC-Br) - com ajuste sazonal.
+
+unidade: valores correntes
+
+Fonte: https://www.bcb.gov.br/estatisticas/grafico/graficoestatistica/ibcbr e SGS - Sistema Gerenciador de Séries Temporais (bcb.gov.br)
