@@ -1,0 +1,98 @@
+﻿f_Execucao_Belem
+
+let
+    // A API pode trazer as receitas detalhadas com esta url
+    // https://data-export.campogrande.ms.gov.br/api/transparencia/receita/lista/?consulta_post=receitas&draw=1&ano=2013&receita=1&data-inicial=01%2F01%2F2013&data-final=31%2F01%2F2013&orgao=33&categoria=1&file_type=csv
+    // 
+    // ou
+    // 
+    // Esta consulta traz apenas os dados da Receita simplificados
+    // https://data-export.campogrande.ms.gov.br/api/transparencia/composicaoreceita/lista?consulta_post=composicao-receita&draw=1&mes-inicial=01&ano-inicial=2010&mes-final=09&ano-final=2022&
+    Fonte = Table.FromRecords(
+        {[Caminho = Text.Replace(Text.Replace(Caminho,"\","/"), ":/", "://"), DataIni = Date.ToText(Date.AddDays(MenorData, -14),"yyyy-MM-dd"), DataFim = DateTime.ToText(Date.EndOfMonth(Date.AddMonths(DateTime.LocalNow(),-2)),"yyyy-MM-dd")]},
+        type table[Caminho = Text.Type, DataIni = Text.Type, DataFim = Text.Type]
+),
+    #"Executar script Python1" = Python.Execute("# 'dataset' tem os dados de entrada para este script#(lf)#(lf)# -*- encoding: utf-8 -*-#(lf)import requests#(lf)import pandas#(lf)import os#(lf)#(lf)from datetime import datetime#(lf)#(lf)#(lf)#print(datetime.now())#(lf)# Lista para guardas os dados #(lf)dataset_list = [] #(lf)#(lf)# Aqui são as variáveis que temos que pegar#(lf)list_cabe = [""idMuni"", ""ano"", ""Mes"", ""nomefonte"", ""categoria"", ""nomecategoria"", ""origem"", ""nomeorigem"", ""especie"", ""nomeespecie"",#(lf)             ""rubrica"", ""nomerubrica"", ""alinea"", ""nomealinea"", ""subalinea"", ""nomesubalinea"", ""prevista"", ""arrecadada""]#(lf)#(lf)#(lf)# Cria variável para caminho de armazenamento dos arquivos#(lf)basedir = dataset['Caminho'][0] + ""/ReceitasPublicas/Capitais/CampoGrande/""#(lf)#(lf)# cria um diretório para armazenar o arquivo comparâmetro para não criar se já existir#(lf)os.makedirs(os.path.abspath(os.path.dirname(basedir)), exist_ok=True)#(lf)#(lf)# Nome do arquivo#(lf)nomearq = ""campo_grande.csv""#(lf)#(lf)# Separa o Ano Atual#(lf)AnoAtual = datetime.now().year - 1#(lf)#(lf)# Identifica menorData#(lf)d_dataini = dataset['DataIni'][0]#(lf)#(lf)# Identifica a maiorData#(lf)d_datafim = dataset['DataFim'][0]#(lf)#(lf)#(lf)# Verifica se o arquivo já existe#(lf)if os.path.isfile(os.path.join(basedir, nomearq)):#(lf)  # Se existe abre e verifica qual a maior data para baixar os últimos 2 anos#(lf)  # abre no dataset#(lf)  dataset = pandas.read_csv(os.path.join(basedir, nomearq), sep=';')#(lf)  # Transforma o type para numerico no ano#(lf)  dataset['ano'] = pandas.to_numeric(dataset['ano'], errors='coerce')#(lf)  # Limita o arquivo #(lf)  dataset= dataset[dataset.ano < AnoAtual] #(lf)  # Salva o arquivo com menos 2 anos anos atuais#(lf)  dataset.to_csv(os.path.join(basedir, nomearq), index = False, sep=';')#(lf)  # Guarda a data para iniciar a busca dos novos dados#(lf)  strAnoAtual = str(AnoAtual) + ""-01-01""#(lf)  # Cria o intervalo de datas#(lf)  datesStart = pandas.date_range(start=strAnoAtual, end=d_datafim, freq='MS')#(lf)  datesEnd = pandas.date_range(start=strAnoAtual, end=d_datafim, freq='M')#(lf)  # Abro o arquivo para incluir os novos valores#(lf)  arq_csv = open(os.path.join(basedir, nomearq),""a"",encoding=""utf-8"")#(lf)else:#(lf)  # Caso contrário cria um novo arquivo csv#(lf)  arq_csv = open(os.path.join(basedir, nomearq),""w"",encoding=""utf-8"")#(lf)  tmp = ""idMuni;ano;Mes;nomefonte;categoria;nomecategoria;origem;nomeorigem;especie;nomeespecie;rubrica;nomerubrica;alinea;nomealinea;subalinea;nomesubalinea;prevista;arrecadada""#(lf)  arq_csv.write(tmp + '\n')#(lf)  # Cria o intervalo de datas#(lf)  datesStart = pandas.date_range(start=d_dataini, end=d_datafim, freq='MS')#(lf)  datesEnd = pandas.date_range(start=d_dataini, end=d_datafim, freq='M')#(lf)#(lf)#(lf)#(lf)# https://data-export.campogrande.ms.gov.br/api/transparencia/receita/lista/#(lf)# ?consulta_post=receitas&draw=1#(lf)# &ano=2013#(lf)# &receita=1#(lf)# &data-inicial=01%2F01%2F2013#(lf)# &data-final=31%2F01%2F2013#(lf)# &orgao=33#(lf)# &categoria=1&file_type=csv#(lf)#(lf)#https://data-export.campogrande.ms.gov.br/api/transparencia/receita/lista/?consulta_post=receitas&draw=1&ano=2013&receita=1&data-inicial=01%2F01%2F2013&data-final=31%2F01%2F2013&orgao=33&categoria=1&file_type=csv#(lf)#(lf)#(lf)def cria_url(uano, udtini, udtfim):#(lf)  # String de pesquisa da url#(lf)  s = """"#(lf)  s = ""?consulta_post=receitas&draw=1""#(lf)  s = s + ""&ano="" + uano#(lf)  s = s + ""&receita=1""#(lf)  s = s + ""&data-inicial="" + udtini#(lf)  s = s + ""&data-final="" + udtfim#(lf)  s = s + ""&orgao=33&categoria=1&file_type=csv""#(lf)  # Monta base da consulta#(lf)  url = ""https://data-export.campogrande.ms.gov.br/api/transparencia/receita/lista/"" + s#(lf)#(lf)  #print(""Inicio: "",  dtInicio)#(lf)  #print(""Fim   : "", dtFim)#(lf)  #print('------------------------------------------------------------------------------------')#(lf)  #print(""webdriver gets url...."")#(lf)  #print(url)#(lf)#(lf)  return url#(lf)#(lf)#(lf)# Função para ler os arquivos das urls#(lf)def ler_arq_url(lcodmuni, lu, lmes):#(lf)  # Garda na variável a resposta para o método GET do site#(lf)  resposta = requests.get(lu)#(lf)  arq_json = resposta.json()#(lf)  # Transfora em dicionário#(lf)  objeto = dict()#(lf)  objeto = dict(arq_json)#(lf)#(lf)  # Varrendo a collection#(lf)  for key,value in objeto.items():#(lf)    if key == ""data"":#(lf)      dados = value#(lf)#(lf)      for k in dados: #(lf)        tmp = """" #(lf)        list_campos = []#(lf)        list_campos.append(lcodmuni)#(lf)        list_campos.append(k.get(""ano""))#(lf)        list_campos.append(lmes)#(lf)        list_campos.append(k.get(""nomefonte""))#(lf)        list_campos.append(k.get(""categoria""))#(lf)        list_campos.append(k.get(""nomecategoria""))#(lf)        list_campos.append(k.get(""origem'""))#(lf)        list_campos.append(k.get(""nomeorigem""))#(lf)        list_campos.append(k.get(""especie""))#(lf)        list_campos.append(k.get(""nomeespecie""))#(lf)        list_campos.append(k.get(""rubrica""))#(lf)        list_campos.append(k.get(""nomerubrica""))#(lf)        list_campos.append(k.get(""alinea""))#(lf)        list_campos.append(k.get(""nomealinea""))#(lf)        list_campos.append(k.get(""subalinea""))#(lf)        list_campos.append(k.get(""nomesubalinea""))#(lf)        list_campos.append(k.get(""prevista""))#(lf)        list_campos.append(k.get(""arrecadada""))#(lf)        # Grava arquivo#(lf)        tmp = lcodmuni + "";"" + str(k.get(""ano"")) + "";"" + str(lmes) + "";"" + str(k.get(""nomefonte"")) + "";"" + str(k.get(""categoria"")) + "";""#(lf)        tmp = tmp + str(k.get(""nomecategoria"")) + "";"" + str(k.get(""origem'"")) + "";"" + str(k.get(""nomeorigem"")) + "";"" + str(k.get(""especie"")) + "";""#(lf)        tmp = tmp + str(k.get(""nomeespecie"")) + "";"" + str(k.get(""rubrica"")) + "";"" + str(k.get(""alinea"")) + "";"" + str(k.get(""nomealinea"")) + "";""#(lf)        tmp = tmp + str(k.get(""subalinea"")) + "";""  + str(k.get(""nomesubalinea"")) + "";"" + str(k.get(""prevista"")) + "";""#(lf)        tmp = tmp + str(k.get(""arrecadada""))#(lf)        arq_csv.write(tmp + '\n')#(lf)#(lf)        dataset_list.append(list_campos)#(lf)#(lf)  #print(dataset_list)#(lf)  return dataset_list#(lf)#(lf)#(lf)# faz o laço para buscar os arquivos#(lf)i = 0#(lf)while i < len(datesStart):#(lf)  #  Converte as datas#(lf)  dtInicio = datesStart[i].strftime(""%d/%m/%Y"")#(lf)  dtFim = datesEnd[i].strftime(""%d/%m/%Y"")#(lf)#(lf)  # Datas para Url#(lf)  data_inicio = str(datesStart[i].strftime(""%d""))  + '%2F' + str(datesStart[i].strftime(""%m"")) + '%2F' + str(datesStart[i].strftime(""%Y""))#(lf)  data_final = str(datesEnd[i].strftime(""%d"")) + '%2F' + str(datesEnd[i].strftime(""%m"")) + '%2F' + str(datesEnd[i].strftime(""%Y""))#(lf)  #(lf)  #cria string da url da API#(lf)  url = cria_url(datesStart[i].strftime(""%Y""), data_inicio, data_final)#(lf)  #(lf)  # Consome a API lendo o arquivo json criado#(lf)  dataset_list = ler_arq_url(""50027404"", url, str(datesStart[i].strftime(""%m"")))#(lf) #(lf)  # Incrementa a contagem das datas#(lf)  i = i + 1#(lf)#(lf)#(lf)#(lf)arq_csv.write('\n')#(lf)# Fecha o Arquivo#(lf)arq_csv.close()#(lf)#(lf)dataset = pandas.DataFrame(dataset_list, columns=list_cabe)#(lf)",[dataset=Fonte]),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Executar script Python1",{"Name"}),
+    #"Value Expandido" = Table.ExpandTableColumn(#"Colunas Removidas", "Value", {"idMuni", "ano", "Mes", "nomefonte", "categoria", "nomecategoria", "origem", "nomeorigem", "especie", "nomeespecie", "rubrica", "nomerubrica", "alinea", "nomealinea", "subalinea", "nomesubalinea", "prevista", "arrecadada"}, {"idMuni", "ano", "Mes", "nomefonte", "categoria", "nomecategoria", "origem", "nomeorigem", "especie", "nomeespecie", "rubrica", "nomerubrica", "alinea", "nomealinea", "subalinea", "nomesubalinea", "prevista", "arrecadada"}),
+    #"Mescla Ano e Mes para Data" = Table.AddColumn(#"Value Expandido", "Data", each Text.Combine({[Mes], [ano]}, "/"), type text),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Mescla Ano e Mes para Data", {{"Data", each "15/" & _, type text}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Prefixo Adicionado",{{"Data", type date}, {"arrecadada", type number}, {"prevista", type number}})
+in
+    #"Tipo Alterado"
+
+
+METADADOS:
+Receitas Correntes do Município de Campo Grande, disponível no site da Transparência
+
+unidade: valores correntes
+
+Fonte: https://transparencia.campogrande.ms.gov.br/consulta-de-receitas/
+
+
+
+ETL Arquivo de Belem:
+
+
+ArqAmostra_Belem
+
+let
+    Pasta = "\ReceitasPublicas\Capitais\Belem",
+    Fonte = Folder.Files(Caminho & Pasta),
+    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Extension] = ".xls")),
+    Navegação1 = #"Linhas Filtradas"{0}[Content]
+in
+    Navegação1
+
+
+ParArqBelem
+ArqAmostra_Belem meta [IsParameterQuery=true, BinaryIdentifier=ArqAmostra_Belem, Type="Binary", IsParameterQueryRequired=true]
+
+
+ETL_Arq_Belem Exemplo
+
+let
+    Fonte = Excel.Workbook(ParArqBelem, null, true),
+    Sheet2 = Fonte{[Name="Sheet1"]}[Data],
+    #"Linhas Filtradas" = Table.SelectRows(Sheet2, each ([Column2] <> null and [Column2] <> "05055009000113" and [Column2] <> "Data Movimento:" and [Column2] <> "Receitas Detalhadas")),
+    #"Colunas Mescladas" = Table.CombineColumns(#"Linhas Filtradas",{"Column1", "Column2"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna01"),
+    #"Colunas Mescladas1" = Table.CombineColumns(#"Colunas Mescladas",{"Column3", "Column4", "Column5"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna02"),
+    #"Colunas Mescladas2" = Table.CombineColumns(#"Colunas Mescladas1",{"Column6", "Column7", "Column8", "Column9", "Column10"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna03"),
+    #"Colunas Mescladas3" = Table.CombineColumns(#"Colunas Mescladas2",{"Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna04"),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Colunas Mescladas3", [PromoteAllScalars=true]),
+    #"Tipo Alterado Texto" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Receita", type text}, {"Orgão Arrecadador", type text}}),
+    #"Remove vazias" = Table.SelectRows(#"Tipo Alterado Texto", each [Receita] <> null and [Receita] <> ""),
+    #"Texto Aparado" = Table.TransformColumns(#"Remove vazias",{{"Data", Text.Trim, type text}}),
+    #"Data Analisada" = Table.TransformColumns(#"Texto Aparado",{{"Data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"Arrecadado", type number}}),
+    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Tipo Alterado", "Receita", Splitter.SplitTextByEachDelimiter({" - "}, QuoteStyle.Csv, false), {"Classificacao_Codigo", "Descricao Receita"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Dividir Coluna por Delimitador",{"Orgão Arrecadador"})
+in
+    #"Colunas Removidas"
+
+
+
+ETL_Arq_Belem
+
+let
+    Fonte = (ParArqBelem as binary) => let
+    Fonte = Excel.Workbook(ParArqBelem, null, true),
+    Sheet2 = Fonte{[Name="Sheet1"]}[Data],
+    #"Linhas Filtradas" = Table.SelectRows(Sheet2, each ([Column2] <> null and [Column2] <> "05055009000113" and [Column2] <> "Data Movimento:" and [Column2] <> "Receitas Detalhadas")),
+    #"Colunas Mescladas" = Table.CombineColumns(#"Linhas Filtradas",{"Column1", "Column2"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna01"),
+    #"Colunas Mescladas1" = Table.CombineColumns(#"Colunas Mescladas",{"Column3", "Column4", "Column5"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna02"),
+    #"Colunas Mescladas2" = Table.CombineColumns(#"Colunas Mescladas1",{"Column6", "Column7", "Column8", "Column9", "Column10"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna03"),
+    #"Colunas Mescladas3" = Table.CombineColumns(#"Colunas Mescladas2",{"Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Coluna04"),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Colunas Mescladas3", [PromoteAllScalars=true]),
+    #"Tipo Alterado Texto" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Receita", type text}, {"Orgão Arrecadador", type text}}),
+    #"Remove vazias" = Table.SelectRows(#"Tipo Alterado Texto", each [Receita] <> null and [Receita] <> ""),
+    #"Texto Aparado" = Table.TransformColumns(#"Remove vazias",{{"Data", Text.Trim, type text}}),
+    #"Data Analisada" = Table.TransformColumns(#"Texto Aparado",{{"Data", each Date.From(DateTimeZone.From(_)), type date}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Analisada",{{"Arrecadado", type number}}),
+    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Tipo Alterado", "Receita", Splitter.SplitTextByEachDelimiter({" - "}, QuoteStyle.Csv, false), {"Classificacao_Codigo", "Descricao Receita"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"Dividir Coluna por Delimitador",{"Orgão Arrecadador"})
+in
+    #"Colunas Removidas"
+in
+    Fonte
+

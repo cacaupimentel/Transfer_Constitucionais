@@ -1,0 +1,65 @@
+Pasta:  IPM_Alagoas
+------------------------------------------------------------------------------------------------------------
+        Arquivo:  06 - Portaria nº 580-2020 - DOEAL-17_02_2020-SUPLEMENTO (1).pdf
+        Arquivo:  diario_oficial_2019-10-16_completo-port 2374-2019.pdf
+        Arquivo:  DOEAL-2021 30-12-2021 Portaria 2047-2021 (Republicação).pdf
+        Arquivo:  DOEAL-28_01_2020-COMPLETO - IPM - RETIRAR ENERGIA port 410-2020.pdf
+	Arquivo:  Folha SUPLEMENTAR - fls 13 a 15 - Portaria SEF Nº 2631-2020  - IPM Definitivo - DOE-AL 30-12-2020 - IPM Definitivo para 2021.pdf
+	Arquivo:  Port 3006-2019 - DOE-AL - 23-12-2019 - IPM Definitivo.pdf
+	
+	# Problema pra ler
+        Arquivo:  Port Prel 2187-2020 - DOEAL - 27-11-2020 (1).pdf
+	# Problema pra ler
+        Arquivo:  Portaria GSEF nº 1260-2021 - IPM Preliminar para 2022.pdf
+
+        Arquivo:  Portaria GSEF nº 558-2018 - Republicação IPM - Judicial Boca da Mata - DOE-AL 11-07-18.pdf
+
+        Arquivo:  Portaria GSEF nº 668-2017 - diario_oficial_2017-09-29 - IPM - Porto Calvo - Maceió - Pilar.pdf
+        Arquivo:  Portaria GSEF nº 669-2017 - IPM Preliminar - diario_oficial_2017-09-29.pdf
+        Arquivo:  Portaria GSEF nº 822-2017 - IPM Preliminar.pdf
+        Arquivo:  Portaria GSEF nº 862-2017 - IPM.pdf
+        Arquivo:  Portaria GSEF Nº 868-2017 - DOE-AL 21-12-2017.pdf
+        Arquivo:  Portaria nº 1000-2018 - IPM.pdf
+        Arquivo:  Portaria nº 46-2017 - Judicial Pilar_DOE-AL_06-02-2017.pdf
+        Arquivo:  Portaria nº 873-2017 - IPM Definitivo 30-12-2017.pdf
+        Arquivo:  Portaria nº 976.pdf
+        Arquivo:  Portaria SEF nº 008-2016-DOE-AL-11-01-2016.pdf
+        Arquivo:  Portaria SEF nº 029-2012-DOE-AL-07-02-2012.pdf
+        Arquivo:  Portaria SEF nº 029-2012-DOE-AL-10-02-2012.pdf
+        Arquivo:  Portaria SEF nº 04-2014-DOE-AL-29-01-2014.pdf
+        Arquivo:  Portaria SEF Nº 067-2017 - IPM_ 2ª liminar Pilar_DOE-AL_13-02-2017.pdf
+        Arquivo:  Portaria SEF nº 103-2016-DOE-AL-15-03-2016.pdf
+        Arquivo:  Portaria SEF nº 135-2011-DOE-AL-04-05-2011.pdf
+        Arquivo:  Portaria SEF nº 15-2013-DOE-AL-25-01-2013.pdf
+        Arquivo:  Portaria SEF nº 164-2013-DOE-AL-03-05-2013.pdf
+        Arquivo:  Portaria SEF nº 169-2013-DOE-AL-07-05-2013.pdf
+        Arquivo:  Portaria SEF nº 215-2014-DOE-AL-04-08-2014.pdf
+        Arquivo:  Portaria SEF nº 259-2012-DOE-AL-03-08-2012.pdf
+        Arquivo:  Portaria SEF Nº 2631-2020  - IPM Definitivo - DOE-AL 30-12-2020 - IPM Definitivo para 2021.pdf
+        Arquivo:  Portaria SEF nº 275-2015-DOE-AL-18-05-2015.pdf
+        Arquivo:  Portaria SEF nº 279-2014-DOE-AL-06-08-2013.pdf
+        Arquivo:  Portaria SEF nº 347-2010-DOE-AL-16-08-2010.pdf
+        Arquivo:  Portaria SEF nº 356-2012-DOE-AL-08-10-2012.pdf
+        Arquivo:  Portaria SEF nº 407-2011-DOE-AL-27-10-2011.pdf
+        Arquivo:  Portaria SEF nº 411-2015-DOE-AL-30-12-2014.pdf
+        Arquivo:  Portaria SEF nº 413-2014-DOE-AL-30-12-2014.pdf
+        Arquivo:  Portaria SEF nº 435-2012-DOE-AL-26-11-2012.pdf
+        Arquivo:  Portaria SEF nº 469-2011-DOE-AL-26-12-2011-.pdf
+        Arquivo:  Portaria SEF nº 470-2010-DOE-AL-22-10-2010.pdf
+        Arquivo:  Portaria SEF nº 484-2013-DOE-AL-06-12-2013.pdf
+        Arquivo:  Portaria SEF Nº 488-2017 - IPM - diario_oficial_20-07-2017.pdf
+        Arquivo:  Portaria SEF nº 497-2016-DOE-AL-10-08-2016.pdf
+        Arquivo:  Portaria SEF nº 502-2013-DOE-AL-27-12-2013.pdf
+        Arquivo:  Portaria SEF nº 507-2010-DOE-AL-22-11-2010.pdf
+        Arquivo:  Portaria SEF nº 551-2010-DOE-AL-29-12-2010.pdf
+        Arquivo:  Portaria SEF nº 675-2015-DOE-AL-08-09-2015.pdf
+        Arquivo:  Portaria SEF nº 712-2016-DOE-AL-17-11-2016.pdf
+        Arquivo:  Portaria SEF nº 784-2016-DOE-AL-31-12-2016.pdf
+        Arquivo:  Portaria SEF nº 824-2015-DOE-AL-23-10-2015.pdf
+        Arquivo:  Portaria SEF nº 945-2015-DOE-AL-03-12-2015.pdf
+        Arquivo:  Portaria SEF nº 961-2015-DOE-AL-21-12-2015.pdf
+        Arquivo:  Portaria SEF nº 968-2015-DOE-AL-31-12-2015.pdf
+        Arquivo:  Portaria SEFAZ N°2047-2021 - DOEAL 22-12-2021.pdf
+        Arquivo:  Portaria SEFAZ Nº 550-2020 DE 07-02-2020 - PUB EM 10-02-2020 DOE-AL - SUPLEMENTAR.pdf
+        Arquivo:  PORTARIA_SEFAZ_Nº_1796-2022.pdf
+        Arquivo:  Portaria_SEF_Nº_1769-2022_-_IPM_Judicial_Delmiro_Energia.pdf

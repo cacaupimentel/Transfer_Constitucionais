@@ -1,0 +1,148 @@
+f_IPM_UF_Para
+
+
+let
+    Fonte = Web.BrowserContents("http://www.sefa.pa.gov.br/index.php/receitas-despesas/tesouro/839-indice-municipios"),
+    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Coluna 1", "DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A"}, {"Site", "DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A", each [Attributes][href]?}}, [RowSelector="DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A"]),
+    #"Linhas Filtradas" = Table.SelectRows(#"Tabela extraída de HTML", each ([Coluna 1] = "Tabela 2000-2009" or [Coluna 1] = "Tabela 2010-2019" or [Coluna 1] = "Tabela 2020-2023")),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Coluna 1", type text}, {"Site", type text}}),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Tipo Alterado", {{"Site", each "www.sefa.pa.gov.br" & _, type text}}),
+    #"Cria Col de páginas da Web" = Table.AddColumn(#"Prefixo Adicionado", "PaginaWeb", each Web.Contents([Site])),
+    #"Arquivos Ocultos Filtrados1" = Table.SelectRows(#"Cria Col de páginas da Web", each [Attributes]?[Hidden]? <> true),
+    #"Invocar Função Personalizada1" = Table.AddColumn(#"Arquivos Ocultos Filtrados1", "Transformar Arquivo", each #"Transformar Arquivo"([PaginaWeb])),
+    #"Outras Colunas Removidas1" = Table.SelectColumns(#"Invocar Função Personalizada1", {"Transformar Arquivo"}),
+    #"Coluna de Tabela Expandida1" = Table.ExpandTableColumn(#"Outras Colunas Removidas1", "Transformar Arquivo", Table.ColumnNames(#"Transformar Arquivo"(#"Arquivo de Amostra"))),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida1",{{"IPM", type number}, {"MunUFMaiuscula", type text}, {"sigla", type text}, {"idUF", Int64.Type}, {"idMun", Int64.Type}}),
+    #"Texto Extraído Antes do Delimitador" = Table.TransformColumns(#"Tipo Alterado1", {{"Ano", each Text.BeforeDelimiter(_, " (COM "), type text}})
+in
+    #"Texto Extraído Antes do Delimitador"
+	
+	
+METADADOS:
+
+
+
+
+TABELAS DE DEPENDÊNCIA:
+
+Pasta = ETL_Arq_IPM_UF_Para
+
+
+ArqAmostraIPM_Para
+
+let
+    Fonte = Web.BrowserContents("http://www.sefa.pa.gov.br/index.php/receitas-despesas/tesouro/839-indice-municipios"),
+    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Coluna 1", "DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A"}, {"Site", "DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A", each [Attributes][href]?}}, [RowSelector="DIV > DIV:nth-last-child(1) > P > SPAN > A,DIV > DIV:nth-last-child(1) > P > P > A,DIV > DIV:nth-last-child(1) > DIV > SPAN > A,DIV > DIV:nth-last-child(1) > DIV > P > A"]),
+    #"Linhas Filtradas" = Table.SelectRows(#"Tabela extraída de HTML", each ([Coluna 1] = "Tabela 2000-2009" or [Coluna 1] = "Tabela 2010-2019" or [Coluna 1] = "Tabela 2020-2023")),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Coluna 1", type text}, {"Site", type text}}),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Tipo Alterado", {{"Site", each "www.sefa.pa.gov.br" & _, type text}}),
+    #"Cria Col de páginas da Web" = Table.AddColumn(#"Prefixo Adicionado", "PaginaWeb", each Web.Contents([Site])),
+    Navegação1 = #"Cria Col de páginas da Web"{0}[PaginaWeb]
+in
+    Navegação1
+	
+	
+	
+ParIPM_Para
+
+ArqAmostraIPM_Para meta [IsParameterQuery=true, BinaryIdentifier=ArqAmostraIPM_Para, Type="Binary", IsParameterQueryRequired=true]
+
+
+
+ETL_Arq_IPM_UF_Para Exemplo
+
+let
+    Fonte = ParIPM_Para,
+    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Column1", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(1)"}, {"Column2", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(2)"}, {"Column3", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(3)"}, {"Column4", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(4)"}, {"Column5", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(5)"}, {"Column6", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(6)"}, {"Column7", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(7)"}, {"Column8", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(8)"}, {"Column9", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(9)"}, {"Column10", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(10)"}, {"Column11", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(11)"}}, [RowSelector="DIV.tabinterna:nth-child(3) > TABLE > * > TR"]),
+    #"Substitui MUNICÍPIOS" = Table.ReplaceValue(#"Tabela extraída de HTML","MUNICÍPIOS PARAENSES","MUNICÍPIOS",Replacer.ReplaceText,{"Column1"}),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Substitui MUNICÍPIOS", [PromoteAllScalars=true]),
+    #"Filtra o TOTAL" = Table.SelectRows(#"Cabeçalhos Promovidos", each ([MUNICÍPIOS] <> "TOTAL")),
+    #"Retira os Ascentos" = Table.TransformColumns(#"Filtra o TOTAL",{{"MUNICÍPIOS", F_Tira_Ascento, type text}}),
+    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"Retira os Ascentos", {"MUNICÍPIOS"}, "Ano", "IPM"),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Outras Colunas Não Dinâmicas",{{"Ano", Text.Upper, type text}}),
+    #"Filtra linhas com 2013" = Table.SelectRows(#"Texto em Maiúscula", each ([Ano] <> "ÍNDICE P/ 2013")),
+    #"Filtra os vazios" = Table.SelectRows(#"Filtra linhas com 2013", each [Ano] <> null and [Ano] <> ""),
+    #"Texto Extraído Após o Delimitador" = Table.TransformColumns(#"Filtra os vazios", {{"Ano", each Text.AfterDelimiter(_, " P/ "), type text}}),
+    #"Texto Aparado" = Table.TransformColumns(#"Texto Extraído Após o Delimitador",{{"MUNICÍPIOS", Text.Trim, type text}}),
+    #"Sufixo Adicionado" = Table.TransformColumns(#"Texto Aparado", {{"MUNICÍPIOS", each _ & " - PA", type text}}),
+    #"Substitui ALMEIRIM - PA" = Table.ReplaceValue(#"Sufixo Adicionado","ALMERIM - PA","ALMEIRIM - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui ANANIDEUA - PA" = Table.ReplaceValue(#"Substitui ALMEIRIM - PA","ANANIDEUA - PA","ANANINDEUA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui CONCEICAO DO ARAGUAIA - PA" = Table.ReplaceValue(#"Substitui ANANIDEUA - PA","CONCEICAO ARAGUAIA - PA","CONCEICAO DO ARAGUAIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui DOM ELISEU - PA" = Table.ReplaceValue(#"Substitui CONCEICAO DO ARAGUAIA - PA","DOM ELIZEU - PA","DOM ELISEU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui IGARAPE-ACU - PA" = Table.ReplaceValue(#"Substitui DOM ELISEU - PA","IGARAPE ACU - PA","IGARAPE-ACU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SANTA MARIA DAS BARREIRAS - PA" = Table.ReplaceValue(#"Substitui IGARAPE-ACU - PA","SANTA M DAS BARREIRAS - PA","SANTA MARIA DAS BARREIRAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui IGARAPE-MIRI - PA" = Table.ReplaceValue(#"Substitui SANTA MARIA DAS BARREIRAS - PA","IGARAPE MIRI - PA","IGARAPE-MIRI - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui ELDORADO DO CARAJAS - PA" = Table.ReplaceValue(#"Substitui IGARAPE-MIRI - PA","ELDORADO DOS CARAJAS - PA","ELDORADO DO CARAJAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SAO GERALDO DO ARAGUAIA - PA" = Table.ReplaceValue(#"Substitui ELDORADO DO CARAJAS - PA","SAO GERALDO ARAGUAIA - PA","SAO GERALDO DO ARAGUAIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SANTA IZABEL DO PARA - PA" = Table.ReplaceValue(#"Substitui SAO GERALDO DO ARAGUAIA - PA","SANTA ISABEL DO PARA - PA","SANTA IZABEL DO PARA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PAU D'ARCO - PA" = Table.ReplaceValue(#"Substitui SANTA IZABEL DO PARA - PA","PAU D ARCO - PA","PAU D'ARCO - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SENADOR JOSE PORFIRIO - PA" = Table.ReplaceValue(#"Substitui PAU D'ARCO - PA","SEN JOSE PORFIRO - PA","SENADOR JOSE PORFIRIO - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SAO CAETANO DE ODIVELAS - PA" = Table.ReplaceValue(#"Substitui SENADOR JOSE PORFIRIO - PA","SAO CAETANO ODIVELAS - PA","SAO CAETANO DE ODIVELAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PEIXE-BOI - PA" = Table.ReplaceValue(#"Substitui SAO CAETANO DE ODIVELAS - PA","PEIXE BOI - PA","PEIXE-BOI - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PACAJA - PA" = Table.ReplaceValue(#"Substitui PEIXE-BOI - PA","PACAJAS - PA","PACAJA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui CACHOEIRA DO PIRIA - PA" = Table.ReplaceValue(#"Substitui PACAJA - PA","CACHOEIRA DO PIRIA - PA","CACHOEIRA DO PIRIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui TOME-ACU - PA" = Table.ReplaceValue(#"Substitui CACHOEIRA DO PIRIA - PA","TOME ACU - PA","TOME-ACU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Substitui TOME-ACU - PA",".",",",Replacer.ReplaceText,{"IPM"}),
+    #"Substitui ""-"" por ZERO" = Table.ReplaceValue(#"Valor Substituído","-","0",Replacer.ReplaceText,{"IPM"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Substitui ""-"" por ZERO",{{"IPM", type number}}),
+    #"Traz a tabela de Municipios" = d_Municipios_API_IBGE,
+    #"Filtra UF=PA" = Table.SelectRows(#"Traz a tabela de Municipios", each ([sigla] = "PA")),
+    #"Tira os Ascentos" = Table.TransformColumns(#"Filtra UF=PA",{{"MunUFMaiuscula", F_Tira_Ascento, type text}}),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tira os Ascentos",{"MunUFMaiuscula", "sigla", "idUF", "idMun"}),
+    #"Consultas Mescladas" = Table.NestedJoin(#"Tipo Alterado", {"MUNICÍPIOS"}, #"Outras Colunas Removidas", {"MunUFMaiuscula"}, "d_Municipios_API_IBGE", JoinKind.LeftOuter),
+    #"d_Municipios_API_IBGE Expandido" = Table.ExpandTableColumn(#"Consultas Mescladas", "d_Municipios_API_IBGE", {"MunUFMaiuscula", "sigla", "idUF", "idMun"}, {"MunUFMaiuscula", "sigla", "idUF", "idMun"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"d_Municipios_API_IBGE Expandido",{"MUNICÍPIOS"})
+in
+    #"Colunas Removidas"
+	
+	
+	
+
+ETL_Arq_IPM_UF_Para
+
+let
+    Fonte = (ParIPM_Para as binary) => let
+    Fonte = ParIPM_Para,
+    #"Tabela extraída de HTML" = Html.Table(Fonte, {{"Column1", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(1)"}, {"Column2", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(2)"}, {"Column3", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(3)"}, {"Column4", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(4)"}, {"Column5", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(5)"}, {"Column6", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(6)"}, {"Column7", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(7)"}, {"Column8", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(8)"}, {"Column9", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(9)"}, {"Column10", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(10)"}, {"Column11", "DIV.tabinterna:nth-child(3) > TABLE > * > TR > :nth-child(11)"}}, [RowSelector="DIV.tabinterna:nth-child(3) > TABLE > * > TR"]),
+    #"Substitui MUNICÍPIOS" = Table.ReplaceValue(#"Tabela extraída de HTML","MUNICÍPIOS PARAENSES","MUNICÍPIOS",Replacer.ReplaceText,{"Column1"}),
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Substitui MUNICÍPIOS", [PromoteAllScalars=true]),
+    #"Filtra o TOTAL" = Table.SelectRows(#"Cabeçalhos Promovidos", each ([MUNICÍPIOS] <> "TOTAL")),
+    #"Retira os Ascentos" = Table.TransformColumns(#"Filtra o TOTAL",{{"MUNICÍPIOS", F_Tira_Ascento, type text}}),
+    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"Retira os Ascentos", {"MUNICÍPIOS"}, "Ano", "IPM"),
+    #"Texto em Maiúscula" = Table.TransformColumns(#"Outras Colunas Não Dinâmicas",{{"Ano", Text.Upper, type text}}),
+    #"Filtra linhas com 2013" = Table.SelectRows(#"Texto em Maiúscula", each ([Ano] <> "ÍNDICE P/ 2013")),
+    #"Filtra os vazios" = Table.SelectRows(#"Filtra linhas com 2013", each [Ano] <> null and [Ano] <> ""),
+    #"Texto Extraído Após o Delimitador" = Table.TransformColumns(#"Filtra os vazios", {{"Ano", each Text.AfterDelimiter(_, " P/ "), type text}}),
+    #"Texto Aparado" = Table.TransformColumns(#"Texto Extraído Após o Delimitador",{{"MUNICÍPIOS", Text.Trim, type text}}),
+    #"Sufixo Adicionado" = Table.TransformColumns(#"Texto Aparado", {{"MUNICÍPIOS", each _ & " - PA", type text}}),
+    #"Substitui ALMEIRIM - PA" = Table.ReplaceValue(#"Sufixo Adicionado","ALMERIM - PA","ALMEIRIM - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui ANANIDEUA - PA" = Table.ReplaceValue(#"Substitui ALMEIRIM - PA","ANANIDEUA - PA","ANANINDEUA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui CONCEICAO DO ARAGUAIA - PA" = Table.ReplaceValue(#"Substitui ANANIDEUA - PA","CONCEICAO ARAGUAIA - PA","CONCEICAO DO ARAGUAIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui DOM ELISEU - PA" = Table.ReplaceValue(#"Substitui CONCEICAO DO ARAGUAIA - PA","DOM ELIZEU - PA","DOM ELISEU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui IGARAPE-ACU - PA" = Table.ReplaceValue(#"Substitui DOM ELISEU - PA","IGARAPE ACU - PA","IGARAPE-ACU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SANTA MARIA DAS BARREIRAS - PA" = Table.ReplaceValue(#"Substitui IGARAPE-ACU - PA","SANTA M DAS BARREIRAS - PA","SANTA MARIA DAS BARREIRAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui IGARAPE-MIRI - PA" = Table.ReplaceValue(#"Substitui SANTA MARIA DAS BARREIRAS - PA","IGARAPE MIRI - PA","IGARAPE-MIRI - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui ELDORADO DO CARAJAS - PA" = Table.ReplaceValue(#"Substitui IGARAPE-MIRI - PA","ELDORADO DOS CARAJAS - PA","ELDORADO DO CARAJAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SAO GERALDO DO ARAGUAIA - PA" = Table.ReplaceValue(#"Substitui ELDORADO DO CARAJAS - PA","SAO GERALDO ARAGUAIA - PA","SAO GERALDO DO ARAGUAIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SANTA IZABEL DO PARA - PA" = Table.ReplaceValue(#"Substitui SAO GERALDO DO ARAGUAIA - PA","SANTA ISABEL DO PARA - PA","SANTA IZABEL DO PARA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PAU D'ARCO - PA" = Table.ReplaceValue(#"Substitui SANTA IZABEL DO PARA - PA","PAU D ARCO - PA","PAU D'ARCO - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SENADOR JOSE PORFIRIO - PA" = Table.ReplaceValue(#"Substitui PAU D'ARCO - PA","SEN JOSE PORFIRO - PA","SENADOR JOSE PORFIRIO - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui SAO CAETANO DE ODIVELAS - PA" = Table.ReplaceValue(#"Substitui SENADOR JOSE PORFIRIO - PA","SAO CAETANO ODIVELAS - PA","SAO CAETANO DE ODIVELAS - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PEIXE-BOI - PA" = Table.ReplaceValue(#"Substitui SAO CAETANO DE ODIVELAS - PA","PEIXE BOI - PA","PEIXE-BOI - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui PACAJA - PA" = Table.ReplaceValue(#"Substitui PEIXE-BOI - PA","PACAJAS - PA","PACAJA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui CACHOEIRA DO PIRIA - PA" = Table.ReplaceValue(#"Substitui PACAJA - PA","CACHOEIRA DO PIRIA - PA","CACHOEIRA DO PIRIA - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Substitui TOME-ACU - PA" = Table.ReplaceValue(#"Substitui CACHOEIRA DO PIRIA - PA","TOME ACU - PA","TOME-ACU - PA",Replacer.ReplaceText,{"MUNICÍPIOS"}),
+    #"Valor Substituído" = Table.ReplaceValue(#"Substitui TOME-ACU - PA",".",",",Replacer.ReplaceText,{"IPM"}),
+    #"Substitui ""-"" por ZERO" = Table.ReplaceValue(#"Valor Substituído","-","0",Replacer.ReplaceText,{"IPM"}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Substitui ""-"" por ZERO",{{"IPM", type number}}),
+    #"Traz a tabela de Municipios" = d_Municipios_API_IBGE,
+    #"Linhas Filtradas" = Table.SelectRows(#"Traz a tabela de Municipios", each ([sigla] = "PA")),
+    #"Tira os Ascentos" = Table.TransformColumns(#"Linhas Filtradas",{{"MunUFMaiuscula", F_Tira_Ascento, type text}}),
+    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tira os Ascentos",{"MunUFMaiuscula", "sigla", "idUF", "idMun"}),
+    #"Consultas Mescladas" = Table.NestedJoin(#"Tipo Alterado", {"MUNICÍPIOS"}, #"Outras Colunas Removidas", {"MunUFMaiuscula"}, "d_Municipios_API_IBGE", JoinKind.LeftOuter),
+    #"d_Municipios_API_IBGE Expandido" = Table.ExpandTableColumn(#"Consultas Mescladas", "d_Municipios_API_IBGE", {"MunUFMaiuscula", "sigla", "idUF", "idMun"}, {"MunUFMaiuscula", "sigla", "idUF", "idMun"}),
+    #"Colunas Removidas" = Table.RemoveColumns(#"d_Municipios_API_IBGE Expandido",{"MUNICÍPIOS"})
+in
+    #"Colunas Removidas"
+in
+    Fonte
